@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>南开一百周年倒计时</title>
-
+    <link rel="shortcut icon" href="/images/logo1.png">
     <style>
         @import url("https://fonts.googleapis.com/css?family=Aleo");
 

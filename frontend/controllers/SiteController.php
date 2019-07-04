@@ -27,13 +27,17 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'],
+                'only' => [ 'login','logout', 'signup'],
                 'rules' => [
                     [
                         'actions' => ['signup'],
                         'allow' => true,
-                        'roles' => ['?'],
                     ],
+                    [
+                        'actions' => ['login'],
+                        'allow' => true,
+                    ],
+
                     [
                         'actions' => ['logout'],
                         'allow' => true,
@@ -76,6 +80,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+
+    public function actionCountDown()
+    {
+        return $this->render('countDown');
+    }
     /**
      * Logs in a user.
      *

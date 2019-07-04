@@ -1,18 +1,27 @@
+
+<?php
+use yii\helpers\Html;
+use frontend\assets\AppAsset;
+
+
+frontend\assets\AppAsset::register($this);
+
+?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+  <meta charset="<?= Yii::$app->charset ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <?= Html::csrfMetaTags() ?>
+  <title><?= Html::encode($this->title) ?></title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
   <title>100南开 | Ahri</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/animate.min.css" rel="stylesheet"> 
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/lightbox.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
-  <link href="css/responsive.css" rel="stylesheet">
 
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -20,10 +29,13 @@
   <![endif]-->
   
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/logo1.png">
+  <link rel="shortcut icon" href="favicon.ico">
+
+<?php $this->head() ?>
 </head><!--/head-->
 
-<body  >
+<body >
+<?php $this->beginBody() ?>
 
   <!--.preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
@@ -32,21 +44,21 @@
   <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="item active" style="background-image: url(images/slider/1.jpg)">
+        <div class="item active" style="background-image: url(/images/slider/1.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">渤海之滨 <span>白河之津</span></h1>
             <!-- <p class="animated fadeInRightBig">NK</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/2.jpg)">
+        <div class="item" style="background-image: url(/images/slider/2.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">南开， <span>让世界听见你</span></h1>
            <!--  <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/3.jpg)">
+        <div class="item" style="background-image: url(/images/slider/3.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">允公允能 <span>日新月异</span></h1>
             <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
@@ -70,19 +82,21 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive"  src="images/logo1.png" alt="logo"></h1>
+            <h1>
+              <img class="img-responsive" src="/images/logo1.png" alt="logo" />
+            </h1>
           </a>                    
         </div>
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">首页</a></li>
+            <li class="scroll active"><a href="/site/index">首页</a></li>
             <li class="scroll"><a href="#services">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us">人物历史</a></li>    
             <li class="scroll"><a href="#blog">感恩南开</a></li>                 
             <li class="scroll"><a href="#portfolio">团队介绍</a></li>
-            <li class="scroll"><a href="#team">联系我们</a></li>
+            <li class="scroll"><a href="/site/contact">联系我们</a></li>
            
-            <li class="scroll"><a href="#contact">其他</a></li>       
+            <li class="scroll"><a href="/site/countDown">倒计时</a></li>       
           </ul>
         </div>
       </div>
@@ -811,5 +825,8 @@
   <script type="text/javascript" src="js/lightbox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
 
+
+<?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>

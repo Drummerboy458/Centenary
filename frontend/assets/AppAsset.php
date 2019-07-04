@@ -13,31 +13,27 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'css/animate.min.css',
         'css/bootstrap.min.css',
+        'css/animate.min.css',
         'css/font-awesome.min.css',
         'css/lightbox.css',
         'css/main.css',
-        'css/responsive.css',
         'css/presets/preset1.css',
-        'css/presets/preset2.css',
-        'css/presets/preset3.css',
-        'css/presets/preset4.css',
-        'css/presets/preset5.css',
-        'css/presets/preset6.css',
+        'css/responsive.css',
     ];
     public $js = [
-        'js/bootstrap.min.js',
-        'js/html5shiv.js',
-        'js/jquery.countTo.js',
-        'js/jquery.inview.min.js',
         'js/jquery.js',
-        'js/lightbox.min.js',
-        'js/main.js',
-        'js/mousescroll.js',
-        'js/respond.min.js',
-        'js/smoothscroll.js',
+        'js/bootstrap.min.js',
+        'js/jquery.inview.min.js',
         'js/wow.min.js',
+        'js/mousescroll.js',
+        'js/smoothscroll.js',
+
+        'js/jquery.countTo.js',
+        'js/lightbox.min.js',
+        'js/html5shiv.js',
+        'js/main.js',
+        'js/respond.min.js',
 
     ];
     public $depends = [

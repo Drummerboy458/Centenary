@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
         'css/main.css',
         'css/presets/preset1.css',
         'css/responsive.css',
+        'css/style.css',
     ];
     public $js = [
         'js/jquery.js',
@@ -28,13 +29,11 @@ class AppAsset extends AssetBundle
         'js/wow.min.js',
         'js/mousescroll.js',
         'js/smoothscroll.js',
-
         'js/jquery.countTo.js',
         'js/lightbox.min.js',
         'js/html5shiv.js',
         'js/main.js',
         'js/respond.min.js',
-
     ];
     public $depends = [
         'yii\web\YiiAsset',

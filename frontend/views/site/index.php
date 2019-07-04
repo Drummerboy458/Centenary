@@ -26,7 +26,7 @@ frontend\assets\AppAsset::register($this);
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
   <![endif]-->
-  
+  <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="favicon.ico">
 
@@ -486,6 +486,42 @@ frontend\assets\AppAsset::register($this);
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="team">
+      <div class="row" >
+      <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
+            <h2 style="color:#000;margin:100px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+          </div>
+        <div class="col-md-6">
+
+            <article class="card" style="margin: 0 auto;">
+              <header class="card__thumb">
+                <img src="/images/4.jpg"/>
+              </header>
+
+              <div class="card__body">
+                <h2 class="card__title"><a href="#">南开大学迎来百年校庆！</a></h2>
+                <div class="card__subtitle">快来和阳阳亮亮一起为母校送上祝福吧！</div>
+                <div class="card__description">
+                  <p style="margin:0px;">百载风雨，沧桑砥砺，诞生于1919年的南开大学，即将迎来建校100周年的历史性时刻。十秩峥嵘薪火传承，值此百年校庆之际，您是否有相对母校说的话？</p>
+                  <p>Nankai university, born in 1919, is about to usher in the historic moment of its 100th anniversary. On the occasion of the centennial
+                    anniversary, do you have any words to say to your Alma master.
+                  </p>
+                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?>>
+                    <button style="background-color:#800080;border:none;color:#fff;padding:6px 10px;position:fixed;right:10px;border-radius:5px;bottom:-15px;">为母校送祝福</button>
+                  </a>
+                </div>
+              </div>
+            </article>
+        </div>
+
+        <div class="col-md-6">
+        
+        </div>
+      </div>
+
   </section>
   
 

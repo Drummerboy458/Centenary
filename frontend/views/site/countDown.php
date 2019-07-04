@@ -29,7 +29,6 @@
 
         .label {
             font-size: 2.2rem;
-            background: url("img/6368077651977322227241996.png");
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;

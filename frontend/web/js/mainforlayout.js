@@ -4,6 +4,11 @@ jQuery(function($) {
 	var preloader = $('.preloader');
 	$(window).load(function(){
 		preloader.remove();
+		if( $(window).scrollTop()>document.getElementById("headerImg").offsetHeight){
+			$('.main-nav').addClass('navbar-fixed-top');
+		} else {
+			$('.main-nav').removeClass('navbar-fixed-top');
+		}
 	});
 
 	//#main-slider
@@ -17,7 +22,7 @@ jQuery(function($) {
 	
 	//Scroll Menu
 	$(window).on('scroll', function(){
-		if( $(window).scrollTop()>0 ){
+		if( $(window).scrollTop()>document.getElementById("headerImg").offsetHeight){
 			$('.main-nav').addClass('navbar-fixed-top');
 		} else {
 			$('.main-nav').removeClass('navbar-fixed-top');

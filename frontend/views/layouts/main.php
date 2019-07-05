@@ -32,8 +32,8 @@ MainAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header id="home">
-   <div style="overflow:hidden;">
-        <img src="/images/bg_head.jpg" style="width:100%"> 
+   <div id="headerImg">
+        <img src="/images/bg_head.jpg" style="width:100%;"> 
    </div>
 
     

@@ -31,6 +31,12 @@ AppAsset::register($this);
   <link rel="shortcut icon" href="/images/logo1.png">
 
 <?php $this->head() ?>
+
+<style>
+  body {
+      overflow-x : hidden;
+  }
+</style>
 </head><!--/head-->
 
 <body >

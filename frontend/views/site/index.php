@@ -28,7 +28,7 @@ frontend\assets\AppAsset::register($this);
   <![endif]-->
   <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="/images/logo1.png">
 
 <?php $this->head() ?>
 </head><!--/head-->
@@ -45,21 +45,21 @@ frontend\assets\AppAsset::register($this);
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(/images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">渤海之滨 <span>白河之津</span></h1>
+            <h1 class="animated fadeInLeftBig"><b>渤海之滨</b> <span><b>白河之津</b></span></h1>
             <!-- <p class="animated fadeInRightBig">NK</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
         </div>
         <div class="item" style="background-image: url(/images/slider/2.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">南开， <span>让世界听见你</span></h1>
+            <h1 class="animated fadeInLeftBig"><b>南开,</b><span><b>让世界听见你</b></span></h1>
            <!--  <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
         </div>
         <div class="item" style="background-image: url(/images/slider/3.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">允公允能 <span>日新月异</span></h1>
+            <h1 class="animated fadeInLeftBig"><b>允公允能</b> <span><b>日新月异</b></span></h1>
             <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
@@ -71,31 +71,31 @@ frontend\assets\AppAsset::register($this);
       <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
 
     </div><!--/#home-slider-->
-    <div class="main-nav" style="background-color: #800080">
-      <div   class="container" >
-        <div class="navbar-header" >
+    <div class="main-nav" style="background-color: #800080; height:100px; width:auto;">
+      <div class="container" style="background-color: #800080">
+        <!-- <div class="navbar-header" style="width: 100%"> -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
             <h1>
-              <img class="img-responsive" src="/images/logo1.png" alt="logo" />
+              <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>
           </a>                    
-        </div>
+       <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="/site/index">首页</a></li>
-            <li class="scroll"><a href="#services">校庆活动</a></li> 
-            <li class="scroll"><a href="#about-us">人物历史</a></li>    
-            <li class="scroll"><a href="#blog">感恩南开</a></li>                 
-            <li class="scroll"><a href="#portfolio">团队介绍</a></li>
-            <li class="scroll"><a href="/site/contact">联系我们</a></li>
+            <li class="scroll active"><a href="/site/index" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href="#services" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#about-us" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="#message" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
+            <li class="scroll"><a href="#team" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
+            <li class="scroll"><a href="#contact" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
            
-            <li class="scroll"><a href="/site/count-down">倒计时</a></li>       
+            <li class="scroll"><a href="/site/count-down" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
           </ul>
         </div>
       </div>
@@ -106,8 +106,8 @@ frontend\assets\AppAsset::register($this);
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
         <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <h2>校庆活动</h2>
+            <p>敬请关注！</p>
           </div>
         </div> 
       </div>
@@ -488,7 +488,7 @@ frontend\assets\AppAsset::register($this);
     </div>
   </section>
 
-  <section id="team">
+  <section id="message">
       <div class="row" >
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
             <h2 style="color:#000;margin:100px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>

@@ -94,8 +94,7 @@ frontend\assets\AppAsset::register($this);
             <li class="scroll"><a href="#blog">感恩南开</a></li>                 
             <li class="scroll"><a href="#portfolio">团队介绍</a></li>
             <li class="scroll"><a href="/site/contact">联系我们</a></li>
-           
-            <li class="scroll"><a href="/site/count-down">倒计时</a></li>       
+            <li class="scroll"><a href="">倒计时</a></li>       
           </ul>
         </div>
       </div>

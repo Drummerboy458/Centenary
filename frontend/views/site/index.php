@@ -509,7 +509,7 @@ frontend\assets\AppAsset::register($this);
                   <p>Nankai university, born in 1919, is about to usher in the historic moment of its 100th anniversary. On the occasion of the centennial
                     anniversary, do you have any words to say to your Alma master.
                   </p>
-                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?>>
+                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?> target="_blank">
                     <button style="background-color:#800080;border:none;color:#fff;padding:6px 10px;position:fixed;right:10px;border-radius:5px;bottom:-15px;">为母校送祝福</button>
                   </a>
                 </div>

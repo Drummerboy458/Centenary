@@ -1,31 +1,22 @@
 <?php
 
 namespace frontend\models;
-
+use frontend\controllers\MessageController;
 use Yii;
-
+use yii\base\Model;
 /**
- * This is the model class for table "message".
- *
- * @property int $id
- * @property string $author
- * @property string $identity
- * @property string $content
- * @property int $status
- * @property string $created_at
- * @property string $updated_at
+ * This is the model class for creating "message".
  */
-class Message extends \yii\db\ActiveRecord
+class MessageForm extends Model
 {
 
 
-    /**
-     * {@inheritdoc}
-     */
-    public static function tableName()
-    {
-        return 'message';
-    }
+    //验证码属性
+    public $verifyCode; 
+    public $author;
+    public $identity;
+    public $content;
+
 
     /**
      * {@inheritdoc}
@@ -36,11 +27,11 @@ class Message extends \yii\db\ActiveRecord
             ['content', 'required', 'message'=>'祝福不能为空哦'],
             ['author', 'required', 'message'=>'姓名不能为空哦'],
             ['identity', 'required', 'message'=>'校友身份不能为空哦'],
-            [['id', 'status'], 'integer'],
+            ['verifyCode', 'required', 'message'=>'验证码不能为空哦'],
             [['content'], 'string'],
-            [['id', 'created_at', 'updated_at'], 'safe'],
             [['author', 'identity'], 'string', 'max' => 32],
-            [['id'], 'unique'],
+            //验证码验证
+            ['verifyCode', 'captcha', 'message'=>'验证码错误'], 
         ];
     }
 
@@ -50,13 +41,10 @@ class Message extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
             'author' => '姓名',
             'identity' => '校友信息',
             'content' => '祝福',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'verifyCode' => '验证码',
         ];
     }
 }

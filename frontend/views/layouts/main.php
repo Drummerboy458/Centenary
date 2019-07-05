@@ -22,7 +22,7 @@ frontend\assets\MainAsset::register($this);
   <meta name="author" content="">
   <title>100南开 | Ahri</title>
 
-
+  <link rel="shortcut icon" href="/images/logo1.png"> <!--网站图标--->
 <?php $this->head() ?>
 </head><!--/head-->
 
@@ -31,14 +31,35 @@ frontend\assets\MainAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header id="home">
-    <div class="main-nav" style="background-color: #800080">
-      <div   class="container" >
+   <div style="overflow:hidden;">
+        <img src="/images/bg_head.jpg" style="width:100%"> <!--布局最上面的图片，后期可以更换-->
+   </div>
+
+   <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
+      <div class="container" style="background-color: #800080">
+        <!-- <div class="navbar-header" style="width: 100%"> -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
+            <h1>
+              <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
+            </h1>
+          </a>                    
+       <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/index');?>>首页</a></li>             
-            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/about');?>>团队介绍</a></li>
-            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/contact');?>>联系我们</a></li>
-            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/count-down');?>>倒计时</a></li>       
+            <li class="scroll active"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
+            <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
+            <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
+           
+            <li class="scroll"><a href="/site/count-down" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
           </ul>
         </div>
       </div>
@@ -58,10 +79,10 @@ frontend\assets\MainAsset::register($this);
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2014 Oxygen Theme.</p>
+            <p><b>&copy; 2019 Ahri Team</b></p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Designed by <a href="http://www.themeum.com/">Themeum</a></p>
+            <p class="pull-right">Designed by <a href="http://www.themeum.com/"><b>Ahri</b></a></p>
           </div>
         </div>
       </div>

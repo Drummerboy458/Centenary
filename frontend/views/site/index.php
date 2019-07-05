@@ -71,7 +71,7 @@ frontend\assets\AppAsset::register($this);
       <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
 
     </div><!--/#home-slider-->
-    <div class="main-nav" style="background-color: #800080; height:100px; width:auto;">
+    <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
       <div class="container" style="background-color: #800080">
         <!-- <div class="navbar-header" style="width: 100%"> -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -88,14 +88,14 @@ frontend\assets\AppAsset::register($this);
        <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="/site/index" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="#services" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="#about-us" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
-            <li class="scroll"><a href="#message" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
-            <li class="scroll"><a href="#team" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
-            <li class="scroll"><a href="#contact" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
+            <li class="scroll active"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
+            <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
+            <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
            
-            <li class="scroll"><a href="/site/count-down" style="height: 100px; line-height: 60px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
+            <li class="scroll"><a href="/site/count-down" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
           </ul>
         </div>
       </div>
@@ -169,6 +169,15 @@ frontend\assets\AppAsset::register($this);
           </div>
         </div>
       </div>
+
+       <div style=" text-align: right;">
+        <a class="more-link" href="/act-activity/index" title="显示更多">
+            <span class="moretext">
+                <font style='color: #a0468c;font-family: 微软雅黑;font-size: 15px;'>更多...</font>
+            </span>
+        </a>
+        </div>
+
     </div>
   </section><!--/#services-->
   <section id="about-us" class="parallax">
@@ -584,10 +593,10 @@ frontend\assets\AppAsset::register($this);
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2014 Oxygen Theme.</p>
+            <p><b>&copy; 2019 Ahri Team</b></p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Designed by <a href="http://www.themeum.com/">Themeum</a></p>
+            <p class="pull-right">Designed by <a href="http://www.themeum.com/"><b>Ahri</b></a></p>
           </div>
         </div>
       </div>

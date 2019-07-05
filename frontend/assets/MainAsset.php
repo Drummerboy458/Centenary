@@ -12,18 +12,18 @@ class MainAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
+        // 'css/site.css',
+        // 'css/layout.css',
         // 'css/bootstrap.min.css',
-        // 'css/animate.min.css',
-        // 'css/font-awesome.min.css',
-         //'css/lightbox.css',
-         'css/layout.css',
-        // 'css/presets/preset1.css',
-        // 'css/responsive.css',
-        // 'css/style.css',
+
+        'css/site.css',
+        'css/bootstrap.min.css',
+        'css/layout.css',
     ];
     public $js = [
-
+        'js/jquery.js',
+        'js/bootstrap.min.js',
+        'js/mainforlayout.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

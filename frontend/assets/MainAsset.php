@@ -12,15 +12,12 @@ class MainAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        // 'css/site.css',
-        // 'css/layout.css',
-        // 'css/bootstrap.min.css',
-
         'css/site.css',
         'css/bootstrap.min.css',
         'css/layout.css',
     ];
     public $js = [
+        'js/respond.min.js',
         'js/jquery.js',
         'js/bootstrap.min.js',
         'js/mainforlayout.js',

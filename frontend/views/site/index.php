@@ -506,7 +506,7 @@ AppAsset::register($this);
   <section id="message">
       <div class="row" >
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-            <h2 style="color:#000;margin:100px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+            <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
             <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
           </div>
         <div class="col-md-6">

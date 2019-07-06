@@ -20,4 +20,9 @@ $this->title = '100|为母校送祝福';
             
         </div>
     </div>
+
+    <div class="col-md-6">
+       
+
+    </div>
 </div>

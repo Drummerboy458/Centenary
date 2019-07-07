@@ -89,22 +89,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-<<<<<<< HEAD
         $db = Yii::$app->db;
         $sql = "select count(*) as num from praise";
         $command = $db->createCommand($sql);
         $num = $command->queryOne()['num'];
 
         $results = Message::getMessages();
+
+        $searchModel = new ActActivitySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
         return $this->render('index', [
             'messages' => $results,
             'num' => $num,
+            'dataProvider' => $dataProvider
         ]);
-=======
-        $searchModel = new ActActivitySearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('index',['dataProvider' => $dataProvider]);
->>>>>>> 7b9233bbb6cf0e7074b8afbca7e8bd5de1b28723
+
+
     }
 
 

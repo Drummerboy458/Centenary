@@ -51,13 +51,13 @@ class ActActivity extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'published_at' => 'Published At',
-            'holded_at' => 'Holded At',
-            'updated_at' => 'Updated At',
-            'sponsor' => 'Sponsor',
-            'location' => 'Location',
+            'title' => '标题',
+            'content' => '',
+            'published_at' => '发布于',
+            'holded_at' => '举办时间',
+            'updated_at' => '最近更新时间',
+            'sponsor' => '主办方',
+            'location' => '地点',
         ];
     }
 

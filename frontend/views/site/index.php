@@ -1,9 +1,17 @@
 <?php
 use yii\helpers\Html;
-use frontend\assets\AppAsset;
+use yii\helpers\HtmlPurifier;
+use frontend\assets\MainAsset;
+use yii\widgets\ListView;
+use yii\data\ActiveDataProvider;
+/* @var $this yii\web\View */
+/* @var $searchModel frontend\models\ActActivitySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
 
+$this->title = '活动预览';
+$this->params['breadcrumbs'][] = $this->title;
 
-AppAsset::register($this);
+frontend\assets\AppAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -95,7 +103,7 @@ AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll active"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
@@ -107,86 +115,135 @@ AppAsset::register($this);
       </div>
     </div><!--/#main-nav-->
   </header><!--/#home-->
-  <section id="services">
+<section id="services">
     <div class="container">
       <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <div class="row">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>校庆活动</h2>
-            <p>敬请关注！</p>
           </div>
-        </div> 
       </div>
-      <div class="text-center our-services">
-        <div class="row">
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="service-icon">
-              <i class="fa fa-flask"></i>
-            </div>
-            <div class="service-info">
-              <h3>Brand Identity</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
-            <div class="service-icon">
-              <i class="fa fa-umbrella"></i>
-            </div>
-            <div class="service-info">
-              <h3>Creative Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
-            <div class="service-icon">
-              <i class="fa fa-cloud"></i>
-            </div>
-            <div class="service-info">
-              <h3>Awesome Support</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
-            <div class="service-icon">
-              <i class="fa fa-coffee"></i>
-            </div>
-            <div class="service-info">
-              <h3>Professional Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
-            <div class="service-icon">
-              <i class="fa fa-bitbucket"></i>
-            </div>
-            <div class="service-info">
-              <h3>App Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
-            <div class="service-icon">
-              <i class="fa fa-gift"></i>
-            </div>
-            <div class="service-info">
-              <h3>Clean Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
-            </div>
-          </div>
-        </div>
+      <div class="row"> <!--两列-->
+        <div class="col-md-9" id="container">  <!--活动页-->
+          <section id="portfolio">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-sm-5" style="">
+                    <div class="folio-item wow fadeInRightBig " data-wow-duration="1000ms" data-wow-delay="300ms">
+                      <div class="folio-image">
+                        <img class="img-responsive" src="/images/activity/act_play1.jpg" alt="">
+                      </div>
+                      <div class="overlay">
+                        <div class="overlay-content">
+                          <div class="overlay-text">
+                            <div class="folio-info">
+                              <h3 >校庆logo</h3>
+                              <p >百年南开，再塑辉煌</p>
+                            </div>
+                            <div class="folio-overview">
+                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-expand"><a href="/images/activity/act_play1.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5" style="">
+                    <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
+                      <div class="folio-image">
+                        <img class="img-responsive" src="/images/activity/act_play3.jpg" alt="">
+                      </div>
+                      <div class="overlay">
+                        <div class="overlay-content">
+                          <div class="overlay-text">
+                            <div class="folio-info">
+                              <h3>Nature将用8期介绍百年南开</h3>
+                              <p>首期看校长阐述迈向科学卓越新纪元</p>
+                            </div>
+                            <div class="folio-overview">
+                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-expand"><a href="/images/activity/act_play3.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5" style="margin-top: 20px; ">
+                    <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
+                      <div class="folio-image">
+                        <img class="img-responsive" src="/images/activity/act_play2.jpg" alt="">
+                      </div>
+                      <div class="overlay">
+                        <div class="overlay-content">
+                          <div class="overlay-text">
+                            <div class="folio-info">
+                              <h3>纪念周恩来总理入学100周年</h3>
+                              <p>暨视察母校60周年主题展览举行</p>
+                            </div>
+                            <div class="folio-overview">
+                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-expand"><a href="/images/activity/act_play2.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5" style=" margin-top: 20px;">
+                    <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
+                      <div class="folio-image">
+                        <img class="img-responsive" src="/images/activity/act_play5.jpg" alt="">
+                      </div>
+                      <div class="overlay">
+                        <div class="overlay-content">
+                          <div class="overlay-text">
+                            <div class="folio-info">
+                              <h3>习总书记访问南开</h3>
+                              <p>观览百年南开主题展</p>
+                            </div>
+                            <div class="folio-overview">
+                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-expand"><a href="/images/activity/act_play5.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="portfolio-single-wrap">
+                <div id="portfolio-single">
+                </div>
+              </div><!-- /#portfolio-single-wrap -->
+          </section><!--/#portfolio-->   
+      </div>    
+              <div class="col-md-3" >  <!--右侧筛选-->
+               <h4><i class="fa fa-angle-right"></i> 近期活动</h4>
+                  <div id="container">  <!--活动页-->
+                      <hr class="style-one">
+                      <!--少数活动展示-->
+                      <?= ListView::widget([
+                          'dataProvider' => $dataProvider,
+                          'itemOptions' => ['class' => 'item 201811'],
+                           'itemView' => 'data',
+                      ]) ?>
+                </div>  
+              </div>  
       </div>
-
-       <div style=" text-align: right;">
-        <a class="more-link" href="/act-activity/index" title="显示更多">
-            <span class="moretext">
-                <font style='color: #a0468c;font-family: 微软雅黑;font-size: 15px;'>更多...</font>
-            </span>
-        </a>
+      <div style="height: 20px; text-align: center; ">   
+         <div style=" text-align: right;">
+          <a class="more-link" href="/act-activity/index" title="显示更多">
+              <span class="moretext">
+                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
+              </span>
+          </a>
         </div>
-
-    </div>
-  </section><!--/#services-->
-  <section id="about-us" class="parallax">
+      </div> <!--分两列-->
+  </div>
+</section><!--#services-->
+<section id="about-us" class="parallax">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
@@ -194,12 +251,11 @@ AppAsset::register($this);
             <h2>About us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
         </div>
-        
-      </div>
+      </div>   
     </div>
-  </section><!--/#about-us-->
+  </div>
+</section><!--/#about-us-->
 
   <section id="portfolio">
     <div class="container">

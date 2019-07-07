@@ -1,32 +1,35 @@
 <?php
 namespace backend\controllers;
 
+
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
-
 /**
  * Site controller
  */
 class SiteController extends Controller
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
+
+
+
     public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
+                'only' => ['login','data','index','logout'],
                 'rules' => [
                     [
-                        'actions' => ['login', 'error'],
+                        'actions' => ['login','error'], //除了登录操作可以为游客权限外，其余的视图均需要登录
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index','chart'],
                         'allow' => true,
                         'roles' => ['?'],
                     ],
@@ -42,7 +45,7 @@ class SiteController extends Controller
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function actions()
     {
@@ -50,13 +53,17 @@ class SiteController extends Controller
             'error' => [
                 'class' => 'yii\web\ErrorAction',
             ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ],
         ];
     }
 
     /**
      * Displays homepage.
      *
-     * @return string
+     * @return mixed
      */
     public function actionIndex()
     {
@@ -64,20 +71,22 @@ class SiteController extends Controller
     }
 
     /**
-     * Login action.
+     * Logs in a user.
      *
-     * @return string
+     * @return mixed
      */
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
-            return $this->goHome();
+            return $this->redirect(['index']);//自动登录
         }
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect(['index']);//登录成功
         } else {
+            $model->password = '';
+
             return $this->render('login', [
                 'model' => $model,
             ]);
@@ -85,19 +94,14 @@ class SiteController extends Controller
     }
 
     /**
-     * Logout action.
+     * Logs out the current user.
      *
-     * @return string
+     * @return mixed
      */
     public function actionLogout()
     {
         Yii::$app->user->logout();
 
         return $this->goHome();
-    }
-
-    public function actionChart()
-    {
-        return $this->render('chart');
     }
 }

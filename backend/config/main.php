@@ -24,7 +24,7 @@ return [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
-            'identityClass' => 'common\models\User',
+            'identityClass' => 'common\models\Adminuser',
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
@@ -45,24 +45,24 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        //  "urlManager" => [
-        //     "enablePrettyUrl" => true,
-        //     "enableStrictParsing" => false,
-        //     "showScriptName" => false,
-        //     "suffix" => "",
-        //     "rules" => [        
-        //     "<controller:\w+>/<id:\d+>"=>"<controller>/view",  
-        //     "<controller:\w+>/<action:\w+>"=>"<controller>/<action>"    
-        //     ],
-        // ],
-        /*
+         "urlManager" => [
+            "enablePrettyUrl" => true,
+            "enableStrictParsing" => false,
+            "showScriptName" => false,
+            "suffix" => "",
+            "rules" => [        
+            "<controller:\w+>/<id:\d+>"=>"<controller>/view",  
+            "<controller:\w+>/<action:\w+>"=>"<controller>/<action>"    
+            ],
+        ],
+        
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+        
     ],
     'params' => $params,
 ];

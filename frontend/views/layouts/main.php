@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use frontend\assets\MainAsset;
 
 
-frontend\assets\MainAsset::register($this);
+MainAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -18,11 +18,10 @@ frontend\assets\MainAsset::register($this);
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
   <title>100南开 | Ahri</title>
 
   <link rel="shortcut icon" href="/images/logo1.png"> <!--网站图标--->
+
 <?php $this->head() ?>
 </head><!--/head-->
 
@@ -31,9 +30,12 @@ frontend\assets\MainAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header id="home">
-   <div style="overflow:hidden;">
-        <img src="/images/bg_head.jpg" style="width:100%"> <!--布局最上面的图片，后期可以更换-->
+   <div id="headerImg">
+        <img src="/images/bg_head.jpg" style="width:100%;"> 
    </div>
+
+    
+
 
    <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
       <div class="container" style="background-color: #800080">
@@ -49,10 +51,10 @@ frontend\assets\MainAsset::register($this);
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>
           </a>                    
-       <!--  </div> -->
+        <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
             <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
@@ -88,7 +90,6 @@ frontend\assets\MainAsset::register($this);
       </div>
     </div>
   </footer>
-
 
 <?php $this->endBody() ?>
 </body>

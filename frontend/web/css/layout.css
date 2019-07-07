@@ -1,5 +1,3 @@
-
-
 .navbar-nav li a:hover, 
 .navbar-nav li a:focus {
   outline:none;
@@ -22,14 +20,22 @@ a:hover {
   outline: none
 }
 
+section {
+  padding: 90px 0;
+}
+
+.heading {
+  padding-bottom:90px;
+}
+
 
 .navbar-right li a {
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 600;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .navbar-right li.active a {
@@ -42,7 +48,28 @@ a:hover {
 
 
 
-#footer .footer-bottom, 
-#footer .footer-bottom a  {
-  color: #028fcc;
+#footer {
+  color:#028FCC;
 }
+
+.footer-top {
+  position: relative;
+  padding:30px 0
+}
+
+#footer .footer-bottom {
+  background-color: #fff;
+  padding: 20px 0 10px;
+}
+
+#footer .footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+
+

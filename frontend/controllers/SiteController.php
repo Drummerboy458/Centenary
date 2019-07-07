@@ -2,6 +2,8 @@
 namespace frontend\controllers;
 
 use Yii;
+use frontend\models\ActActivity;
+use frontend\models\ActActivitySearch;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -66,7 +68,16 @@ class SiteController extends Controller
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-            ],
+                'backColor'=>0xffffff,//背景颜色   白底黑字
+                'maxLength' => 4, //最大显示个数
+                'minLength' => 4,//最少显示个数
+                'padding' => 5,//间距
+                'height'=>40,//高度
+                'width' => 130,  //宽度  
+                'foreColor'=>0x000000,     //字体颜色   白底黑字
+                'offset'=>4,        //设置字符偏移量 有效果
+        ],
+
         ];
     }
 
@@ -77,7 +88,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new ActActivitySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('index',['dataProvider' => $dataProvider]);
     }
 
 

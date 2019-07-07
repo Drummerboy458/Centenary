@@ -13,16 +13,21 @@ class MainAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        // 'css/bootstrap.min.css',
+        'css/bootstrap.min.css',
+        'css/font-awesome.min.css',
+        'css/main.css',
+        'css/responsive.css',
         // 'css/animate.min.css',
         // 'css/font-awesome.min.css',
          //'css/lightbox.css',
          'css/layout.css',
+         'css/lww.css',
         // 'css/presets/preset1.css',
         // 'css/responsive.css',
         // 'css/style.css',
     ];
     public $js = [
+        'js/lww.js',
 
     ];
     public $depends = [

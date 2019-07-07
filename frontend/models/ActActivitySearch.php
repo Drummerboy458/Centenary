@@ -41,7 +41,7 @@ class ActActivitySearch extends ActActivity
      */
     public function search($params)
     {
-        $query = ActActivity::find();
+        $query = ActActivity::find()->orderBy('published_at'); //根据发布时间排序
 
         // add conditions that should always apply here
 

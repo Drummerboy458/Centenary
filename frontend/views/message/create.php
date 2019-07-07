@@ -5,16 +5,18 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Message */
 
-$this->title = 'Create Message';
-$this->params['breadcrumbs'][] = ['label' => 'Messages', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = '100|为母校送祝福';
 ?>
-<div class="message-create">
+<div class="row">
+    <div class="col-md-6">
+        <div class="message-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
-
+            <h2>为母校送祝福</h2>
+            <br>
+            <?= $this->render('_form', [
+                'model' => $model,
+            ]) ?>
+            
+        </div>
+    </div>
 </div>

@@ -1,0 +1,69 @@
+hr.style-one{/*渐变*/
+width:100%;
+margin:0 auto;
+border: 0;
+height: 1px;
+background: #800080;
+background-image: linear-gradient(to right, #ddd, #bbb, #100);
+}
+.left {float: left;width:60%;height:500px;}
+.right {float: right; width:40%;height:500px;}
+.item_title{
+    color:#800080;
+    font-size: 16px;
+}
+.item_header{
+    color:black;
+    font-size: 25px;
+}
+ #filters{
+            padding-left:25px;
+}
+#filters .date{            
+    text-align: center;javascript:void(0);
+    float:left;
+    border: 1px solid #e7e7e7;
+}
+#filters .date{
+    width:20%;
+}
+#filters .date-1017{ 
+    width:40%;
+}
+
+#filters .date-active{            
+    background:#fffcea;
+    border:1px solid #a0468c;
+}
+#filters .date-month {
+    font-size: 18px;
+    height: 50px;
+    line-height: 50px;
+    color:#888;
+}
+#filters .date-active .date-month{            
+    color:#a0468c;
+}
+
+#filters .date-month span{
+    font-size: 14px;
+    height: 32px;
+    line-height: 32px;
+}
+#filters .date-year {            
+    background-color: #fafafa;
+    color: #d5d5d5;
+    height: 30px;
+    line-height: 30px;
+    font-size:14px;
+}
+#filters .date-active .date-year {            
+    color:#fff;
+    background-color:#a0468c;
+}
+#container .item{
+    transition: 2s;
+    -moz-transition: 2s; /* Firefox 4 */
+    -webkit-transition: 2s; /* Safari and Chrome */
+    -o-transition: 2s; /* Opera */
+}

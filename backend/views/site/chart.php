@@ -1,19 +1,4 @@
-<?php
-
-/* @var $this \yii\web\View */
-/* @var $content string */
-
-use backend\assets\AppAsset;
-use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
-use common\widgets\Alert;
-
-AppAsset::register($this);
-?>
-<?php $this->beginPage() ?>
-
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -37,15 +22,9 @@ AppAsset::register($this);
     <link rel="stylesheet" href="assets/css/animate.css">
     <!-- Custom styles for this theme -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <!-- Vector Map  -->
-    <link rel="stylesheet" href="assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css">
-    <!-- ToDos  -->
-    <link rel="stylesheet" href="assets/plugins/todo/css/todos.css">
-    <!-- Morris  -->
-    <link rel="stylesheet" href="assets/plugins/morris/css/morris.css">
     <!-- Fonts -->
     <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
     <!-- Feature detection -->
     <script src="assets/js/modernizr-2.6.2.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,11 +32,9 @@ AppAsset::register($this);
     <script src="assets/js/html5shiv.js"></script>
     <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-    <?php $this->head() ?>
 </head>
 
 <body>
-<?php $this->beginBody() ?>
     <section id="container">
         <header id="header">
             <!--logo start-->
@@ -184,19 +161,43 @@ AppAsset::register($this);
                 </ul>
             </div>
         </header>
-        <!--sidebar left start-->
+        <!--sidebar start-->
         <aside class="sidebar">
             <div id="leftside-navigation" class="nano">
                 <ul class="nano-content">
-                    <li class="active">
+                    <li>
                         <a href="index.html"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
                     </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>UI Elements</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                        <ul>
 
+                            <li><a href="ui-alerts-notifications.html">Alerts &amp; Notifications</a>
+                            </li>
+                            <li><a href="ui-panels.html">Panels</a>
+                            </li>
+                            <li><a href="ui-buttons.html">Buttons</a>
+                            </li>
+                            <li><a href="ui-slider-progress.html">Sliders &amp; Progress</a>
+                            </li>
+                            <li><a href="ui-modals-popups.html">Modals &amp; Popups</a>
+                            </li>
+                            <li><a href="ui-icons.html">Icons</a>
+                            </li>
+                            <li><a href="ui-grid.html">Grid</a>
+                            </li>
+                            <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
+                            </li>
+                            <li><a href="ui-nestable-list.html">Nestable Lists</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="sub-menu">
                         <a href="javascript:void(0);"><i class="fa fa-table"></i><span>Tables</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
                             <li><a href="tables-basic.html">Basic Tables</a>
                             </li>
+
                             <li><a href="tables-data.html">Data Tables</a>
                             </li>
                         </ul>
@@ -227,257 +228,139 @@ AppAsset::register($this);
                             </li>
                         </ul>
                     </li>
-
+                    <li class="sub-menu active">
+                        <a href="javascript:void(0);"><i class="fa fa-bar-chart-o"></i><span>Charts</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                        <ul>
+                            <li class="active"><a href="charts-chartjs.html">Chartjs</a>
+                            </li>
+                            <li><a href="charts-morris.html">Morris</a>
+                            </li>
+                            <li><a href="charts-c3.html">C3 Charts</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li class="sub-menu">
-                        <a href="/yii2/Centenary/backend/web/index.php/site/chart"><i class="fa fa-text-height"></i><span>chart</span></a>
+                        <a href="javascript:void(0);"><i class="fa fa-map-marker"></i><span>Maps</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                        <ul>
+                            <li><a href="map-google.html">Google Map</a>
+                            </li>
+                            <li><a href="map-vector.html">Vector Map</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="typography.html"><i class="fa fa-text-height"></i><span>Typography</span></a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:void(0);"><i class="fa fa-file"></i><span>Pages</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                        <ul>
+                            <li><a href="pages-blank.html">Blank Page</a>
+                            </li>
+                            <li><a href="pages-login.html">Login</a>
+                            </li>
+                            <li><a href="pages-sign-up.html">Sign Up</a>
+                            </li>
+                            <li><a href="pages-calendar.html">Calendar</a>
+                            </li>
+                            <li><a href="pages-timeline.html">Timeline</a>
+                            </li>
+                            <li><a href="pages-404.html">404</a>
+                            </li>
+                            <li><a href="pages-500.html">500</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
 
         </aside>
-        <!--sidebar left end-->
+        <!--sidebar end-->
         <!--main content start-->
         <section class="main-content-wrapper">
             <section id="main-content">
-                <!--tiles start-->
                 <div class="row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="dashboard-tile detail tile-red">
-                            <div class="content">
-                                <h1 class="text-left timer" data-from="0" data-to="180" data-speed="2500"></h1>
-                                <p>New Users</p>
-                            </div>
-                            <div class="icon"><i class="fa fa-users"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="dashboard-tile detail tile-turquoise">
-                            <div class="content">
-                                <h1 class="text-left timer" data-from="0" data-to="56" data-speed="2500"></h1>
-                                <p>New Comments</p>
-                            </div>
-                            <div class="icon"><i class="fa fa-comments"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="dashboard-tile detail tile-blue">
-                            <div class="content">
-                                <h1 class="text-left timer" data-from="0" data-to="32" data-speed="2500"></h1>
-                                <p>New Messages</p>
-                            </div>
-                            <div class="icon"><i class="fa fa fa-envelope"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="dashboard-tile detail tile-purple">
-                            <div class="content">
-                                <h1 class="text-left timer" data-to="105" data-speed="2500"></h1>
-                                <p>New Sales</p>
-                            </div>
-                            <div class="icon"><i class="fa fa-bar-chart-o"></i>
-                            </div>
-                        </div>
+                    <div class="col-md-12">
+                        <!--breadcrumbs start -->
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a>
+                            </li>
+                            <li>Charts</li>
+                            <li class="active">Chart.js</li>
+                        </ul>
+                        <!--breadcrumbs end -->
+                        <h1 class="h1">Chart.js</h1>
                     </div>
                 </div>
-                <!--tiles end-->
-                <!--dashboard charts and map start-->
+
+
                 <div class="row">
                     <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Sales for 2014</h3>
+                                <h3 class="panel-title">Doughnut</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <div id="sales-chart" style="height: 250px;"></div>
+                            <div class="panel-body text-center">
+                                <canvas id="doughnut" height="300" width="400"></canvas>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Office locations</h3>
+                                <h3 class="panel-title">Line</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <div class="map" id="map" style="height: 250px;"></div>
+                            <div class="panel-body text-center">
+                                <canvas id="line" height="300" width="450"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--dashboard charts and map end-->
-                <!--ToDo start-->
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">To do list</h3>
+                                <h3 class="panel-title">Bar</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <input id="new-todo" type="text" class="form-control" placeholder="What needs to be done?">
-                                            <section id='main'>
-                                                <ul id='todo-list'></ul>
-                                            </section>
-                                        </div>
-                                        <div class="form-group">
-                                            <button id="todo-enter" class="btn btn-primary pull-right">Submit</button>
-                                            <div id='todo-count'></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Server Status</h3>
-                                        <div class="actions pull-right">
-                                            <i class="fa fa-chevron-down"></i>
-                                            <i class="fa fa-times"></i>
-                                        </div>
-                                    </div>
-                                    <div class="panel-body">
-
-                                        <span class="sublabel">Memory Usage</span>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-info" style="width: 20%">20%</div>
-                                        </div>
-                                        <!-- progress -->
-
-                                        <span class="sublabel">CPU Usage</span>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-default" style="width: 60%">60%</div>
-                                        </div>
-                                        <!-- progress -->
-
-                                        <span class="sublabel">Disk Usage</span>
-                                        <div class="progress progress-striped">
-                                            <div class="progress-bar progress-bar-primary" style="width: 80%">80%</div>
-                                        </div>
-                                        <!-- progress -->
-
-                                    </div>
-                                </div>
-
+                            <div class="panel-body text-center">
+                                <canvas id="bar" height="300" width="400"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-solid-info">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Weather</h3>
+                                <h3 class="panel-title">Polar Area</h3>
                                 <div class="actions pull-right">
                                     <i class="fa fa-chevron-down"></i>
                                     <i class="fa fa-times"></i>
                                 </div>
                             </div>
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3 class="text-center small-thin uppercase">Today</h3>
-                                        <div class="text-center">
-                                            <canvas id="clear-day" width="110" height="110"></canvas>
-                                            <h4>62°C</h4>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3 class="text-center small-thin uppercase">Tonight</h3>
-                                        <div class="text-center">
-                                            <canvas id="partly-cloudy-night" width="110" height="110"></canvas>
-                                            <h4>44°C</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="panel-footer">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Mon</h6>
-                                        <div class="text-center">
-                                            <canvas id="partly-cloudy-day" width="32" height="32"></canvas>
-                                            <span>48°C</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Mon</h6>
-                                        <div class="text-center">
-                                            <canvas id="rain" width="32" height="32"></canvas>
-                                            <span>39°C</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Tue</h6>
-                                        <div class="text-center">
-                                            <canvas id="sleet" width="32" height="32"></canvas>
-                                            <span>32°C</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Wed</h6>
-                                        <div class="text-center">
-                                            <canvas id="snow" width="32" height="32"></canvas>
-                                            <span>28°C</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Thu</h6>
-                                        <div class="text-center">
-                                            <canvas id="wind" width="32" height="32"></canvas>
-                                            <span>40°C</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-2">
-                                        <h6 class="text-center small-thin uppercase">Fri</h6>
-                                        <div class="text-center">
-                                            <canvas id="fog" width="32" height="32"></canvas>
-                                            <span>42°C</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <h4>Browser Summary</h4>
-                                <div id="donut-example"></div>
+                            <div class="panel-body text-center">
+                                <canvas id="polarArea" height="300" width="450"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!--ToDo end-->
+
             </section>
         </section>
         <!--main content end-->
         <!--sidebar right start-->
         <aside class="sidebarRight">
-            <div id="rightside-navigation ">
+            <div id="rightside-navigation">
                 <div class="sidebar-heading"><i class="fa fa-user"></i> Contacts</div>
                 <div class="sidebar-title">online</div>
                 <div class="list-contacts">
@@ -561,51 +444,14 @@ AppAsset::register($this);
         <!--sidebar right end-->
     </section>
     <!--Global JS-->
-    <!-- <script src="assets/js/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/jquery-1.10.2.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/plugins/waypoints/waypoints.min.js"></script>
-    <script src="assets/js/application.js"></script> -->
-    <!--Page Level JS-->
-    <!-- <script src="assets/plugins/countTo/jquery.countTo.js"></script>
-    <script src="assets/plugins/weather/js/skycons.js"></script> -->
-    <!-- FlotCharts  -->
-    <!-- <script src="assets/plugins/flot/js/jquery.flot.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.resize.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.canvas.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.image.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.categories.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.crosshair.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.errorbars.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.fillbetween.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.navigate.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.pie.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.selection.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.stack.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.symbol.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.threshold.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.colorhelpers.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.time.min.js"></script>
-    <script src="assets/plugins/flot/js/jquery.flot.example.js"></script> -->
-    <!-- Morris  -->
-    <script src="assets/plugins/morris/js/morris.min.js"></script>
-    <script src="assets/plugins/morris/js/raphael.2.1.0.min.js"></script>
-    <!-- Vector Map  -->
-    <script src="assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- ToDo List  -->
-    <script src="assets/plugins/todo/js/todos.js"></script>
-    <!--Load these page level functions-->
-    <script>
-    $(document).ready(function() {
-        app.timer();
-        app.map();
-        app.weather();
-        app.morrisPie();
-    });
-    </script>   
+    <script src="assets/js/application.js"></script>
+    <!--Page Leve JS -->
+    <script src="assets/plugins/chartjs/Chart.min.js"></script>
+    <script src="assets/plugins/chartjs/chartjs-demo.js"></script>
 
-<?php $this->endBody() ?>
 </body>
 
 </html>
-<?php $this->endPage() ?>

@@ -11,7 +11,7 @@ use yii\data\ActiveDataProvider;
 $this->title = '活动预览';
 $this->params['breadcrumbs'][] = $this->title;
 
-AppAsset::register($this);
+frontend\assets\AppAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>

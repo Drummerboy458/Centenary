@@ -2,6 +2,8 @@
 namespace frontend\controllers;
 
 use Yii;
+use frontend\models\ActActivity;
+use frontend\models\ActActivitySearch;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
@@ -86,7 +88,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new ActActivitySearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        return $this->render('index',['dataProvider' => $dataProvider]);
     }
 
 

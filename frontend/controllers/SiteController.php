@@ -12,6 +12,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\Message;
 
 /**
  * Site controller
@@ -86,7 +87,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $db = Yii::$app->db;
+        $sql = "select count(*) as num from praise";
+        $command = $db->createCommand($sql);
+        $num = $command->queryOne()['num'];
+
+        $results = Message::getMessages();
+        return $this->render('index', [
+            'messages' => $results,
+            'num' => $num,
+        ]);
     }
 
 

@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle
         'css/presets/preset1.css',
         'css/responsive.css',
         'css/style.css',
+        'layui/css/layui.css',
     ];
     public $js = [
         'js/jquery.js',
@@ -34,6 +35,7 @@ class AppAsset extends AssetBundle
         'js/html5shiv.js',
         'js/main.js',
         'js/respond.min.js',
+        'layui/layui.all.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

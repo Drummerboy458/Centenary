@@ -9,6 +9,7 @@ use frontend\models\MessageSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\Pagination;
 /**
  * MessageController implements the CRUD actions for Message model.
  */
@@ -42,6 +43,8 @@ class MessageController extends Controller
         $form = new MessageForm();
         $model = new Message();
 
+        $results = Message::getMessages();
+
         if ($form->load(Yii::$app->request->post()))
         {
             //输入验证 包括验证码
@@ -66,7 +69,23 @@ class MessageController extends Controller
 
         return $this->render('create', [
             'model' => $form,
+            'messages' => $results,
         ]);
     }
-    
+
+    public function actionIndex(){
+
+
+        $query = Message::find()->where(['status' => 1])->orderby(['created_at' => SORT_DESC]);
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize'=>6]);
+        $models = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+        return $this->render('index', [
+            'messages' => $models,
+            'pages' => $pages,
+        ]);
+    }
+
 }

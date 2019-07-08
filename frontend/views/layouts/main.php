@@ -23,6 +23,8 @@ MainAsset::register($this);
   <link rel="shortcut icon" href="/images/logo1.png"> <!--网站图标--->
 
 <?php $this->head() ?>
+
+
 </head><!--/head-->
 
 <body >

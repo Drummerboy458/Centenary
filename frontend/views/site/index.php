@@ -1,5 +1,7 @@
 <?php
 use yii\helpers\Html;
+use frontend\assets\AppAsset;
+use frontend\models\Message;
 use yii\helpers\HtmlPurifier;
 use frontend\assets\MainAsset;
 use yii\widgets\ListView;
@@ -9,7 +11,6 @@ use yii\data\ActiveDataProvider;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = '南开大学迎来百年校庆！';
-$this->params['breadcrumbs'][] = $this->title;
 
 frontend\assets\AppAsset::register($this);
 
@@ -30,10 +31,6 @@ frontend\assets\AppAsset::register($this);
   <meta name="author" content="">
   <title>100南开 | Ahri</title>
 
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
   <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="/images/logo1.png">
@@ -566,7 +563,7 @@ frontend\assets\AppAsset::register($this);
           </div>
         <div class="col-md-6">
 
-            <article class="card" style="margin: 0 auto;">
+            <article class="card" style="float:right;margin:0 10px 0 0;">
               <header class="card__thumb">
                 <img src="/images/4.jpg"/>
               </header>
@@ -579,8 +576,8 @@ frontend\assets\AppAsset::register($this);
                   <p>Nankai university, born in 1919, is about to usher in the historic moment of its 100th anniversary. On the occasion of the centennial
                     anniversary, do you have any words to say to your Alma master.
                   </p>
-                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?> target="_blank">
-                    <button style="background-color:#800080;border:none;color:#fff;padding:6px 10px;position:fixed;right:10px;border-radius:5px;bottom:-15px;">为母校送祝福</button>
+                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/index'); ?>>
+                    <button style="background-color:#800080;border:none;color:#fff;padding:6px 10px;border-radius:5px;float:right;margin:0 10px 0px 0;">为母校送祝福</button>
                   </a>
                 </div>
               </div>
@@ -588,9 +585,83 @@ frontend\assets\AppAsset::register($this);
         </div>
 
         <div class="col-md-6">
+          <ul class="layui-timeline" style="padding:0 20% 0 0;margin:0 0 0 10px">
+          <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis" style="color:#800080;">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title" style="color:#800080;">@<?php echo $messages[0]['identity'],' ',$messages[0]['author'], ' ：' ?></h3>
+                <p>
+                <?php echo $messages[0]['content']?>
+                </p>
+                </div>
+            </li>
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis" style="color:#800080;">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title" style="color:#800080;">@<?php echo $messages[1]['identity'],' ',$messages[1]['author'], ' ：' ?></h3>
+                <p><?php echo $messages[1]['content']?></p>
+                </div>
+            </li>
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis" style="color:#800080;">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title" style="color:#800080;">@<?php echo $messages[2]['identity'],' ',$messages[2]['author'], ' ：' ?></h3>
+                <p>
+                <?php echo $messages[2]['content']?>
+                </p>
+                </div>
+            </li>
+
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis" style="color:#800080;">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title" style="color:#800080;">@<?php echo $messages[3]['identity'],' ',$messages[3]['author'], ' ：' ?></h3>
+                <p>
+                <?php echo $messages[3]['content']?>
+                </p>
+                </div>
+            </li>
+
+            <li class="layui-timeline-item">
+                <i class="layui-icon layui-timeline-axis" style="color:#800080;background-color:#800080;">&#xe63f;</i>
+                <div class="layui-timeline-content layui-text">
+                <div class="layui-timeline-title"><a href=<?php echo Yii::$app->urlManager->createUrl('message/index'); ?> target="_blank" style="color:#800080;bold;font-size:16px;"><b>更多...</b></a></div>
+                </div>
+            </li>
+          </ul>
         
         </div>
       </div>
+
+      <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 10% 0 10%;">
+        <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
+      </div>
+
+      <script>
+        //注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
+        layui.use('element', function(){
+          var element = layui.element;
+        });
+      </script>
+
+      <script type="text/javascript">
+        document.querySelector('#praise').onclick = function () {
+        document.getElementsByClassName("layui-progress-text")[0].innerText="30%";
+        document.getElementsByClassName("layui-progress-bar layui-bg-blue")[0].style.width="30%";
+
+        // var httpRequest = new XMLHttpRequest();
+        //   httpRequest.open('POST', 'http://148.70.181.82/user/send', true);
+        //   httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        //   httpRequest.send('phone:17822001791');
+
+        //   httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+        //       if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+        //           var json = httpRequest.responseText;//获取到服务端返回的数据
+        //           console.log(json['success']);
+        //   }
+        // };
+        }
+      </script>
 
   </section>
   

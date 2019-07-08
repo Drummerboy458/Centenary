@@ -6,6 +6,11 @@ use yii\helpers\HtmlPurifier;
 use frontend\assets\MainAsset;
 use yii\widgets\ListView;
 use yii\data\ActiveDataProvider;
+/* @var $this yii\web\View */
+/* @var $searchModel frontend\models\ActActivitySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = '南开大学迎来百年校庆！';
 
 frontend\assets\AppAsset::register($this);
 
@@ -43,41 +48,40 @@ frontend\assets\AppAsset::register($this);
 <?php $this->beginBody() ?>
 
   <!--.preloader-->
-  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+  <!-- <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div> -->
   <!--/.preloader-->
 
   <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="item active" style="background-image: url(/images/slider/1.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig"><b>渤海之滨</b> <span><b>白河之津</b></span></h1>
-            <!-- <p class="animated fadeInRightBig">NK</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
-          </div>
+        <div class="carousel-inner">
+            <div class="item active" style="background-image: url(/images/slider/1.jpg)">
+              <div class="caption">
+                <h1 class="animated fadeInLeftBig"><b>渤海之滨</b> <span><b>白河之津</b></span></h1>
+                <!-- <p class="animated fadeInRightBig">NK</p>
+                <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
+              </div>
+            </div>
+            <div class="item" style="background-image: url(/images/slider/2.jpg)">
+                <div class="caption">
+                  <h1 class="animated fadeInLeftBig"><b>南开,</b><span><b>让世界听见你</b></span></h1>
+                 <!--  <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
+                  <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
+                </div>
+            </div>
+            <div class="item" style="background-image: url(/images/slider/3.jpg)">
+              <div class="caption">
+                <h1 class="animated fadeInLeftBig"><b>允公允能</b> <span><b>日新月异</b></span></h1>
+                <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
+                <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
+              </div>
+            </div>
         </div>
-        <div class="item" style="background-image: url(/images/slider/2.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig"><b>南开,</b><span><b>让世界听见你</b></span></h1>
-           <!--  <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/images/slider/3.jpg)">
-          <div class="caption">
-            <h1 class="animated fadeInLeftBig"><b>允公允能</b> <span><b>日新月异</b></span></h1>
-            <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
-          </div>
-        </div>
-      </div>
-      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
-
-      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
-
+        <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+        <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+        <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
     </div><!--/#home-slider-->
-    <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
+    
+    <div class="main-nav" style="background-color: #800080; height:50px; width: auto;">
       <div class="container" style="background-color: #800080">
         <!-- <div class="navbar-header" style="width: 100%"> -->
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -91,11 +95,11 @@ frontend\assets\AppAsset::register($this);
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>
           </a>                    
-       <!--  </div> -->
+        <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>

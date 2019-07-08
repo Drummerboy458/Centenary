@@ -30,7 +30,7 @@
                 'items' => [
                    
                    
-                    // ['label' => '数据管理', 'icon' => ' fa-database', 'url' => ['/data-series/index']],
+                    ['label' => '流量情况', 'icon' => ' fa-database', 'url' => ['../views/site/chart.php']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => '权限管理',

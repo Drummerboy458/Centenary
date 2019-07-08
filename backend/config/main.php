@@ -14,7 +14,8 @@ return [
     'bootstrap' => ['log'],
     'modules' => [
         "admin" => [        
-        "class" => "mdm\admin\Module",   
+        "class" => "mdm\admin\Module",
+        "layout" => "left",   
         ],
     ],
     "aliases" => [    

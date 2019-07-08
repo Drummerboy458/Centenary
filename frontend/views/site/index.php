@@ -46,7 +46,7 @@ frontend\assets\AppAsset::register($this);
 
 <body >
 <?php $this->beginBody() ?>
-
+<div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--.preloader-->
   <!-- <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div> -->
   <!--/.preloader-->

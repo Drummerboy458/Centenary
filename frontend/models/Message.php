@@ -59,4 +59,15 @@ class Message extends \yii\db\ActiveRecord
             'updated_at' => 'Updated At',
         ];
     }
+
+
+    public function getMessages(){
+        $db = Yii::$app->db;
+        $sql = "select author, identity, content from message where status=1 order by created_at desc limit 0, 4";
+        $command = $db->createCommand($sql);
+        $result = $command->queryAll();
+        return $result;
+    }
+
+    
 }

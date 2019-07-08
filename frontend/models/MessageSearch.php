@@ -51,22 +51,8 @@ class MessageSearch extends Message
         $this->load($params);
 
         if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
             return $dataProvider;
         }
-
-        // grid filtering conditions
-        $query->andFilterWhere([
-            'id' => $this->id,
-            'status' => $this->status,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-        ]);
-
-        $query->andFilterWhere(['like', 'author', $this->author])
-            ->andFilterWhere(['like', 'identity', $this->identity])
-            ->andFilterWhere(['like', 'content', $this->content]);
 
         return $dataProvider;
     }

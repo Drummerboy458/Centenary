@@ -14,6 +14,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use frontend\models\Message;
 
 /**
  * Site controller
@@ -88,9 +89,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $db = Yii::$app->db;
+        $sql = "select count(*) as num from praise";
+        $command = $db->createCommand($sql);
+        $num = $command->queryOne()['num'];
+
+        $results = Message::getMessages();
+
         $searchModel = new ActActivitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('index',['dataProvider' => $dataProvider]);
+
+        return $this->render('index', [
+            'messages' => $results,
+            'num' => $num,
+            'dataProvider' => $dataProvider
+        ]);
+
+
     }
 
 

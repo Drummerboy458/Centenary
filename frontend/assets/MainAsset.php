@@ -15,9 +15,8 @@ class MainAsset extends AssetBundle
         'css/site.css',
         'css/bootstrap.min.css',
         'css/font-awesome.min.css',
-        'css/layout.css',
-         //'css/main.css',
         'css/responsive.css',
+        'css/layout.css',
         'css/lww.css',
     ];
     public $js = [

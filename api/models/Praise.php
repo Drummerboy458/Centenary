@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\models;
+namespace api\models;
 
 use Yii;
 
@@ -26,10 +26,9 @@ class Praise extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['occured_at', 'ip'], 'required'],
-            [['occured_at'], 'safe'],
+            ['ip', 'required','message'=>'ip值缺失'],
             [['ip'], 'string', 'max' => 32],
-            [['occured_at', 'ip'], 'unique', 'targetAttribute' => ['occured_at', 'ip']],
+            [['occured_at', 'ip'], 'unique', 'targetAttribute' => ['occured_at', 'ip'], 'message'=>'数据重复'],
         ];
     }
 
@@ -39,7 +38,7 @@ class Praise extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'occured_at' => 'Occured At',
+            'occured_at' => '时间',
             'ip' => 'Ip',
         ];
     }

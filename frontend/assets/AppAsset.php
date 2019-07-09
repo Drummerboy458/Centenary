@@ -22,7 +22,6 @@ class AppAsset extends AssetBundle
         'css/responsive.css',
         'css/style.css',
         'layui/css/layui.css',
-        'css/activity.timeline.css',
     ];
     public $js = [
         'js/jquery.js',

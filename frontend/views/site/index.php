@@ -46,7 +46,7 @@ frontend\assets\AppAsset::register($this);
 
 <body >
 <?php $this->beginBody() ?>
-
+<div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--.preloader-->
   <!-- <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div> -->
   <!--/.preloader-->
@@ -572,11 +572,11 @@ frontend\assets\AppAsset::register($this);
   </section>
 
   <section id="message">
-      <div class="row" >
+    <div class="row" >
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-            <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
-            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
-          </div>
+        <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+        <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+      </div>
         <div class="col-md-6">
 
             <article class="card" style="float:right;margin:0 10px 0 0;">
@@ -592,7 +592,7 @@ frontend\assets\AppAsset::register($this);
                   <p>Nankai university, born in 1919, is about to usher in the historic moment of its 100th anniversary. On the occasion of the centennial
                     anniversary, do you have any words to say to your Alma master.
                   </p>
-                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/index'); ?>>
+                  <a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?>>
                     <button style="background-color:#800080;border:none;color:#fff;padding:6px 10px;border-radius:5px;float:right;margin:0 10px 0px 0;">为母校送祝福</button>
                   </a>
                 </div>
@@ -649,35 +649,40 @@ frontend\assets\AppAsset::register($this);
         </div>
       </div>
 
-      <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 10% 0 10%;">
-        <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
+
+      <div class="row" style="margin-top:100px;">
+        <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
+          <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
+          <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 0 0 0;">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
+          </div>
+
+          <button href="#" id="praise" class="layui-btn layui-btn-primary" 
+                  style="display:block;margin:0 auto;border:none;color:#fff;font-size:16px;
+                        background-color:#800080;border-radius:25%;margin-top:20px;">
+            点赞
+          </button>
+        </div>
       </div>
 
-      <script>
-        //注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
-        layui.use('element', function(){
-          var element = layui.element;
-        });
-      </script>
+
+
+
 
       <script type="text/javascript">
         document.querySelector('#praise').onclick = function () {
-        document.getElementsByClassName("layui-progress-text")[0].innerText="30%";
-        document.getElementsByClassName("layui-progress-bar layui-bg-blue")[0].style.width="30%";
-
-        // var httpRequest = new XMLHttpRequest();
-        //   httpRequest.open('POST', 'http://148.70.181.82/user/send', true);
-        //   httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        //   httpRequest.send('phone:17822001791');
-
-        //   httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
-        //       if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
-        //           var json = httpRequest.responseText;//获取到服务端返回的数据
-        //           console.log(json['success']);
-        //   }
-        // };
+          $.post("http://admins.com/praise/add").done(
+            function(data){
+              console.log(String(100*data.data/100)+"%");
+              document.getElementsByClassName("layui-progress-text")[0].innerText=String(100*data.data/100)+"%";
+              document.getElementsByClassName("layui-progress-bar layui-bg-blue")[0].style.width=String(100*data.data/100)+"%";      
+            }
+          );
         }
       </script>
+
+      
 
   </section>
   

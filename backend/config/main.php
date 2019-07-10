@@ -1,34 +1,41 @@
 <?php
 $params = array_merge(
-    require(__DIR__ . '/../../common/config/params.php'),
-    require(__DIR__ . '/../../common/config/params-local.php'),
-    require(__DIR__ . '/params.php'),
-    require(__DIR__ . '/params-local.php')
+    require __DIR__ . '/../../common/config/params.php',
+    require __DIR__ . '/../../common/config/params-local.php',
+    require __DIR__ . '/params.php',
+    require __DIR__ . '/params-local.php'
 );
 
 return [
     'id' => 'app-backend',
+    'name' => 'Ahri',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-     'modules' => [
+    'modules' => [
         "admin" => [        
-        "class" => "mdm\admin\Module",   
+        "class" => "mdm\admin\Module",
+        "layout" => "left",   
         ],
     ],
     "aliases" => [    
     "@mdm/admin" => "@vendor/mdmsoft/yii2-admin",
     ],
     'components' => [
+
+        "authManager" => [        
+        "class" => 'yii\rbac\DbManager', 
+        "defaultRoles" => ["guest"],
+        ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
             'identityClass' => 'common\models\Adminuser',
             'enableAutoLogin' => true,
+            'loginUrl' => array('/site/login'),
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
-
         'session' => [
             // this is the name of the session cookie used for login on the backend
             'name' => 'advanced-backend',
@@ -45,7 +52,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-         "urlManager" => [
+        "urlManager" => [
             "enablePrettyUrl" => true,
             "enableStrictParsing" => false,
             "showScriptName" => false,
@@ -55,14 +62,13 @@ return [
             "<controller:\w+>/<action:\w+>"=>"<controller>/<action>"    
             ],
         ],
-        
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-            ],
-        ],
-        
     ],
+    'as access' => [
+         'class' => 'mdm\admin\components\AccessControl',
+         'allowActions' => [
+                 '*',
+             ], // 后面对权限完善了以后，把*改回来
+        ],
     'params' => $params,
+    'defaultRoute' => 'site/login'
 ];

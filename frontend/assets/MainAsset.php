@@ -15,7 +15,6 @@ class MainAsset extends AssetBundle
         'css/site.css',
         'css/bootstrap.min.css',
         'css/font-awesome.min.css',
-        'css/main.css',
         'css/responsive.css',
         // 'css/animate.min.css',
         // 'css/font-awesome.min.css',
@@ -32,9 +31,12 @@ class MainAsset extends AssetBundle
     ];
     public $js = [
         'js/lww.js',
+        'js/respond.min.js',
+        'js/jquery.js',
+        'js/bootstrap.min.js',
+        'js/mainforlayout.js',
         'js/jquery.min.js',
         'js/jquery.qqFace.js',
-
     ];
     public $depends = [
         'yii\web\YiiAsset',

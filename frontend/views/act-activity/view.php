@@ -13,14 +13,14 @@ $this->params['breadcrumbs'][] = $this->title;
  
 <div class="act-activity-view">
 
-    <h1 style="text-align: center;"><?= Html::encode($this->title) ?></h1>
+    <h1 style="text-align: center; color: black;font-weight: bold;font-size: 35px;"><?= Html::encode($this->title) ?></h1>
     <div style="margin-left: 900px;">
-        <h4> 发布于：<?= Html::encode($model->published_at) ?></h4>
+        <h4 style="color: black;font-weight: bold;font-size: 16px;"> 发布时间：<?= Html::encode($model->published_at) ?></h4>
     </div>
     <?= DetailView::widget([
         'model' => $model,
         'template'=>'<tr><th>{label}</th><td style = "padding: 25px;25px;">{value}</td></tr>',
-        'options' => ['style' => 'background-color: rgb(210, 250, 227); line-height: 60px;border-radius: 20px;'],
+        'options' => ['style' => 'background-color: rgb(210, 250, 227); line-height: 60px;border-radius: 20px;margin-top:10px;'],
         'attributes' => [
             'content:ntext',
         ],
@@ -55,15 +55,15 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
 
                             <div class="form-group" style="float: right;padding-top: 28px; padding-right: 30px;width: ">
-                            <?= Html::submitButton('发送', ['class' => 'btn btn-success','style' => 'background-image : linear-gradient(to bottom, #6280c4, #c782dc);height:30px;;padding-top:5px;']) ?>
+                            <?= Html::submitButton('发表', ['class' => 'btn btn-success','style' => 'background-image : linear-gradient(to bottom, #6280c4, #c782dc);height:30px;;padding-top:5px;']) ?>
                             </div> 
                             <?php ActiveForm::end(); ?>
 
                          </div>
                          <div>
                                 
-                                <input style="padding-left: 18px; margin-top: 145px;margin-right: 100px;  height: 30px; background:none; color:purple; font-size: 14px;font-weight: normal; border: none;" type="button" class="sub_btn" value="预览">
-                                <span class="emotion" style="padding-left: 700px; color: purple; font-weight: bold;">表情  |</span>
+                                <input style="padding: 5px; margin-top: 205px;margin-right: 95px;  height: 30px; background:none; color:purple; font-size: 14px;font-weight: normal; border: none;" type="button" class="sub_btn" value="预览">
+                                <span class="emotion" style="padding-left: 720px;margin-right: 60px; color: purple; font-weight: bold;">表情  |</span>
                         </div>
                     
                     </div>

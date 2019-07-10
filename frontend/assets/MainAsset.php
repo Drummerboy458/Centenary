@@ -22,7 +22,7 @@ class MainAsset extends AssetBundle
         'css/layout.css',
         'css/lww.css',
         'css/comment.css',
-        'css/comment.min.css',
+        //'css/comment.min.css',
         //'css/comment_form.css',
         'css/comment_style.css',
         // 'css/presets/preset1.css',

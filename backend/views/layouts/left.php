@@ -29,8 +29,8 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                    
-                   
-                    ['label' => '流量情况', 'icon' => ' fa-database', 'url' => ['../views/site/chart.php']],
+                    ['label' => '留言管理', 'icon' => ' fa-database', 'url' => ['/message/index']],
+                    ['label' => '流量情况', 'icon' => ' fa-database', 'url' => ['/visitCount/index']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => '权限管理',

@@ -1,10 +1,10 @@
 <?php
 
 // 加入我们需要的类EchartsAsset跟EchartsPHP
-use backend\assets\EchartsAsset;
+//use backend\assets\EchartsAsset;
 use Hisune\EchartsPHP\ECharts;
 
-$asset=EchartsAsset::register($this);
+//$asset=EchartsAsset::register($this);
 $chart = new ECharts($asset->baseUrl);
 $chart->tooltip->show = true;
 $chart->legend->data = array('销量');

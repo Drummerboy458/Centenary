@@ -90,7 +90,7 @@ frontend\assets\AppAsset::register($this);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
+          <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>
@@ -99,7 +99,7 @@ frontend\assets\AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
@@ -118,9 +118,10 @@ frontend\assets\AppAsset::register($this);
             <h2>校庆活动</h2>
           </div>
       </div>
+       <hr>
       <div class="row"> <!--两列-->
-        <div class="col-md-9" id="container">  <!--活动页-->
-          <section id="portfolio">
+        <div class="col-md-8" id="container">  <!--活动页-->
+          <section id="portfolio" style="padding: 45px 0;">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-5" style="">
@@ -216,27 +217,42 @@ frontend\assets\AppAsset::register($this);
           </section><!--/#portfolio-->   
       </div>    
               <div class="col-md-3" >  <!--右侧筛选-->
-               <h4><i class="fa fa-angle-right"></i> 近期活动</h4>
-                  <div id="container">  <!--活动页-->
-                      <hr class="style-one">
-                      <!--少数活动展示-->
-                      <?= ListView::widget([
-                          'dataProvider' => $dataProvider,
-                          'itemOptions' => ['class' => 'item 201811'],
-                           'itemView' => 'data',
-                      ]) ?>
-                </div>  
+               <h3><i class="fa fa-angle-right"></i> 近期活动</h4>
+                  <div id="container" >  <!--活动页-->
+                      <hr class="style-one" style="opacity: 0">
+                       <div style="background-color: rgb(247,247,247); border-radius: 30px;">
+                        <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=3'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">1. <?php echo $activities[0]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=4'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">2. <?php echo $activities[1]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=8'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">3. <?php echo $activities[2]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=5'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">4. <?php echo $activities[3]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=1'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">5. <?php echo $activities[4]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=10'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;">6. <?php echo $activities[5]['title']?> </p>
+                        </a>
+                        </div>
+
+                        <div style="height: 10px; padding-top: 50px; text-align: center; ">   
+                         <div style=" text-align: right;">
+                          <a class="more-link" href="/act-activity/index" title="显示更多">
+                              <span class="moretext">
+                                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
+                              </span>
+                          </a>
+                        </div>
+                      </div> <!--分两列-->
+                  </div>  
               </div>  
       </div>
-      <div style="height: 20px; text-align: center; ">   
-         <div style=" text-align: right;">
-          <a class="more-link" href="/act-activity/index" title="显示更多">
-              <span class="moretext">
-                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
-              </span>
-          </a>
-        </div>
-      </div> <!--分两列-->
   </div>
 </section><!--#services-->
 <section id="about-us" class="parallax">
@@ -556,11 +572,11 @@ frontend\assets\AppAsset::register($this);
   </section>
 
   <section id="message">
-      <div class="row" >
+    <div class="row" >
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-            <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
-            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
-          </div>
+        <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+        <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+      </div>
         <div class="col-md-6">
 
             <article class="card" style="float:right;margin:0 10px 0 0;">
@@ -633,35 +649,40 @@ frontend\assets\AppAsset::register($this);
         </div>
       </div>
 
-      <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 10% 0 10%;">
-        <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
+
+      <div class="row" style="margin-top:100px;">
+        <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
+          <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
+          <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+          <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 0 0 0;">
+            <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
+          </div>
+
+          <button href="#" id="praise" class="layui-btn layui-btn-primary" 
+                  style="display:block;margin:0 auto;border:none;color:#fff;font-size:16px;
+                        background-color:#800080;border-radius:25%;margin-top:20px;">
+            点赞
+          </button>
+        </div>
       </div>
 
-      <script>
-        //注意进度条依赖 element 模块，否则无法进行正常渲染和功能性操作
-        layui.use('element', function(){
-          var element = layui.element;
-        });
-      </script>
+
+
+
 
       <script type="text/javascript">
         document.querySelector('#praise').onclick = function () {
-        document.getElementsByClassName("layui-progress-text")[0].innerText="30%";
-        document.getElementsByClassName("layui-progress-bar layui-bg-blue")[0].style.width="30%";
-
-        // var httpRequest = new XMLHttpRequest();
-        //   httpRequest.open('POST', 'http://148.70.181.82/user/send', true);
-        //   httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        //   httpRequest.send('phone:17822001791');
-
-        //   httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
-        //       if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
-        //           var json = httpRequest.responseText;//获取到服务端返回的数据
-        //           console.log(json['success']);
-        //   }
-        // };
+          $.post("http://admins.com/praise/add").done(
+            function(data){
+              console.log(String(100*data.data/100)+"%");
+              document.getElementsByClassName("layui-progress-text")[0].innerText=String(100*data.data/100)+"%";
+              document.getElementsByClassName("layui-progress-bar layui-bg-blue")[0].style.width=String(100*data.data/100)+"%";      
+            }
+          );
         }
       </script>
+
+      
 
   </section>
   

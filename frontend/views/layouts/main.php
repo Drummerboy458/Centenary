@@ -21,7 +21,6 @@ MainAsset::register($this);
   <title>100南开 | Ahri</title>
 
   <link rel="shortcut icon" href="/images/logo1.png"> <!--网站图标--->
-
 <?php $this->head() ?>
 
 
@@ -36,9 +35,6 @@ MainAsset::register($this);
         <img src="/images/bg_head.jpg" style="width:100%;"> 
    </div>
 
-    
-
-
    <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
       <div class="container" style="background-color: #800080">
         <!-- <div class="navbar-header" style="width: 100%"> -->
@@ -48,7 +44,7 @@ MainAsset::register($this);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
+          <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>

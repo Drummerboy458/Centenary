@@ -59,11 +59,6 @@ class MessageController extends Controller
                     //返回主页
                     return $this->redirect(['site/index']);
                 }
-                else
-                {
-                    echo 'A';
-                    return;
-                }
             }
         }
 

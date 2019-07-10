@@ -99,7 +99,7 @@ frontend\assets\AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
@@ -118,9 +118,10 @@ frontend\assets\AppAsset::register($this);
             <h2>校庆活动</h2>
           </div>
       </div>
+       <hr>
       <div class="row"> <!--两列-->
-        <div class="col-md-9" id="container">  <!--活动页-->
-          <section id="portfolio">
+        <div class="col-md-8" id="container">  <!--活动页-->
+          <section id="portfolio" style="padding: 45px 0;">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-5" style="">
@@ -216,27 +217,42 @@ frontend\assets\AppAsset::register($this);
           </section><!--/#portfolio-->   
       </div>    
               <div class="col-md-3" >  <!--右侧筛选-->
-               <h4><i class="fa fa-angle-right"></i> 近期活动</h4>
-                  <div id="container">  <!--活动页-->
-                      <hr class="style-one">
-                      <!--少数活动展示-->
-                      <?= ListView::widget([
-                          'dataProvider' => $dataProvider,
-                          'itemOptions' => ['class' => 'item 201811'],
-                           'itemView' => 'data',
-                      ]) ?>
-                </div>  
+               <h3><i class="fa fa-angle-right"></i> 近期活动</h4>
+                  <div id="container" >  <!--活动页-->
+                      <hr class="style-one" style="opacity: 0">
+                       <div style="background-color: rgb(247,247,247); border-radius: 30px;">
+                        <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=3'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">1. <?php echo $activities[0]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=4'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">2. <?php echo $activities[1]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=8'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">3. <?php echo $activities[2]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=5'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">4. <?php echo $activities[3]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=1'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">5. <?php echo $activities[4]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=10'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;">6. <?php echo $activities[5]['title']?> </p>
+                        </a>
+                        </div>
+
+                        <div style="height: 10px; padding-top: 50px; text-align: center; ">   
+                         <div style=" text-align: right;">
+                          <a class="more-link" href="/act-activity/index" title="显示更多">
+                              <span class="moretext">
+                                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
+                              </span>
+                          </a>
+                        </div>
+                      </div> <!--分两列-->
+                  </div>  
               </div>  
       </div>
-      <div style="height: 20px; text-align: center; ">   
-         <div style=" text-align: right;">
-          <a class="more-link" href="/act-activity/index" title="显示更多">
-              <span class="moretext">
-                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
-              </span>
-          </a>
-        </div>
-      </div> <!--分两列-->
   </div>
 </section><!--#services-->
 <section id="about-us" class="parallax">

@@ -5,9 +5,13 @@ namespace frontend\controllers;
 use Yii;
 use frontend\models\ActActivity;
 use frontend\models\ActActivitySearch;
+use frontend\models\ActComment;
+use frontend\models\ActCommentForm;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\data\Pagination;
+use yii\web\BadRequestHttpException;
 
 /**
  * ActActivityController implements the CRUD actions for ActActivity model.
@@ -51,8 +55,43 @@ class ActActivityController extends Controller
      */
     public function actionView($id)
     {
+
+        $query = ActComment::find()->where(['status' => 1])->orderby(['created_at' => SORT_DESC]);
+        $countQuery = clone $query;
+        $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize'=>4]);
+        $results = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+
+        $comment = new ActComment();
+        $form = new ActCommentForm();
+
+        if ($form->load(Yii::$app->request->post()))
+        {
+            //输入验证 包括验证码
+            if ($form->validate()) {
+                //验证完成 获取需要存储的信息
+
+                $comment->author=$form->author;
+                $comment->identity=$form->identity;
+                $comment->content=$form->content;
+                $comment->activity_id=$id;
+
+                if($comment->save()) {
+                   //do nothing
+                }
+                else
+                {
+                    var_dump($comment->getErrors());//输出错误信息
+                }
+            }
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'comment'=> $form,
+            'comments' => $results,
+            'pages' => $pages,
+            'totalCount' => $countQuery->count(),
         ]);
     }
 

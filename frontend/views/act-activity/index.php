@@ -32,11 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?=Html::tag('h1',Html::encode($this->title),['class' => 'item_header'] )?>
                 <br>
                 <hr class="style-one">
+                <br>
                 <?= ListView::widget([
+                    'summary'=>'', 
                     'dataProvider' => $dataProvider,
-                    // 'itemOptions' => [
-                    //     'class' => 'item 201811',
-                    //     ],
                     'itemView' => 'data',
                 ]) ?>
             </div>    

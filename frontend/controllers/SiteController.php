@@ -99,8 +99,12 @@ class SiteController extends Controller
         $searchModel = new ActActivitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+        //选择近期的活动进行展示
+        $activities = ActActivity::getActivities();
+
         return $this->render('index', [
             'messages' => $results,
+            'activities' =>$activities,
             'num' => $num,
             'dataProvider' => $dataProvider
         ]);

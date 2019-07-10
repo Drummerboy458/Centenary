@@ -20,14 +20,20 @@ class MainAsset extends AssetBundle
         // 'css/animate.min.css',
         // 'css/font-awesome.min.css',
          //'css/lightbox.css',
-         'css/layout.css',
-         'css/lww.css',
+        'css/layout.css',
+        'css/lww.css',
+        'css/comment.css',
+        'css/comment.min.css',
+        //'css/comment_form.css',
+        'css/comment_style.css',
         // 'css/presets/preset1.css',
         // 'css/responsive.css',
         // 'css/style.css',
     ];
     public $js = [
         'js/lww.js',
+        'js/jquery.min.js',
+        'js/jquery.qqFace.js',
 
     ];
     public $depends = [

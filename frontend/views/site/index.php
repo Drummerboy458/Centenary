@@ -90,7 +90,7 @@ frontend\assets\AppAsset::register($this);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
+          <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>

@@ -22,8 +22,7 @@
 
             $(document).ready(function () {
                 filter();
-});             
-
+});   
 $(function(){
 
     $('.emotion').qqFace({

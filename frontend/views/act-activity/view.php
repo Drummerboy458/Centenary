@@ -19,7 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <?= DetailView::widget([
         'model' => $model,
-        'options' => ['style' => 'background-color: rgb(210, 250, 227); line-height: 60px;'],
+        'template'=>'<tr><th>{label}</th><td style = "padding: 25px;25px;">{value}</td></tr>',
+        'options' => ['style' => 'background-color: rgb(210, 250, 227); line-height: 60px;border-radius: 20px;'],
         'attributes' => [
             'content:ntext',
         ],
@@ -61,7 +62,7 @@ $this->params['breadcrumbs'][] = $this->title;
                          </div>
                          <div>
                                 
-                                <input style="padding-left: 18px; margin-top: 160px;margin-right: 100px;  height: 30px; background:none; color:purple; font-size: 14px;font-weight: normal; border: none;" type="button" class="sub_btn" value="预览">
+                                <input style="padding-left: 18px; margin-top: 145px;margin-right: 100px;  height: 30px; background:none; color:purple; font-size: 14px;font-weight: normal; border: none;" type="button" class="sub_btn" value="预览">
                                 <span class="emotion" style="padding-left: 700px; color: purple; font-weight: bold;">表情  |</span>
                         </div>
                     
@@ -75,7 +76,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
         <?
         $count = count($comments);
-        echo "<p style = \"color: purple; font-size: 15px;\"> 共计 ",$totalCount,"条评论 </p>";
+        if ($totalCount == 0)
+            echo "<div class = \"vempty\"> 快来做第一个评论的人吧~ </div>";
+        else
+            echo "<p style = \"color: purple; font-size: 15px;\"> 共计 ",$totalCount,"条评论 </p>";
         //echo $comments[4]['author'];
         for($i=0; $i<$count; $i++) {
             echo "

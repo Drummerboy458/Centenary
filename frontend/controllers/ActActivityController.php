@@ -56,7 +56,7 @@ class ActActivityController extends Controller
     public function actionView($id)
     {
 
-        $query = ActComment::find()->where(['status' => 1])->orderby(['created_at' => SORT_DESC]);
+        $query = ActComment::find()->where(['status' => 1,'activity_id' => $id])->orderby(['created_at' => SORT_DESC]);
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount' => $countQuery->count(), 'pageSize'=>4]);
         $results = $query->offset($pages->offset)
@@ -68,7 +68,7 @@ class ActActivityController extends Controller
 
         if ($form->load(Yii::$app->request->post()))
         {
-            //输入验证 包括验证码
+            //输入验证
             if ($form->validate()) {
                 //验证完成 获取需要存储的信息
 
@@ -78,7 +78,8 @@ class ActActivityController extends Controller
                 $comment->activity_id=$id;
 
                 if($comment->save()) {
-                   //do nothing
+                   //刷新
+                      return $this->redirect(['view', 'id' => $id]);
                 }
                 else
                 {

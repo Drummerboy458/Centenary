@@ -16,8 +16,18 @@ class MainAsset extends AssetBundle
         'css/bootstrap.min.css',
         'css/font-awesome.min.css',
         'css/responsive.css',
+        // 'css/animate.min.css',
+        // 'css/font-awesome.min.css',
+         //'css/lightbox.css',
         'css/layout.css',
         'css/lww.css',
+        'css/comment.css',
+        //'css/comment.min.css',
+        //'css/comment_form.css',
+        'css/comment_style.css',
+        // 'css/presets/preset1.css',
+        // 'css/responsive.css',
+        // 'css/style.css',
     ];
     public $js = [
         'js/lww.js',
@@ -25,7 +35,8 @@ class MainAsset extends AssetBundle
         'js/jquery.js',
         'js/bootstrap.min.js',
         'js/mainforlayout.js',
-
+        'js/jquery.min.js',
+        'js/jquery.qqFace.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

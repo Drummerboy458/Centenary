@@ -90,7 +90,7 @@ frontend\assets\AppAsset::register($this);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" style="padding-top: 0px" href="index.php">
+          <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
               <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
             </h1>
@@ -99,7 +99,7 @@ frontend\assets\AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
             <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
@@ -112,16 +112,21 @@ frontend\assets\AppAsset::register($this);
     </div><!--/#main-nav-->
   </header><!--/#home-->
 <section id="services" style="margin-bottom:8%;">
+
+
+  <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:40px;">
+      <h2 style="color:#000;margin:10% 0px 0px 0px;font-size:26px;font-weight: bold;">南开历程</h2>
+      <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+    </div>
+  </div>
+
+
     <div class="container">
-      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="margin-bottom:80px;">
-          <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2 style="color:#000;margin:10% 0px 0px 0px;font-size:26px;font-weight: bold;">校庆活动</h2>
-            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
-          </div>
-      </div>
+      
       <div class="row"> <!--两列-->
-        <div class="col-md-9" id="container">  <!--活动页-->
-          <section id="portfolio">
+        <div class="col-md-8" id="container">  <!--活动页-->
+          <section id="portfolio" style="padding: 45px 0;">
               <div class="container-fluid">
                 <div class="row">
                   <div class="col-sm-5" style="">
@@ -217,27 +222,42 @@ frontend\assets\AppAsset::register($this);
           </section><!--/#portfolio-->   
       </div>    
               <div class="col-md-3" >  <!--右侧筛选-->
-               <h4><i class="fa fa-angle-right"></i> 近期活动</h4>
-                  <div id="container">  <!--活动页-->
-                      <hr class="style-one">
-                      <!--少数活动展示-->
-                      <?= ListView::widget([
-                          'dataProvider' => $dataProvider,
-                          'itemOptions' => ['class' => 'item 201811'],
-                           'itemView' => 'data',
-                      ]) ?>
-                </div>  
+               <h3><i class="fa fa-angle-right"></i> 近期活动</h4>
+                  <div id="container" >  <!--活动页-->
+                      <hr class="style-one" style="opacity: 0">
+                       <div style="background-color: rgb(247,247,247); border-radius: 30px;">
+                        <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=3'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">1. <?php echo $activities[0]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=4'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">2. <?php echo $activities[1]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=8'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">3. <?php echo $activities[2]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=5'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">4. <?php echo $activities[3]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=1'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">5. <?php echo $activities[4]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=10'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;">6. <?php echo $activities[5]['title']?> </p>
+                        </a>
+                        </div>
+
+                        <div style="height: 10px; padding-top: 50px; text-align: center; ">   
+                         <div style=" text-align: right;">
+                          <a class="more-link" href="/act-activity/index" title="显示更多">
+                              <span class="moretext">
+                                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
+                              </span>
+                          </a>
+                        </div>
+                      </div> <!--分两列-->
+                  </div>  
               </div>  
       </div>
-      <div style="height: 20px; text-align: center; ">   
-         <div style=" text-align: right;">
-          <a class="more-link" href="/act-activity/index" title="显示更多">
-              <span class="moretext">
-                  <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
-              </span>
-          </a>
-        </div>
-      </div> <!--分两列-->
   </div>
 </section><!--#services-->
 
@@ -245,13 +265,10 @@ frontend\assets\AppAsset::register($this);
 <section id="about-us" class="parallax" style="background-image: url(/images/nk1.jpg);">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6" style="padding:0 20% 15% 0;">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>南开大学主楼</h2>
-            <br>
-            <p style="font-size:16px;">南开大学主楼1963年建成，2003年又进行了大规模的装修和翻新。主楼的设计沿中轴对称，气势雄伟，广场中间巍然挺立的周恩来总理雕像高大而伟岸。 2009年3月，入选天津十大标志性建筑。 </p>
+        <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">         
+           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
         </div>
-      </div>   
+      </div>
     </div>
   </div>
 </section><!--/#about-us-->
@@ -411,23 +428,31 @@ frontend\assets\AppAsset::register($this);
   <section id="about-us" class="parallax"  style="background-image: url(/images/nk2.jpg);">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6" style="padding:0 20% 15% 0;">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>南开大学图书馆</h2>
-            <br>
-            <p style="font-size:16px;">南开大学图书馆创建于1919年，前身为1927年卢木斋先生捐资兴建的木斋图书馆和西南联大时期的联大图书馆。伴随南开大学的整体战略发展，图书馆现有津南校区（中心馆）和八里台校区（逸夫馆、理科馆、经济分馆）两个校区的四处馆舍，总建筑面积71610余平方米，总阅览座位4000余席。 </p>
-          </div>
+
+         
+           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
+
         </div>
       </div>
     </div>
   </section>
 
+
+
+
+
   <section id="message">
     <div class="row" >
+
+
+    <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
         <h2 style="color:#000;margin:8% 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
         <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
       </div>
+    </div>
+
         <div class="col-md-6">
 
             <article class="card" style="float:right;margin:0 10px 0 0;">
@@ -501,11 +526,16 @@ frontend\assets\AppAsset::register($this);
       </div>
 
 
-      <div class="row" style="margin-top:100px;">
+      <div class="row" style="margin-top:80px;">
+        <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
+            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+          </div>
+        </div>
+
         <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-          <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
-          <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
-          <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 0 0 0;">
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
             <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
           </div>
 
@@ -515,7 +545,9 @@ frontend\assets\AppAsset::register($this);
             点赞
           </button>
         </div>
+
       </div>
+
 
 
 

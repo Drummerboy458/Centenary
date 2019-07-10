@@ -245,7 +245,7 @@ frontend\assets\AppAsset::register($this);
 <section id="about-us" class="parallax" style="background-image: url(/images/nk1.jpg);">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6" style="padding:0 20% 30% 0;">
+        <div class="col-sm-6" style="padding:0 20% 15% 0;">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>南开大学主楼</h2>
             <br>

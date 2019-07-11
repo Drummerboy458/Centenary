@@ -22,6 +22,9 @@ class AppAsset extends AssetBundle
         'css/responsive.css',
         'css/style.css',
         'layui/css/layui.css',
+        'css/default.css',
+        'css/reset.css',
+        'css/style-timeline.css',
     ];
     public $js = [
         'js/jquery.js',
@@ -36,6 +39,10 @@ class AppAsset extends AssetBundle
         'js/main.js',
         'js/respond.min.js',
         'layui/layui.all.js',
+        'js/jquery-2.1.1.min.js',
+        'js/jquery.mobile.custom.min.js',
+        'js/main-timeline.js'
+
     ];
     public $depends = [
         'yii\web\YiiAsset',

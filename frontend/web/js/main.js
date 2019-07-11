@@ -130,12 +130,20 @@ jQuery(function($) {
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
 		$.ajax({
-			url: $(this).attr('action'),
+			type: 'POST',
+			url: "http://admins.com/site/contact",
+			data: {
+				name: $("input[name='name']")[0].value,
+				email: $("input[name='email']")[0].value,
+				subject: $("input[name='subject']")[0].value,
+				message: $("textarea[name='message']")[0].value
+			},
 			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i>邮件正在发送</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+			console.log(data);
+			form_status.html('<p style="color:#fff;">感谢您的建议，我们会尽快处理。</p>').delay(3000).fadeOut();
 		});
 	});
 

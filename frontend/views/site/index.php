@@ -99,8 +99,8 @@ frontend\assets\AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="#activities" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#history" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
             <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
@@ -111,14 +111,19 @@ frontend\assets\AppAsset::register($this);
       </div>
     </div><!--/#main-nav-->
   </header><!--/#home-->
-<section id="services">
+<section id="activities" style="margin-bottom:8%;">
+
+
+  <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+    <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:40px;">
+      <h2 style="color:#000;margin:10% 0px 0px 0px;font-size:26px;font-weight: bold;">校庆活动</h2>
+      <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+    </div>
+  </div>
+
+
     <div class="container">
-      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2>校庆活动</h2>
-          </div>
-      </div>
-       <hr>
+      
       <div class="row"> <!--两列-->
         <div class="col-md-8" id="container">  <!--活动页-->
           <section id="portfolio" style="padding: 45px 0;">
@@ -255,328 +260,190 @@ frontend\assets\AppAsset::register($this);
       </div>
   </div>
 </section><!--#services-->
-<section id="about-us" class="parallax">
+
+
+<section id="about-us" class="parallax" style="background-image: url(/images/nk1.jpg);">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">         
+           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
         </div>
-      </div>   
+      </div>
     </div>
   </div>
 </section><!--/#about-us-->
 
-  <section id="portfolio">
+<div style="height:50px;width:100%;" id="history"></div>
+
+<section class="cd-horizontal-timeline" style="margin-top:0;">
+
+  <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="margin-top:30px;">
+    <div class="text-center col-sm-8 col-sm-offset-2">
+      <h2 style="color:#000;font-size:26px;font-weight: bold;">南开历程</h2>
+      <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+    </div>
+  </div>
+
+<div class="timeline">
+    <div class="events-wrapper">
+        <div class="events">
+            <ol>
+                <li><a href="#0" data-date="16/01/2014" class="selected">1919年</a></li>
+                <li><a href="#0" data-date="28/02/2014">1927年</a></li>
+                <li><a href="#0" data-date="20/04/2014">1937年7月</a></li>
+                <li><a href="#0" data-date="20/05/2014">1937年8月</a></li>
+                <li><a href="#0" data-date="09/07/2014">1946年</a></li>
+                <li><a href="#0" data-date="30/08/2014">1958年</a></li>
+                <li><a href="#0" data-date="15/09/2014">1980年</a></li>
+                <li><a href="#0" data-date="01/11/2014">1995年12月</a></li>
+                <li><a href="#0" data-date="10/12/2014">2000年12月</a></li>
+                <li><a href="#0" data-date="19/01/2015">2015年9月</a></li>
+                <li><a href="#0" data-date="03/03/2015">2018年</a></li>
+            </ol>
+    
+            <span class="filling-line" aria-hidden="true"></span>
+        </div> <!-- .events -->
+    </div> <!-- .events-wrapper -->
+            
+    <ul class="cd-timeline-navigation">
+        <li><a href="#0" class="prev inactive">Prev</a></li>
+        <li><a href="#0" class="next">Next</a></li>
+    </ul> <!-- .cd-timeline-navigation -->
+</div> <!-- .timeline -->
+
+<div class="events-content">
+<ol>
+        <li class="selected" data-date="16/01/2014">
+  <!-- <h2 style="font-size:30px;font-weight: bold;">南开大学建校</h2><br> -->
+    <!-- <em>1919</em> -->
+    <img src="/images/history/1919.jpg"  style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1919年4月，在严、张二人的努力下，位于南开学校南端的大学部校舍开始兴建。9月7、8日，南开学校大学部举办招生考试。1919年9月25日，南开大学举行首次开学典礼。南开大学成立时，本着“文以治国、理以强国、商以富国”的办学理念，设文、理、商3科。1920年，李组绅捐款三万洋银，增设矿科。
+            </p>
+        </li>
+
+        <li data-date="28/02/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>February 28th, 2014</em> -->
+    <img src="/images/history/1927.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1927年，成立社会经济研究委员会（后改称经济研究所）和满蒙研究会（后改称东北研究会），卢木斋捐资10万元，开始兴建“木斋图书馆”。
+            </p>
+        </li>
+
+        <li data-date="20/04/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>March 20th, 2014</em> -->
+    <img src="/images/history/19378.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1937年7月，南开大学遭日本侵略军狂轰烂炸，三分之二的校舍被毁。
+        </p>
+        </li>
+
+        <li data-date="20/05/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>May 20th, 2014</em> -->
+    <img src="/images/history/19379.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1937年8月，南开大学与北京大学、清华大学合组长沙临时大学，三校校长张伯苓、蒋梦麟、梅贻琦为常务委员，共主校务。翌年4月，长沙临时大学迁往昆明，改称西南联合大学。
+            </p>
+        </li>
+
+        <li data-date="09/07/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>July 9th, 2014</em> -->
+    <img src="/images/history/1946.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1946年，南开大学迁回天津并改为国立。复校后设文学院、理学院、政治经济学院和工学院，计16个系，另设有经济研究所、应用化学研究所及边疆人文研究室。		</p>
+        </li>
+
+        <li data-date="30/08/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>August 30th, 2014</em> -->
+    <img src="/images/history/1958.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国共产党和中国政府十分关心南开大学的发展，1958年，毛泽东主席莅校视察。
+            </p>
+        </li>
+
+        <li data-date="15/09/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>September 15th, 2014</em> -->
+    <img src="/images/history/1980.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1980年以后，南开大学为适应社会主义现代化建设需要，利用老专业基础好的优势，建立了一批新的专业和研究机构。文科重点增设了以财经类为主的应用性专业，并在此基础上于1983年恢复了经济学院，理科重点增设了交叉、边缘和高新科技类专业。到80年代中后期，南开大学发展成为一所包括人文社会科学、自然科学、技术科学、生命科学、管理科学及艺术等多学科的综合大学。</p>
+        </li>
+
+        <li data-date="01/11/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>November 1st, 2014</em> -->
+    <img src="/images/history/1995.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1995年12月，南开大学成为首批列入国家“211工程”重点建设的15所大学之一。
+            </p>
+        </li>
+
+        <li data-date="10/12/2014">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>December 10th, 2014</em> -->
+    <img src="/images/history/2000.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000年12月25日，教育部和天津市人民政府签署重点共建南开大学协议，南开大学进入首批国家教育工程“985工程”。
+            </p>
+        </li>
+
+        <li data-date="19/01/2015">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>January 19th, 2015</em> -->
+    <img src="/images/history/2015.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015年9月，南开大学津南校区建成启用，初步形成了八里台校区、津南校区、泰达学院“一校三区”办学格局。</p>
+        </li>
+
+        <li data-date="03/03/2015">
+            <!-- <h2>Event title here</h2> -->
+    <!-- <em>March 3rd, 2015</em> -->
+    <img src="/images/history/2018.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+            <p style="min-height:120px;">	
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018年1月，南开大学入选教育部首批挂牌中美青年创客交流中心名单。3月，入选教育部首批新工科研究与实践项目。5月，南开大学成立人工智能学院、网络空间安全学院、统计与数据科学学院。11月，教育部公示第一批中华优秀传统文化传承基地名单，南开大学入选。</p>
+        </li>
+    </ol>
+	</div> <!-- .events-content -->
+
+
+</section>
+
+
+
+  <section id="about-us" class="parallax"  style="background-image: url(/images/nk2.jpg);">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>Our Portfolio</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
-        </div>
-      </div> 
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/1.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/2.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/3.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/4.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/5.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/6.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="900ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/7.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="1000ms">
-            <div class="folio-image">
-              <img class="img-responsive" src="/images/portfolio/8.jpg" alt="">
-            </div>
-            <div class="overlay">
-              <div class="overlay-content">
-                <div class="overlay-text">
-                  <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
-                  </div>
-                  <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="/images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="portfolio-single-wrap">
-      <div id="portfolio-single">
-      </div>
-    </div><!-- /#portfolio-single-wrap -->
-  </section><!--/#portfolio-->
-
-  <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>The Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
-        </div>
-      </div>
-      <div class="team-members">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-                <img class="img-responsive" src="/images/team/1.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>CEO &amp; Founder</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="member-image">
-                <img class="img-responsive" src="/images/team/2.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lawrence Lane</h3>
-                <h4>UI/UX Designer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <div class="member-image">
-                <img class="img-responsive" src="/images/team/3.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lois Clark</h3>
-                <h4>Developer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-              <div class="member-image">
-                <img class="img-responsive" src="/images/team/4.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>Support Manager</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>            
-    </div>
-  </section><!--/#team-->
-
-
-
-  <section id="about-us" class="parallax">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
+
+         
+           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
+
         </div>
       </div>
     </div>
   </section>
 
-  <section id="message">
+
+
+<div style="width:100%;height:50px;" id="message"></div>
+
+
+  <section>
     <div class="row" >
+
+
+    <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-        <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+        <h2 style="color:#000;margin:30px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
         <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
       </div>
+    </div>
+
         <div class="col-md-6">
 
             <article class="card" style="float:right;margin:0 10px 0 0;">
@@ -650,11 +517,16 @@ frontend\assets\AppAsset::register($this);
       </div>
 
 
-      <div class="row" style="margin-top:100px;">
+      <div class="row" style="margin-top:80px;">
+        <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
+            <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
+          </div>
+        </div>
+
         <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-          <h2 style="color:#000;margin:10px 0px 0px 0px;font-size:26px;font-weight: bold;">给母校点赞</h2>
-          <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
-          <div class="layui-progress layui-progress-big" lay-showPercent="true" style="margin:50px 0 0 0;">
+          <div class="layui-progress layui-progress-big" lay-showPercent="true">
             <div class="layui-progress-bar layui-bg-blue" lay-percent=<?php echo $num/100*100,'%';?>></div>
           </div>
 
@@ -664,7 +536,9 @@ frontend\assets\AppAsset::register($this);
             点赞
           </button>
         </div>
+
       </div>
+
 
 
 
@@ -693,8 +567,7 @@ frontend\assets\AppAsset::register($this);
       <div class="container">
         <div class="row">
           <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <h2>联系我们</h2>
           </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -704,34 +577,34 @@ frontend\assets\AppAsset::register($this);
                 <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                      <input type="text" name="name" class="form-control" placeholder="姓名" required="required">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                      <input type="email" name="email" class="form-control" placeholder="邮箱地址" required="required">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                  <input type="text" name="subject" class="form-control" placeholder="主题" required="required">
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="请输入您要发送给我们的信息" required="required"></textarea>
                 </div>                        
                 <div class="form-group">
-                  <button type="submit" class="btn-submit">Send Now</button>
+                  <button type="submit" class="btn-submit">发送</button>
                 </div>
               </form>   
             </div>
             <div class="col-sm-6">
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <p style="font-size:16px;">我们致力于改善用户体验，为广大南开人和社会各界认识提供更好的服务，如果您发现了任何问题或者是对我们有什么建议，欢迎您联系我们。</p>
+                <br>
                 <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li>
+                  <li><i class="fa fa-map-marker"></i> <span> 地址:</span>天津海河教育园区同砚路38号</li>
+                  <li><i class="fa fa-phone"></i> <span> 电话:</span> 17822001791  </li>
+                  <li><i class="fa fa-envelope"></i> <span> 邮箱:</span>819814373@qq.com</li>
                 </ul>
               </div>                            
             </div>
@@ -740,9 +613,11 @@ frontend\assets\AppAsset::register($this);
       </div>
     </div>        
   </section><!--/#contact-->
+   
+  
   <footer id="footer">
     
-    <div class="footer-bottom">
+    <div class="footer-bottom" style="padding:20px;">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">

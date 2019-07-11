@@ -55,14 +55,23 @@ return [
             'enableStrictParsing'=>true,
             'showScriptName' => false,
             'rules' => [
-                [
+               [
                     'class'=>'yii\rest\UrlRule',
                     'controller'=>'praise',
                     'pluralize'=>false,
                     'extraPatterns'=>[
                         'POST add'=>'add',
                     ]
-                ],
+                ], 
+
+                [
+                    'class'=>'yii\rest\UrlRule',
+                    'controller'=>'site',
+                    'pluralize'=>false,
+                    'extraPatterns'=>[
+                        'POST contact'=>'contact',
+                    ]
+                ], 
             ],
         ],
     ],

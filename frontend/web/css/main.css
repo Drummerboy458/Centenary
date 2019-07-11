@@ -323,7 +323,7 @@ section {
 ********About CSS*******
 **************************/
 #about-us {
-  background-image: url(../images/about-bg.jpg);
+  background-image: url(../images/nk1.jpg);
   padding: 60px 0;
 }
 
@@ -870,7 +870,7 @@ section {
 
 .form-control {
   background-color: transparent;
-  border-color: rgba(255,255,255,.1);
+  border-color: rgba(255,255,255, 0.7);
   height: 50px;
   border-radius: 0;
   box-shadow: none;
@@ -884,7 +884,6 @@ textarea.form-control {
 .form-group {
   margin-bottom: 30px;
 }
-
 .contact-info {
   padding-left:70px;
   font-weight: 300;

@@ -411,10 +411,6 @@ frontend\assets\AppAsset::register($this);
 	</div> <!-- .events-content -->
 
 
-<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
-<script type="text/javascript" src="js/main-timeline.js"></script>
-
 </section>
 
 

@@ -74,7 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
            
         </div>
 
-        <?
+        <?php
         $count = count($comments);
         if ($totalCount == 0)
             echo "<div class = \"vempty\"> 快来做第一个评论的人吧~ </div>";

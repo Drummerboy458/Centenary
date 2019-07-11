@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Act_activitySearch */
+/* @var $model common\models\ActActivitySearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <!-- <?= $form->field($model, 'id') ?> -->
 
     <?= $form->field($model, 'title') ?>
 
@@ -28,6 +28,12 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'updated_at') ?>
 
     <?php // echo $form->field($model, 'sponsor') ?>
+
+    <?php // echo $form->field($model, 'location') ?>
+
+    <?php // echo $form->field($model, 'date_filter') ?>
+
+    <?php // echo $form->field($model, 'category_id') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

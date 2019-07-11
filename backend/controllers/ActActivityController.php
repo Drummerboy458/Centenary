@@ -3,19 +3,19 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Act_category;
-use common\models\Act_categorySearch;
+use common\models\ActActivity;
+use common\models\ActActivitySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * Act_categoryController implements the CRUD actions for Act_category model.
+ * ActActivityController implements the CRUD actions for ActActivity model.
  */
-class Act_categoryController extends Controller
+class ActActivityController extends Controller
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -30,25 +30,50 @@ class Act_categoryController extends Controller
     }
 
     /**
-     * Lists all Act_category models.
+     * Lists all ActActivity models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Act_categorySearch();
+        $query1 = ActActivity::find()->where(['category_id' => 1]);
+        $countQuery = clone $query1;
+        $totalCount1 = $countQuery->count();    //学术活动数量
+
+        $query2 = ActActivity::find()->where(['category_id' => 2]);
+        $countQuery = clone $query2;
+        $totalCount2 = $countQuery->count();    //纪念活动数量
+
+        $query3 = ActActivity::find()->where(['category_id' => 3]);
+        $countQuery = clone $query3;
+        $totalCount3 = $countQuery->count();    //发展活动数量
+
+        $query4 = ActActivity::find()->where(['category_id' => 4]);
+        $countQuery = clone $query4;
+        $totalCount4 = $countQuery->count();    //文体活动数量
+
+        $query5 = ActActivity::find()->where(['category_id' => 5]);
+        $countQuery = clone $query5;
+        $totalCount5 = $countQuery->count();    //校友活动数量
+
+        $searchModel = new ActActivitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'totalCount1' =>  $totalCount1,
+            'totalCount2' =>  $totalCount2,
+            'totalCount3' =>  $totalCount3,
+            'totalCount4' =>  $totalCount4,
+            'totalCount5' =>  $totalCount5,
         ]);
     }
 
     /**
-     * Displays a single Act_category model.
+     * Displays a single ActActivity model.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
@@ -58,29 +83,28 @@ class Act_categoryController extends Controller
     }
 
     /**
-     * Creates a new Act_category model.
+     * Creates a new ActActivity model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Act_category();
+        $model = new ActActivity();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**
-     * Updates an existing Act_category model.
+     * Updates an existing ActActivity model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
     {
@@ -88,19 +112,18 @@ class Act_categoryController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
     }
 
     /**
-     * Deletes an existing Act_category model.
+     * Deletes an existing ActActivity model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
     {
@@ -110,18 +133,18 @@ class Act_categoryController extends Controller
     }
 
     /**
-     * Finds the Act_category model based on its primary key value.
+     * Finds the ActActivity model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Act_category the loaded model
+     * @return ActActivity the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Act_category::findOne($id)) !== null) {
+        if (($model = ActActivity::findOne($id)) !== null) {
             return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

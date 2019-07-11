@@ -3,19 +3,19 @@
 namespace backend\controllers;
 
 use Yii;
-use common\models\Act_activity;
-use common\models\Act_activitySearch;
+use common\models\ActCategory;
+use common\models\ActCategorySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * Act_activityController implements the CRUD actions for Act_activity model.
+ * ActCategoryController implements the CRUD actions for ActCategory model.
  */
-class Act_activityController extends Controller
+class ActCategoryController extends Controller
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function behaviors()
     {
@@ -30,12 +30,12 @@ class Act_activityController extends Controller
     }
 
     /**
-     * Lists all Act_activity models.
+     * Lists all ActCategory models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new Act_activitySearch();
+        $searchModel = new ActCategorySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,10 +45,9 @@ class Act_activityController extends Controller
     }
 
     /**
-     * Displays a single Act_activity model.
+     * Displays a single ActCategory model.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id)
     {
@@ -58,29 +57,29 @@ class Act_activityController extends Controller
     }
 
     /**
-     * Creates a new Act_activity model.
+     * Creates a new ActCategory model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Act_activity();
+        $model = new ActCategory();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+             var_dump($model->getErrors());//输出错误信息
+            return $this->render('create', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
     }
 
     /**
-     * Updates an existing Act_activity model.
+     * Updates an existing ActCategory model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
     {
@@ -88,19 +87,18 @@ class Act_activityController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('update', [
+                'model' => $model,
+            ]);
         }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
     }
 
     /**
-     * Deletes an existing Act_activity model.
+     * Deletes an existing ActCategory model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionDelete($id)
     {
@@ -110,18 +108,18 @@ class Act_activityController extends Controller
     }
 
     /**
-     * Finds the Act_activity model based on its primary key value.
+     * Finds the ActCategory model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Act_activity the loaded model
+     * @return ActCategory the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Act_activity::findOne($id)) !== null) {
+        if (($model = ActCategory::findOne($id)) !== null) {
             return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
         }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
 }

@@ -5,15 +5,15 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Act_category;
+use common\models\ActCategory;
 
 /**
- * Act_categorySearch represents the model behind the search form of `common\models\Act_category`.
+ * ActCategorySearch represents the model behind the search form about `common\models\ActCategory`.
  */
-class Act_categorySearch extends Act_category
+class ActCategorySearch extends ActCategory
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
@@ -24,7 +24,7 @@ class Act_categorySearch extends Act_category
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {
@@ -41,7 +41,7 @@ class Act_categorySearch extends Act_category
      */
     public function search($params)
     {
-        $query = Act_category::find();
+        $query = ActCategory::find();
 
         // add conditions that should always apply here
 

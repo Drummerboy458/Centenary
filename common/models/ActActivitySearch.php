@@ -5,26 +5,26 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Act_activity;
+use common\models\ActActivity;
 
 /**
- * Act_activitySearch represents the model behind the search form of `common\models\Act_activity`.
+ * ActActivitySearch represents the model behind the search form about `common\models\ActActivity`.
  */
-class Act_activitySearch extends Act_activity
+class ActActivitySearch extends ActActivity
 {
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['title', 'content', 'published_at', 'holded_at', 'updated_at', 'sponsor'], 'safe'],
+            [['id', 'date_filter', 'category_id'], 'integer'],
+            [['title', 'content', 'published_at', 'holded_at', 'updated_at', 'sponsor', 'location'], 'safe'],
         ];
     }
 
     /**
-     * {@inheritdoc}
+     * @inheritdoc
      */
     public function scenarios()
     {
@@ -41,7 +41,7 @@ class Act_activitySearch extends Act_activity
      */
     public function search($params)
     {
-        $query = Act_activity::find();
+        $query = ActActivity::find()->orderby(['holded_at' => SORT_DESC]); //根据举办时间排序;
 
         // add conditions that should always apply here
 
@@ -63,11 +63,14 @@ class Act_activitySearch extends Act_activity
             'published_at' => $this->published_at,
             'holded_at' => $this->holded_at,
             'updated_at' => $this->updated_at,
+            'date_filter' => $this->date_filter,
+            'category_id' => $this->category_id,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'content', $this->content])
-            ->andFilterWhere(['like', 'sponsor', $this->sponsor]);
+            ->andFilterWhere(['like', 'sponsor', $this->sponsor])
+            ->andFilterWhere(['like', 'location', $this->location]);
 
         return $dataProvider;
     }

@@ -4,28 +4,27 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\models\Act_categorySearch */
+/* @var $searchModel common\models\ActCategorySearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Act Categories';
+$this->title = '分类管理';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="act-category-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h3><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Act Category', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('添加分类', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'type',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -18,9 +18,18 @@ $fieldOptions2 = [
     'inputTemplate' => "{input}<span class='glyphicon glyphicon-lock form-control-feedback'></span>"
 ];
 ?>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+
+  <title>后台 | 登录</title>
+
+</head>
+<body style=" background-image:'/images/nku.jpg'">
 <div class="login-box">
     <div class="login-logo">
-        <a><b>后台登录</b>
+         <a><b style="color: #00E3E3">后台登录</b>
     </div>
     <div class="login-box-body">
          <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
@@ -38,3 +47,5 @@ $fieldOptions2 = [
             <?php ActiveForm::end(); ?>
     </div>
 </div>
+</body>
+</html>

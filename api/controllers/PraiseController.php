@@ -14,22 +14,22 @@ class PraiseController extends ActiveController
     public $modelClass='api\models\Praise';
 
     public function behaviors()
-{
-    return ArrayHelper::merge([
-        [
-            'class' => Cors::className(),
-            'cors' => [
-                'Origin' => ['*'],
-                'Access-Control-Request-Method' => ['POST', 'HEAD', 'OPTIONS'],
-            ],
-            'actions' => [
-                'login' => [
-                    'Access-Control-Allow-Credentials' => true,
+    {
+        return ArrayHelper::merge([
+            [
+                'class' => Cors::className(),
+                'cors' => [
+                    'Origin' => ['*'],
+                    'Access-Control-Request-Method' => ['POST', 'HEAD', 'OPTIONS'],
+                ],
+                'actions' => [
+                    'login' => [
+                        'Access-Control-Allow-Credentials' => true,
+                    ]
                 ]
-            ]
-        ],
-    ], parent::behaviors());
-}
+            ],
+        ], parent::behaviors());
+    }
 
     public function actionAdd()
     {

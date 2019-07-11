@@ -99,8 +99,8 @@ frontend\assets\AppAsset::register($this);
         <div class="collapse navbar-collapse" style="background-color: #800080">
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="#services" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="#activities" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href="#history" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
             <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
@@ -111,12 +111,12 @@ frontend\assets\AppAsset::register($this);
       </div>
     </div><!--/#main-nav-->
   </header><!--/#home-->
-<section id="services" style="margin-bottom:8%;">
+<section id="activities" style="margin-bottom:8%;">
 
 
   <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
     <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:40px;">
-      <h2 style="color:#000;margin:10% 0px 0px 0px;font-size:26px;font-weight: bold;">南开历程</h2>
+      <h2 style="color:#000;margin:10% 0px 0px 0px;font-size:26px;font-weight: bold;">校庆活动</h2>
       <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
     </div>
   </div>
@@ -273,17 +273,11 @@ frontend\assets\AppAsset::register($this);
   </div>
 </section><!--/#about-us-->
 
-  <section id="portfolio">
-    <div class="container">
-      <div class="row">
-       
-      </div>
-    </div>
-  </section>
+<div style="height:50px;width:100%;" id="history"></div>
 
-<section class="cd-horizontal-timeline">
+<section class="cd-horizontal-timeline" style="margin-top:0;">
 
-  <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+  <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms" style="margin-top:30px;">
     <div class="text-center col-sm-8 col-sm-offset-2">
       <h2 style="color:#000;font-size:26px;font-weight: bold;">南开历程</h2>
       <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
@@ -440,15 +434,16 @@ frontend\assets\AppAsset::register($this);
 
 
 
+<div style="width:100%;height:50px;" id="message"></div>
 
 
-  <section id="message">
+  <section>
     <div class="row" >
 
 
     <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="text-center col-sm-8 col-sm-offset-2" style="margin-bottom:50px;">
-        <h2 style="color:#000;margin:8% 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
+        <h2 style="color:#000;margin:30px 0px 0px 0px;font-size:26px;font-weight: bold;">情系南开</h2>
         <hr style="filter: alpha(opacity=100, finishopacity=0, style=3);" width="100%"SIZE=5>
       </div>
     </div>
@@ -612,8 +607,8 @@ frontend\assets\AppAsset::register($this);
                 <br>
                 <ul class="address">
                   <li><i class="fa fa-map-marker"></i> <span> 地址:</span>天津海河教育园区同砚路38号</li>
-                  <li><i class="fa fa-phone"></i> <span> 电话:</span> xxxxxxxxxxx  </li>
-                  <li><i class="fa fa-envelope"></i> <span> 邮箱:</span>xxxxxxxx@163.com</li>
+                  <li><i class="fa fa-phone"></i> <span> 电话:</span> 17822001791  </li>
+                  <li><i class="fa fa-envelope"></i> <span> 邮箱:</span>819814373@qq.com</li>
                 </ul>
               </div>                            
             </div>

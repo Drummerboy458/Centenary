@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Act_category */
+/* @var $model common\models\VisitCount */
 
-$this->title = 'Create Act Category';
-$this->params['breadcrumbs'][] = ['label' => 'Act Categories', 'url' => ['index']];
+$this->title = 'Create Visit Count';
+$this->params['breadcrumbs'][] = ['label' => 'Visit Counts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="act-category-create">
+<div class="visit-count-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

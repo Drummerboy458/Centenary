@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Act_category */
+/* @var $model common\models\VisitCount */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Act Categories', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Visit Counts', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="act-category-view">
+<div class="visit-count-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,7 +29,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'type',
+            'nums',
+            'date',
         ],
     ]) ?>
 

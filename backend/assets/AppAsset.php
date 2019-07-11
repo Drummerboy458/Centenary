@@ -15,6 +15,11 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+        'js/echarts.common.min.js',
+        'js/echarts.js',
+        'js/echarts.min.js',
+        'js/echarts.simple.min.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',

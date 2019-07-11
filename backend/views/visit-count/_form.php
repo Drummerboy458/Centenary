@@ -4,17 +4,19 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Act_category */
+/* @var $model common\models\VisitCount */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="act-category-form">
+<div class="visit-count-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'id')->textInput() ?>
 
-    <?= $form->field($model, 'type')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'nums')->textInput() ?>
+
+    <?= $form->field($model, 'date')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

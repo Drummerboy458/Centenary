@@ -29,8 +29,11 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                    
-                    ['label' => '留言管理', 'icon' => ' fa-database', 'url' => ['/message/index']],
-                    ['label' => '流量情况', 'icon' => ' fa-database', 'url' => ['/visitCount/index']],
+                    ['label' => '活动分类', 'icon' => ' fa-database', 'url' => ['/act_category/index'],],
+                    ['label' => '百年活动', 'icon' => ' fa-check-circle', 'url' => ['/act_activity/index'],],
+                    ['label' => '留言管理', 'icon' => ' fa-user', 'url' => ['/message/index'],],
+                    
+                    ['label' => '流量情况', 'icon' => ' fa-road', 'url' => ['/visitCount/index'],],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => '权限管理',

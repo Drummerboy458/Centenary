@@ -1,20 +1,3 @@
-<?php
-
-use yii\helpers\Html;
-use yii\grid\GridView;
-
-/* @var $this yii\web\View */
-/* @var $searchModel backend\models\UserSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = Yii::t('app', 'User Logins');
-$this->params['breadcrumbs'][] = $this->title;
-        $t =  $this->params['data1'];
-        $k = $this->params['data2'];
-        // var_dump($t);
-        // exit(0);
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,11 +18,9 @@ require.config({
         });
         var t =  ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"];
         var k = [5, 20, 80, 10, 10, 20];
-        var s1=<?php $this->params['data1'] ?>
-        var s2=<?php $this->params['data2'] ?>
         // $t =  $this->params['data1'];
         // $k = $this->params['data2'];
-        // var_dump(t);
+        // var_dump($t);
         // exit(0);
 
         // 使用
@@ -64,7 +45,7 @@ require.config({
                     xAxis : [
                         {
                             type : 'category',
-                            data : s1
+                            data : t
                         }
                     ],
                     yAxis : [
@@ -76,7 +57,7 @@ require.config({
                         {
                             "name":"访问量",
                             "type":"line",
-                            "data":s2
+                            "data":k
                         }
                     ]
                 };
@@ -88,3 +69,4 @@ require.config({
     </script>
 </body>
 </html>
+

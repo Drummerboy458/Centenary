@@ -60,7 +60,6 @@ class VisitCountController extends Controller
         $view->params['data2'] = $result2;
 
         return $this->render('index');
-
     }
     /**
      * Displays a single VisitCount model.

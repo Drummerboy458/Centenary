@@ -47,12 +47,12 @@ class Message extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'author' => 'Author',
-            'identity' => 'Identity',
-            'content' => 'Content',
-            'status' => 'Status',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'author' => '姓名',
+            'identity' => '身份',
+            'content' => '内容',
+            'status' => '状态',
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间',
         ];
     }
 }

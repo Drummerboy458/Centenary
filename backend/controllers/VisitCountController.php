@@ -8,7 +8,7 @@ use common\models\VisitCountSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\db\Query;
 /**
  * VisitCountController implements the CRUD actions for VisitCount model.
  */
@@ -33,17 +33,35 @@ class VisitCountController extends Controller
      * Lists all VisitCount models.
      * @return mixed
      */
+    // public function actionIndex()
+    // {
+    //     $searchModel = new VisitCountSearch();
+    //     $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+    //     return $this->render('index', [
+    //         'searchModel' => $searchModel,
+    //         'dataProvider' => $dataProvider,
+    //     ]);
+    // }
     public function actionIndex()
     {
-        $searchModel = new VisitCountSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $view = Yii::$app->view;
+        $date=(new Query())->from('visit_count')->select('date')->orderBy('date')->all();
+        foreach($date as $eachdate)
+        {
+            $result1[] = $eachdate['date'];
+        }
+        $view->params['data1'] = $result1;
+        $count=(new Query())->from('visit_count')->select('nums')->orderBy('date')->all();
+        foreach($count as $eachcount)
+        {
+            $result2[] = $eachcount['nums'];
+        }
+        $view->params['data2'] = $result2;
 
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
+        return $this->render('index');
+
     }
-
     /**
      * Displays a single VisitCount model.
      * @param integer $id
@@ -56,69 +74,9 @@ class VisitCountController extends Controller
             'model' => $this->findModel($id),
         ]);
     }
-
-    /**
-     * Creates a new VisitCount model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate()
-    {
-        $model = new VisitCount();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Updates an existing VisitCount model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
-    }
-
-    /**
-     * Deletes an existing VisitCount model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
-    }
-
-    /**
-     * Finds the VisitCount model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return VisitCount the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
     protected function findModel($id)
     {
-        if (($model = VisitCount::findOne($id)) !== null) {
+        if (($model = Visit::findOne($id)) !== null) {
             return $model;
         }
 

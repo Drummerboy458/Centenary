@@ -1,18 +1,18 @@
 <?php
 
-namespace backend\controllers;
+namespace frontend\controllers;
 
 use Yii;
-use common\models\Message;
-use common\models\MessageSearch;
+use common\models\Adminuser;
+use common\models\AdminuserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * MessageController implements the CRUD actions for Message model.
+ * AdminuserController implements the CRUD actions for Adminuser model.
  */
-class MessageController extends Controller
+class AdminuserController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,12 +30,12 @@ class MessageController extends Controller
     }
 
     /**
-     * Lists all Message models.
+     * Lists all Adminuser models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new MessageSearch();
+        $searchModel = new AdminuserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class MessageController extends Controller
     }
 
     /**
-     * Displays a single Message model.
+     * Displays a single Adminuser model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class MessageController extends Controller
     }
 
     /**
-     * Creates a new Message model.
+     * Creates a new Adminuser model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Message();
+        $model = new Adminuser();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class MessageController extends Controller
     }
 
     /**
-     * Updates an existing Message model.
+     * Updates an existing Adminuser model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -84,12 +84,19 @@ class MessageController extends Controller
      */
     public function actionUpdate($id)
     {
-        Message::updateAllCounters(['status'=>1],['id'=>$id]);
-        return $this->redirect('index');
+        $model = $this->findModel($id);
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }
+
+        return $this->render('update', [
+            'model' => $model,
+        ]);
     }
 
     /**
-     * Deletes an existing Message model.
+     * Deletes an existing Adminuser model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -103,15 +110,15 @@ class MessageController extends Controller
     }
 
     /**
-     * Finds the Message model based on its primary key value.
+     * Finds the Adminuser model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Message the loaded model
+     * @return Adminuser the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Message::findOne($id)) !== null) {
+        if (($model = Adminuser::findOne($id)) !== null) {
             return $model;
         }
 

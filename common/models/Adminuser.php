@@ -59,10 +59,10 @@ class Adminuser extends ActiveRecord implements IdentityInterface
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
-            'nickname' => 'Nickname',
-            'email' => 'Email',
-            'profile' => 'Profile',
+            'username' => '姓名',
+            'nickname' => '昵称',
+            'email' => '邮箱',
+            'profile' => '简介',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'created_at' => 'Created At',

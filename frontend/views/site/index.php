@@ -142,7 +142,7 @@ frontend\assets\AppAsset::register($this);
                               <p >百年南开，再塑辉煌</p>
                             </div>
                             <div class="folio-overview">
-                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-link"></span>
                               <span class="folio-expand"><a href="/images/activity/act_play1.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
@@ -163,7 +163,7 @@ frontend\assets\AppAsset::register($this);
                               <p>首期看校长阐述迈向科学卓越新纪元</p>
                             </div>
                             <div class="folio-overview">
-                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-link"></span>
                               <span class="folio-expand"><a href="/images/activity/act_play3.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
@@ -184,7 +184,7 @@ frontend\assets\AppAsset::register($this);
                               <p>暨视察母校60周年主题展览举行</p>
                             </div>
                             <div class="folio-overview">
-                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-link"></span>
                               <span class="folio-expand"><a href="/images/activity/act_play2.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
@@ -205,7 +205,7 @@ frontend\assets\AppAsset::register($this);
                               <p>观览百年南开主题展</p>
                             </div>
                             <div class="folio-overview">
-                              <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html" ><i class="fa fa-link"></i></a></span>
+                              <span class="folio-link"></span>
                               <span class="folio-expand"><a href="/images/activity/act_play5.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>

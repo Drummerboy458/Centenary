@@ -1,10 +1,6 @@
 <?php
 
 use yii\helpers\Html;
-use frontend\assets\CommentAsset;
-
-
-CommentAsset::register($this);
 
 /* @var $this yii\web\View */
 /* @var $model frontend\models\ActComment */

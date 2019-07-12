@@ -35,6 +35,10 @@ background-image: linear-gradient(to right, #ddd, #bbb, #100);
     background:#fffcea;
     border:1px solid #a0468c;
 }
+#filters .active{            
+    background:#fffcea;
+    border:1px solid #a0468c;
+}
 #filters .date-month {
     font-size: 18px;
     height: 50px;
@@ -172,6 +176,16 @@ div.bubble-left:after {
     border-right-width: 0.6em;    
     border-bottom-width: 0.4em;    
     border-top-width: 0.4em;
+}
+div.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+div.nav-pills{
+    float: none;
+    position: initial;
+    display: inline-block;
 }
 .comment { width: 680px; margin: 20px auto; position: relative; background: #fff; padding: 20px 50px 50px; border: 1px solid #DDD; border-radius: 5px; }
 .comment h3 { height: 28px; line-height: 28px }

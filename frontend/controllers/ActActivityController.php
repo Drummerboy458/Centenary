@@ -39,6 +39,7 @@ class ActActivityController extends Controller
      */
     public function actionIndex()
     {
+        
         $searchModel = new ActActivitySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

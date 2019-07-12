@@ -1,14 +1,14 @@
 <?php
 
-namespace frontend\models;
+namespace common\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\ActActivity;
+use common\models\ActActivity;
 
 /**
- * ActActivitySearch represents the model behind the search form about `frontend\models\ActActivity`.
+ * ActActivitySearch represents the model behind the search form about `common\models\ActActivity`.
  */
 class ActActivitySearch extends ActActivity
 {
@@ -18,7 +18,7 @@ class ActActivitySearch extends ActActivity
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'date_filter', 'category_id'], 'integer'],
             [['title', 'content', 'published_at', 'holded_at', 'updated_at', 'sponsor', 'location'], 'safe'],
         ];
     }
@@ -41,7 +41,7 @@ class ActActivitySearch extends ActActivity
      */
     public function search($params)
     {
-        $query = ActActivity::find()->orderby(['holded_at' => SORT_DESC]); //根据举办时间排序
+        $query = ActActivity::find()->orderby(['holded_at' => SORT_DESC]); //根据举办时间排序;
 
         // add conditions that should always apply here
 
@@ -63,6 +63,8 @@ class ActActivitySearch extends ActActivity
             'published_at' => $this->published_at,
             'holded_at' => $this->holded_at,
             'updated_at' => $this->updated_at,
+            'date_filter' => $this->date_filter,
+            'category_id' => $this->category_id,
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])

@@ -13,9 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
  
 <div class="act-activity-view">
 
-    <h1 style="text-align: center; color: black;font-weight: bold;font-size: 35px;"><?= Html::encode($this->title) ?></h1>
+    <h1 style="text-align: center; color: black;font-weight: bold;font-size: 35px;padding: 40px;"><?= Html::encode($this->title) ?></h1>
     <div style="margin-left: 900px;">
-        <h4 style="color: black;font-weight: bold;font-size: 16px;"> 发布时间：<?= Html::encode($model->published_at) ?></h4>
+        <h4 style="color: black;font-weight: bold;font-size: 15px;padding: 10px;"> 发布时间：<?= Html::encode($model->published_at) ?></h4>
     </div>
     <?= DetailView::widget([
         'model' => $model,

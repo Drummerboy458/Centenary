@@ -221,28 +221,31 @@ frontend\assets\AppAsset::register($this);
               </div><!-- /#portfolio-single-wrap -->
           </section><!--/#portfolio-->   
       </div>    
-              <div class="col-md-3" >  <!--右侧筛选-->
+              <div class="col-md-4" >  <!--右侧筛选-->
                <h3><i class="fa fa-angle-right"></i> 近期活动</h4>
                   <div id="container" >  <!--活动页-->
                       <hr class="style-one" style="opacity: 0">
                        <div style="background-color: rgb(247,247,247); border-radius: 30px;">
                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=3'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">1. <?php echo $activities[0]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[0]['title']?> </p>
                         </a>
                          <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=4'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">2. <?php echo $activities[1]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[1]['title']?> </p>
                         </a>
                          <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=8'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">3. <?php echo $activities[2]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[2]['title']?> </p>
                         </a>
                          <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=5'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">4. <?php echo $activities[3]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[3]['title']?> </p>
                         </a>
                          <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=1'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;">5. <?php echo $activities[4]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[4]['title']?> </p>
                         </a>
                          <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=10'); ?>>
-                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;">6. <?php echo $activities[5]['title']?> </p>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;"><?php echo $activities[5]['title']?> </p>
+                        </a>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/view?id=11'); ?>>
+                        <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;"><?php echo $activities[6]['title']?> </p>
                         </a>
                         </div>
 

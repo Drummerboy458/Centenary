@@ -8,7 +8,7 @@
                 <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
-                <p>Alexander Pierce</p>
+               <p><?= yii::$app->user->identity->username; ?></p>
 
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
@@ -28,6 +28,17 @@
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
+
+                     [
+                        'label' => '校庆活动',
+                        'icon' => ' fa-user',
+                        'url' => 'javascript:;',
+                        'items' => [
+                            ['label' => '活动分类', 'icon' => '  fa-tag', 'url' => ['/act-category/index']],
+                            ['label' => '发布活动', 'icon' => ' fa-check-circle', 'url' => ['/act-activity/index']],
+                        ],
+                    ],    
+
                     ['label' => '管理员信息', 'icon' => ' fa-user', 'url' => ['/adminuser/index'],],
                     // ['label' => '活动分类', 'icon' => ' fa-database', 'url' => ['/act_category/index'],],
                     // ['label' => '百年活动', 'icon' => ' fa-check-circle', 'url' => ['/act_activity/index'],],

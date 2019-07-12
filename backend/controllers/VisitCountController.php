@@ -82,4 +82,11 @@ class VisitCountController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+    // //折线统计
+    // public function getRes(){
+    //     $user = M('account');
+    //     $sql = "SELECT date(visit_time) AS date,count(*) as count FROM visit_raw  GROUP BY date ";
+    //     $result = $user->query($sql);
+    //     $this->ajaxReturn(array('code'=>200,'result'=>$result));
+    // }
 }

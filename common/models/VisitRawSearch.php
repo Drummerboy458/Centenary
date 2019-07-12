@@ -5,12 +5,12 @@ namespace common\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Visit;
+use common\models\VisitRaw;
 
 /**
- * VisitSearch represents the model behind the search form of `common\models\Visit`.
+ * VisitRawSearch represents the model behind the search form of `common\models\VisitRaw`.
  */
-class VisitSearch extends Visit
+class VisitRawSearch extends VisitRaw
 {
     /**
      * {@inheritdoc}
@@ -41,7 +41,7 @@ class VisitSearch extends Visit
      */
     public function search($params)
     {
-        $query = Visit::find();
+        $query = VisitRaw::find();
 
         // add conditions that should always apply here
 

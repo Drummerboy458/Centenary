@@ -1,18 +1,18 @@
 <?php
 
-namespace frontend\controllers;
+namespace backend\controllers;
 
 use Yii;
-use common\models\Adminuser;
-use common\models\AdminuserSearch;
+use common\models\VisitRaw;
+use common\models\VisitRawSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * AdminuserController implements the CRUD actions for Adminuser model.
+ * VisitRawController implements the CRUD actions for VisitRaw model.
  */
-class AdminuserController extends Controller
+class VisitRawController extends Controller
 {
     /**
      * {@inheritdoc}
@@ -30,34 +30,22 @@ class AdminuserController extends Controller
     }
 
     /**
-     * Lists all Adminuser models.
+     * Lists all VisitRaw models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $nickname = Adminuser::getNickname();
-
-        $searchModel = new AdminuserSearch();
+        $searchModel = new VisitRawSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        //选择近期的活动进行展示
-        $profile = Adminuser::getProfile();
-
         return $this->render('index', [
-            'nickname' => $nickname,
-            'profile' =>$profile,
-            'dataProvider' => $dataProvider
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
-
-        
-        // return $this->render('index', [
-        //     'searchModel' => $searchModel,
-        //     'dataProvider' => $dataProvider,
-        // ]);
     }
 
     /**
-     * Displays a single Adminuser model.
+     * Displays a single VisitRaw model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -70,13 +58,13 @@ class AdminuserController extends Controller
     }
 
     /**
-     * Creates a new Adminuser model.
+     * Creates a new VisitRaw model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Adminuser();
+        $model = new VisitRaw();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -88,7 +76,7 @@ class AdminuserController extends Controller
     }
 
     /**
-     * Updates an existing Adminuser model.
+     * Updates an existing VisitRaw model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -108,7 +96,7 @@ class AdminuserController extends Controller
     }
 
     /**
-     * Deletes an existing Adminuser model.
+     * Deletes an existing VisitRaw model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,15 +110,15 @@ class AdminuserController extends Controller
     }
 
     /**
-     * Finds the Adminuser model based on its primary key value.
+     * Finds the VisitRaw model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Adminuser the loaded model
+     * @return VisitRaw the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Adminuser::findOne($id)) !== null) {
+        if (($model = VisitRaw::findOne($id)) !== null) {
             return $model;
         }
 

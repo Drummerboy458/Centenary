@@ -15,7 +15,7 @@ return [
     'modules' => [
         "admin" => [        
         "class" => "mdm\admin\Module",
-        'layout' => 'left',//yii2-admin的导航菜单
+        'layout' => 'left-menu',//yii2-admin的导航菜单
         ],
     ],
     "aliases" => [    

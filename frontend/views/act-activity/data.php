@@ -32,11 +32,11 @@ use yii\helpers\HtmlPurifier;
 
 ?>
  <div >
-    <div style="background-color: rgb(247,247,247);margin-top: 20px; border-radius: 30px;" class = "item <?=Html::encode($model->date_filter)?>">
+    <div style="background-color: rgb(247,247,247);margin-top: 20px; border-radius: 30px;" class = "item <?=Html::encode($model->date_filter)?> <?=Html::encode($model->category_id)?>">
         <p style="padding-top: 20px;padding: 5px;"> &nbsp;<?=Html::a(Html::encode('【'.$model->title.'】'),['view', 'id' => $model->id],['class' => 'item_title','style' => 'color:purple;'] )?> </p>
-         <p style="padding-left: 10px;padding: 5px;;color: purple;"> &nbsp;<i class="fa fa-fw fa-user"></i> <?= Html::encode($model->sponsor) ?> </p>
-        <p style="padding-left: 10px;padding: 5px;color: purple;"> &nbsp;<i class="fa fa-fw fa-calendar"></i> <?= Html::encode(date($model->holded_at)) ?> </p>
-        <p style="padding-left: 10px;padding: 5px;color: purple; "> &nbsp;<i class="fa fa-fw fa-map-marker"></i> <?= Html::encode($model->location) ?></p>
-        <p style="padding-bottom: 20px;padding: 5px;color: purple; padding-left: 10px; "> &nbsp;<i class="fa  fa-tag"></i> <?= Html::encode($category) ?></p>
+         <p style="padding-left: 10px;padding: 5px;"> &nbsp;<i class="fa fa-fw fa-user"></i> <?= Html::encode($model->sponsor) ?> </p>
+        <p style="padding-left: 10px;padding: 5px;"> &nbsp;<i class="fa fa-fw fa-calendar"></i> <?= Html::encode(date($model->holded_at)) ?> </p>
+        <p style="padding-left: 10px;padding: 5px;"> &nbsp;<i class="fa fa-fw fa-map-marker"></i> <?= Html::encode($model->location) ?></p>
+        <p style="padding-bottom: 20px;padding: 5px; padding-left: 10px; "> &nbsp;<i class="fa  fa-tag"></i> <?= Html::encode($category) ?></p>
     </div>
 </div>

@@ -87,7 +87,7 @@ class ActActivity extends \yii\db\ActiveRecord
 
     public function getActivities(){
         $db = Yii::$app->db;
-        $sql = "select title from act_activity  order by holded_at desc limit 0, 7";
+        $sql = "select * from act_activity  order by holded_at desc limit 0, 6";
         $command = $db->createCommand($sql);
         $result = $command->queryAll();
         return $result;

@@ -198,5 +198,19 @@ class Adminuser extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
-    
+
+    public function getNickname(){
+        $db = Yii::$app->db;
+        $sql = "select nickname from adminuser";
+        $command = $db->createCommand($sql);
+        $nickname = $command->queryAll();
+        return $nickname;
+    }
+    public function getProfile(){
+        $db = Yii::$app->db;
+        $sql = "select profile from adminuser";
+        $command = $db->createCommand($sql);
+        $profile = $command->queryAll();
+        return $profile;
+    }
 }

@@ -5,20 +5,20 @@ namespace common\models;
 use Yii;
 
 /**
- * This is the model class for table "visit".
+ * This is the model class for table "visit_raw".
  *
  * @property int $id
  * @property string $visit_ip
  * @property string $visit_time
  */
-class Visit extends \yii\db\ActiveRecord
+class VisitRaw extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'visit';
+        return 'visit_raw';
     }
 
     /**
@@ -27,7 +27,7 @@ class Visit extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['visit_ip', 'visit_time'], 'required'],
+            [['visit_ip'], 'required'],
             [['visit_time'], 'safe'],
             [['visit_ip'], 'string', 'max' => 255],
         ];
@@ -45,20 +45,22 @@ class Visit extends \yii\db\ActiveRecord
         ];
     }
 
-    public static function ExitVisit()
-    {
-        $visit_ip=Yii::$app->app->request->userIP;
-        if(!self::findOne(['visit_ip'=>$visit_ip])){
-            $visit= new Visit();
-            $visit->visit_ip=$visit_ip;
-            $visit->visit_time=time();
-            return $visit->save();
-        }
-        return true;
-    }
+public static function ExitVisit()
+{
+    $visit_ip=Yii::$app->request->userIP;
+    // if(!self::findOne(['visit_ip'=>$visit_ip])){
 
-    public static function visitNum()
-    {
-        return Visit::find()->count();
-    }
+    // }
+
+    $visit=new VisitRaw();
+    $visit->visit_ip=$visit_ip;
+    $visit->visit_time=time();
+    return $visit->save();
+
+}
+public static function visitNum()
+{
+    return VisitRaw::find()->count();
+}
+
 }

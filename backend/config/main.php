@@ -15,7 +15,7 @@ return [
     'modules' => [
         "admin" => [        
         "class" => "mdm\admin\Module",
-        'layout' => 'left-menu',//yii2-admin的导航菜单
+        //'layout' => 'left-menu',//yii2-admin的导航菜单
         ],
     ],
     "aliases" => [    
@@ -66,7 +66,7 @@ return [
     'as access' => [
          'class' => 'mdm\admin\components\AccessControl',
          'allowActions' => [
-                 '*',
+                 'site/*',
              ], // 后面对权限完善了以后，把*改回来
         ],
     'params' => $params,

@@ -1,11 +1,11 @@
-<aside class="main-sidebar">
+<aside class="main-sidebar" style="background-color: rgba(99,0,45,0.26);">
 
     <section class="sidebar">
 
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
+                <img src="<?= $directoryAsset ?>/img/user2.png" class="img-circle" alt="User Image"/>
             </div>
             <div class="pull-left info">
                <p><?= yii::$app->user->identity->username; ?></p>

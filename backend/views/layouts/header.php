@@ -6,7 +6,7 @@ use yii\helpers\Html;
 ?>
 
 <header class="main-header">
-    <nav class="navbar navbar-static-top" role="navigation" style="background-color: #5CADAD">
+    <nav class="navbar navbar-static-top" role="navigation" style="background-color: purple;">
 
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
@@ -18,24 +18,23 @@ use yii\helpers\Html;
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                       <img src="<?= $directoryAsset ?>/img/user.jpg" class="img-circle"
-                                 alt="User Image"/>
+                          <img src="<?= $directoryAsset ?>/img/user2.png" class="user-image" alt="User Image"/>
 
                         <span class="hidden-xs"><?= yii::$app->user->identity->username; ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
-                        <li class="user-header">
-                            <img src="<?= $directoryAsset ?>/img/user.jpg" class="img-circle"
+                        <li class="user-header" style="background-color: purple;">
+                            <img src="<?= $directoryAsset ?>/img/user2.png" class="img-circle"
                                  alt="User Image"/>
 
                             <p>
                                <?= yii::$app->user->identity->username; ?>
-                                <small>Member since Nov. 2019</small>
+                                <small>Since 2019年7月</small>
                             </p>
                         </li>
                         <!-- Menu Body -->
-                        <li class="user-body">
+                        <!-- <li class="user-body">
                             <div class="col-xs-4 text-center">
                                 <a href="#">Followers</a>
                             </div>
@@ -45,16 +44,16 @@ use yii\helpers\Html;
                             <div class="col-xs-4 text-center">
                                 <a href="#">Friends</a>
                             </div>
-                        </li>
+                        </li> -->
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
                                 <a href="view?id= <?= yii::$app->user->identity->id; ?>" 
-                                class="btn btn-default btn-flat">Profile</a>
+                                class="btn btn-default btn-flat">个人简介</a>
                             </div>
                             <div class="pull-right">
                                 <?= Html::a(
-                                    'Sign out',
+                                    '注销',
                                     ['/site/logout'],
                                     ['data-method' => 'post', 'class' => 'btn btn-default btn-flat']
                                 ) ?>
@@ -64,9 +63,9 @@ use yii\helpers\Html;
                 </li>
 
                 <!-- User Account: style can be found in dropdown.less -->
-                <li>
+               <!--  <li>
                     <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </nav>

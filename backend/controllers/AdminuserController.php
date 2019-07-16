@@ -6,6 +6,7 @@ use Yii;
 use common\models\Adminuser;
 use common\models\AdminuserSearch;
 use yii\web\Controller;
+use backend\models\SignupForm;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -64,10 +65,21 @@ class AdminuserController extends Controller
      */
     public function actionCreate()
     {
-        $model = new Adminuser();
+        // $model = new Adminuser();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        // if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        //     return $this->redirect(['view', 'id' => $model->id]);
+        // }
+
+        // return $this->render('create', [
+        //     'model' => $model,
+        // ]);
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post()) && $model->signup()) {
+
+            // var_dump($model->getErrors());//输出错误信息
+            // exit(0);
+            return $this->redirect('index');
         }
 
         return $this->render('create', [

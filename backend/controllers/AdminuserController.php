@@ -7,6 +7,7 @@ use common\models\Adminuser;
 use common\models\AdminuserSearch;
 use yii\web\Controller;
 use backend\models\SignupForm;
+use backend\models\PasswordForm;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
@@ -65,15 +66,6 @@ class AdminuserController extends Controller
      */
     public function actionCreate()
     {
-        // $model = new Adminuser();
-
-        // if ($model->load(Yii::$app->request->post()) && $model->save()) {
-        //     return $this->redirect(['view', 'id' => $model->id]);
-        // }
-
-        // return $this->render('create', [
-        //     'model' => $model,
-        // ]);
 
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
@@ -136,5 +128,17 @@ class AdminuserController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    //  修改密码
+    public function actionPassword(){
+        $model=new PasswordForm();
+        $request = YII::$app->request;
+
+        if($request->isPost && $model->load(Yii::$app->request->post()) && $model->changePassword()){
+            return $this->redirect('index');
+        }else{
+            return $this->render('password',['model'=>$model]);
+        }
     }
 }

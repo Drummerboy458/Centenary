@@ -39,17 +39,21 @@ class Adminuser extends ActiveRecord implements IdentityInterface
      * {@inheritdoc}
      */
     public function rules()
-    {
+    {//必须写规则，如果没有规则，而且想保存，那就写到 safe
         return [
-            [['username', 'nickname', 'email', 'auth_key', 'password_hash'], 'required'],
-            [['profile'], 'string'],
-            [['created_at', 'updated_at'], 'safe'],
-            [['username', 'nickname', 'email'], 'string', 'max' => 128],
-            [['auth_key'], 'string', 'max' => 32],
-            [['password_hash'], 'string', 'max' => 256],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
+            [['username', 'nickname', 'email','profile', 'auth_key', 'password_hash','created_at', 'updated_at'], 'safe']
         ];
+
+        // return [
+        //     [['username', 'nickname', 'email', 'auth_key', 'password_hash'], 'required'],
+        //     [['profile'], 'string'],
+        //     [['created_at', 'updated_at'], 'safe'],
+        //     [['username', 'nickname', 'email'], 'string', 'max' => 128],
+        //     [['auth_key'], 'string', 'max' => 32],
+        //     [['password_hash'], 'string', 'max' => 256],
+        //     [['username'], 'unique'],
+        //     [['email'], 'unique'],
+        // ];
     }
 
     /**

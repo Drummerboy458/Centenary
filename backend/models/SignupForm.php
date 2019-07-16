@@ -12,8 +12,9 @@ use yii\base\Model;
 class SignupForm extends Adminuser
 {
     public $username;
-    public $phone;
+    public $nickname;
     public $email;
+    public $profile;
     public $password;
 
 
@@ -24,16 +25,15 @@ class SignupForm extends Adminuser
     {
         return [
 
-        ['username','string','min'=>4,'max'=>18,'tooLong'=>'字符不能超过18个','tooShort'=>'至少3个字符'],
-        [['username', 'password', 'email'], 'required', 'message' => '不能为空'],
+        ['username','string','min'=>3,'max'=>18,'tooLong'=>'字符不能超过18个','tooShort'=>'至少3个字符'],
+        [['username', 'nickname', 'password', 'email','profile'], 'required', 'message' => '不能为空'],
         ['username','unique','targetClass' => '\common\models\Adminuser', 'message' => '用户名已经被注册！'],
 
-         ['phone','required'],
-         ['phone','unique','targetClass' => '\common\models\Adminuser', 'message' => '手机号已经被注册！'],
-        [['phone'], 'match','pattern'=>'/^1[0-9]{10}$/','message'=>'手机号格式不正确'],
+        ['nickname','string','min'=>3,'max'=>18,'tooLong'=>'字符不能超过18个','tooShort'=>'至少3个字符'],
+
 
         ['password', 'required'],
-         ['password','string','min'=>6,'max'=>18,'tooLong'=>'字符不能超过18个','tooShort'=>'至少6个字符'],
+        ['password','string','min'=>6,'max'=>18,'tooLong'=>'字符不能超过18个','tooShort'=>'至少6个字符'],
 
          ['email', 'trim'],
          ['email', 'required'],
@@ -52,9 +52,9 @@ class SignupForm extends Adminuser
      */
     public function signup()
     {
-        // if (!$this->validate()) {
-        //     return null;
-        // }
+        if (!$this->validate()) {
+            return null;
+        }
         
         $user = new Adminuser();
         $user->username = $this->username;
@@ -63,14 +63,11 @@ class SignupForm extends Adminuser
         $user->profile = $this->profile;
         $user->setPassword($this->password);
         $user->generateAuthKey();
-        
-
-        //$user->save('false');
-        var_dump($user->save('false'));
-        exit(0);//返回false，没有保存成功
+       
+        $user->save('false');
 
         $auth = \Yii::$app->authManager;
-        $UserRole = $auth->getRole('查看流量'); //默认分配User权限
+        $UserRole = $auth->getRole('查看流量'); //默认分配权限
 
         $auth->assign($UserRole, $user->getId());
 

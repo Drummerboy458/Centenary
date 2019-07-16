@@ -74,6 +74,7 @@ class AdminuserController extends Controller
         // return $this->render('create', [
         //     'model' => $model,
         // ]);
+
         $model = new SignupForm();
         if ($model->load(Yii::$app->request->post()) && $model->signup()) {
 

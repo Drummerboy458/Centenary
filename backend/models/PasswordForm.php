@@ -40,27 +40,19 @@ class PasswordForm extends Adminuser
         $id = YII::$app->user->id;
         $admin=  Adminuser::findIdentity($id);
         $password = $admin->password_hash;
-        $oldpwd = Yii::$app->security->generatePasswordHash($this->oldpwd);
-
-        if(Yii::$app->getSecurity()->validatePassword($oldpwd, $password)){           
+        if(Yii::$app->getSecurity()->validatePassword($this->oldpwd, $password)){           
                 $newpwd = Yii::$app->getSecurity()->generatePasswordHash($this->newpwd);
                 $admin->password_hash = $newpwd;
 
-                var_dump(0);
-                exit(0);
-                //未保存成功
-
                 if($admin->save()){
+                    Yii::$app->getSession()->setFlash('success', '修改成功');
                     return true;
                 }else{
                     return false;
                 }       
         }
         else{
-            var_dump(1);
-            exit(0);
-
-            Yii::$app->session->setFlash('contact','旧密码错误');
+            Yii::$app->session->setFlash('error','旧密码错误');
             return false;
         }
     }

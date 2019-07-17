@@ -9,6 +9,8 @@ use yii\bootstrap\ActiveForm;
 $this->title = '修改密码';
 $this->params['breadcrumbs'][] = ['label' => 'Adminusers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+Yii::$app->session->getFlash('error');
+Yii::$app->session->getFlash('success');
 ?>
 <div class="user-updatepwd">
     <div class="row" >

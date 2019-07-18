@@ -18,7 +18,6 @@ class MainAsset extends AssetBundle
         'css/responsive.css',
         'css/layout.css',
         'css/lww.css',
-        'css/comment.css',
         'css/comment_style.css',
     ];
     public $js = [

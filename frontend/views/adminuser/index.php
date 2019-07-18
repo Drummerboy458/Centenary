@@ -30,95 +30,80 @@
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2 class="layui-timeline-title" style="color:#800080;">团队介绍</h2>
+          <h1 style="color:#800080;font-size:28px;">团队介绍</h1>
+          <br>
           <p>巍巍南开，百年树人；锐意进取，广纳新知</p>
           <p>众流合注，霈为大川；群山出材，巍成广厦</p>
           <p>日新月异兮中华之振兴，允公允能兮报国之渴想</p>
         </div>
       </div>
-      <div class="team-members">
+      <div class="container">
         <div class="row">
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
                 <img class="img-responsive" src="/images/team/1.jpg" alt="">
               </div>
               <div class="member-info">
-                <h3><?php echo $nickname[1]['nickname']?></h3>
-                <h4>组长</h4>
-                <p><?php echo $profile[1]['profile']?></p>
+                <h2 style="color:#000;font-size:36px;"><?php echo $lzy['nickname']?></h2>
+                <br><h4 style="font-size:18px;">组长</h4>
+                <p style="font-size:16px;word-wrap:break-word;"><?php echo $lzy['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
+                  <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                  <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
               <div class="member-image">
                 <img class="img-responsive" src="/images/team/2.jpg" alt="">
               </div>
               <div class="member-info">
-                <h3><?php echo $nickname[0]['nickname']?></h3>
-                <h4>组员</h4>
-                <p><?php echo $profile[0]['profile']?></p>
+              <h2 style="color:#000;font-size:36px;"><?php echo $lww['nickname']?></h2>
+                
+              <br><h4 style="font-size:18px;">组员</h4>
+              <p style="font-size:16px;word-wrap:break-word;"><?php echo $lww['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
               <div class="member-image">
                 <img class="img-responsive" src="/images/team/3.jpg" alt="">
               </div>
               <div class="member-info">
-                <h3><?php echo $nickname[2]['nickname']?></h3>
-                <h4>组员</h4>
-                <p><?php echo $profile[2]['profile']?></p>
+              <h2 style="color:#000;font-size:36px;"><?php echo $sxr['nickname']?></h2>
+              <br>
+              <h4 style="font-size:18px;">组员</h4>
+              <p style="font-size:16px;"><?php echo $sxr['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <div class="member-image">
                 <img class="img-responsive" src="/images/team/4.jpg" alt="">
               </div>
               <div class="member-info">
-                <h3><?php echo $nickname[3]['nickname']?></h3>
-                <h4>组员</h4>
-                <p><?php echo $profile[3]['profile']?></p>
+              <h2 style="color:#000;font-size:36px;"><?php echo $pcy['nickname']?></h2>
+              <br>
+              <h4 style="font-size:18px;">组员</h4>
+              <p style="font-size:16px;"><?php echo $pcy['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>

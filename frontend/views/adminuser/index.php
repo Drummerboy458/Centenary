@@ -41,7 +41,7 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/1.jpg" alt="">
+                <img class="img-responsive" src="/images/team/1.jpg" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $nickname[1]['nickname']?></h3>
@@ -62,7 +62,7 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/2.jpg" alt="">
+                <img class="img-responsive" src="/images/team/2.jpg" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $nickname[0]['nickname']?></h3>
@@ -83,7 +83,7 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/3.jpg" alt="">
+                <img class="img-responsive" src="/images/team/3.jpg" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $nickname[2]['nickname']?></h3>
@@ -104,7 +104,7 @@
           <div class="col-sm-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <div class="member-image">
-                <img class="img-responsive" src="images/team/4.jpg" alt="">
+                <img class="img-responsive" src="/images/team/4.jpg" alt="">
               </div>
               <div class="member-info">
                 <h3><?php echo $nickname[3]['nickname']?></h3>

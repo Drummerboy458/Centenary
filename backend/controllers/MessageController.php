@@ -84,15 +84,10 @@ class MessageController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        }
-
-        return $this->render('update', [
-            'model' => $model,
-        ]);
+        //Message::updateAllCounters(['status'=>1],['id'=>$id]);
+        //$date=(new Query())->from('visit_count')->select('date')->orderBy('date')->all();
+        Yii::$app->db->createCommand('update message set status=1 where id=:id')->bindParam(':id', $id)->execute();     
+        return $this->redirect('index');
     }
 
     /**
@@ -105,7 +100,6 @@ class MessageController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

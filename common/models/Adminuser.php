@@ -39,17 +39,21 @@ class Adminuser extends ActiveRecord implements IdentityInterface
      * {@inheritdoc}
      */
     public function rules()
-    {
+    {//必须写规则，如果没有规则，而且想保存，那就写到 safe
         return [
-            [['username', 'nickname', 'email', 'auth_key', 'password_hash'], 'required'],
-            [['profile'], 'string'],
-            [['created_at', 'updated_at'], 'safe'],
-            [['username', 'nickname', 'email'], 'string', 'max' => 128],
-            [['auth_key'], 'string', 'max' => 32],
-            [['password_hash'], 'string', 'max' => 256],
-            [['username'], 'unique'],
-            [['email'], 'unique'],
+            [['username', 'nickname', 'email','profile', 'auth_key', 'password_hash','created_at', 'updated_at'], 'safe']
         ];
+
+        // return [
+        //     [['username', 'nickname', 'email', 'auth_key', 'password_hash'], 'required'],
+        //     [['profile'], 'string'],
+        //     [['created_at', 'updated_at'], 'safe'],
+        //     [['username', 'nickname', 'email'], 'string', 'max' => 128],
+        //     [['auth_key'], 'string', 'max' => 32],
+        //     [['password_hash'], 'string', 'max' => 256],
+        //     [['username'], 'unique'],
+        //     [['email'], 'unique'],
+        // ];
     }
 
     /**
@@ -59,10 +63,10 @@ class Adminuser extends ActiveRecord implements IdentityInterface
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
-            'nickname' => 'Nickname',
-            'email' => 'Email',
-            'profile' => 'Profile',
+            'username' => '姓名',
+            'nickname' => '昵称',
+            'email' => '邮箱',
+            'profile' => '简介',
             'auth_key' => 'Auth Key',
             'password_hash' => 'Password Hash',
             'created_at' => 'Created At',
@@ -198,5 +202,21 @@ class Adminuser extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
-    
+
+    public function getNickname(){
+        $db = Yii::$app->db;
+        $sql = "select nickname from adminuser";
+        $command = $db->createCommand($sql);
+        $nickname = $command->queryAll();
+        return $nickname;
+    }
+    public function getProfile(){
+        $db = Yii::$app->db;
+        $sql = "select profile from adminuser";
+        $command = $db->createCommand($sql);
+        $profile = $command->queryAll();
+        return $profile;
+    }
+
+   
 }

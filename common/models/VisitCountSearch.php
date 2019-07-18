@@ -19,7 +19,7 @@ class VisitCountSearch extends VisitCount
     {
         return [
             [['id', 'nums'], 'integer'],
-            [['created_time'], 'safe'],
+            [['date'], 'safe'],
         ];
     }
 
@@ -61,7 +61,7 @@ class VisitCountSearch extends VisitCount
         $query->andFilterWhere([
             'id' => $this->id,
             'nums' => $this->nums,
-            'created_time' => $this->created_time,
+            'date' => $this->date,
         ]);
 
         return $dataProvider;

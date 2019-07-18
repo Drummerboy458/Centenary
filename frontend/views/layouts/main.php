@@ -1,10 +1,10 @@
 <?php
 use yii\helpers\Html;
 use frontend\assets\MainAsset;
-
+use common\models\VisitRaw;
 
 MainAsset::register($this);
-
+VisitRaw::ExitVisit();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -54,7 +54,7 @@ MainAsset::register($this);
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
             <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="#about-us" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href="/adminuser/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
             <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
             <li class="scroll"><a href="#team" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
             <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>

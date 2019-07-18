@@ -15,7 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('修改信息', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('修改密码', ['password', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
@@ -33,8 +34,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'nickname',
             'email:email',
             'profile:ntext',
-            'auth_key',
-            'password_hash',
+            // 'auth_key',
+            // 'password_hash',
             'created_at',
             'updated_at',
         ],

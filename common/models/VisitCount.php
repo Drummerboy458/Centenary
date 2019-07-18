@@ -9,7 +9,7 @@ use Yii;
  *
  * @property int $id
  * @property int $nums
- * @property string $created_time
+ * @property string $date
  */
 class VisitCount extends \yii\db\ActiveRecord
 {
@@ -27,9 +27,9 @@ class VisitCount extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id', 'nums', 'created_time'], 'required'],
+            [['id', 'nums', 'date'], 'required'],
             [['id', 'nums'], 'integer'],
-            [['created_time'], 'safe'],
+            [['date'], 'safe'],
             [['id'], 'unique'],
         ];
     }
@@ -42,7 +42,7 @@ class VisitCount extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'nums' => 'Nums',
-            'created_time' => 'Created Time',
+            'date' => 'Date',
         ];
     }
 }

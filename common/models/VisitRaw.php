@@ -1,0 +1,66 @@
+<?php
+
+namespace common\models;
+
+use Yii;
+
+/**
+ * This is the model class for table "visit_raw".
+ *
+ * @property int $id
+ * @property string $visit_ip
+ * @property string $visit_time
+ */
+class VisitRaw extends \yii\db\ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'visit_raw';
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['visit_ip'], 'required'],
+            [['visit_time'], 'safe'],
+            [['visit_ip'], 'string', 'max' => 255],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'visit_ip' => 'Visit Ip',
+            'visit_time' => 'Visit Time',
+        ];
+    }
+
+public static function ExitVisit()
+{
+    $visit_ip=Yii::$app->request->userIP;
+    // if(!self::findOne(['visit_ip'=>$visit_ip])){
+
+    // }
+
+    $visit=new VisitRaw();
+    $visit->visit_ip=$visit_ip;
+    $visit->visit_time=time();
+    return $visit->save();
+
+}
+public static function visitNum()
+{
+    return VisitRaw::find()->count();
+}
+
+}

@@ -50,10 +50,8 @@
                 <p style="font-size:16px;word-wrap:break-word;"><?php echo $lzy['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
+                  <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                  <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>
@@ -69,10 +67,9 @@
               <p style="font-size:16px;word-wrap:break-word;"><?php echo $lww['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
+                <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                
               </div>
             </div>
           </div>
@@ -88,10 +85,8 @@
               <p style="font-size:16px;"><?php echo $sxr['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>
@@ -107,10 +102,8 @@
               <p style="font-size:16px;"><?php echo $pcy['profile']?></p>
               </div>
               <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                </ul>
+              <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
               </div>
             </div>
           </div>

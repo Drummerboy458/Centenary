@@ -217,6 +217,4 @@ class Adminuser extends ActiveRecord implements IdentityInterface
         $profile = $command->queryAll();
         return $profile;
     }
-
-   
 }

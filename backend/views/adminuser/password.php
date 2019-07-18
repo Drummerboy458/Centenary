@@ -3,8 +3,9 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\User */
+/*
+*修改密码的视图文件
+*/
 
 $this->title = '修改密码';
 $this->params['breadcrumbs'][] = ['label' => 'Adminusers', 'url' => ['index']];

@@ -100,6 +100,12 @@ class Adminuser extends ActiveRecord implements IdentityInterface
         return static::findOne(['username' => $username]);
     }
 
+    public static function findById($id)
+    {
+        return static::findOne(['id' => $id]);
+    }
+
+
     /**
      * Finds user by password reset token
      *

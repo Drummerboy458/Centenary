@@ -4,7 +4,6 @@ namespace frontend\controllers;
 
 use Yii;
 use common\models\Adminuser;
-use common\models\AdminuserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,25 +34,18 @@ class AdminuserController extends Controller
      */
     public function actionIndex()
     {
-        $nickname = Adminuser::getNickname();
-
-        $searchModel = new AdminuserSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        //选择近期的活动进行展示
-        $profile = Adminuser::getProfile();
+        $lzy = Adminuser::findByUsername('lxm');
+        $lww = Adminuser::findByUsername('lww');
+        $sxr = Adminuser::findByUsername('sxr');
+        $pcy = Adminuser::findByUsername('pcy');
 
         return $this->render('index', [
-            'nickname' => $nickname,
-            'profile' =>$profile,
-            'dataProvider' => $dataProvider
-        ]);
+            'lzy' =>$lzy,
+            'lww' =>$lww,
+            'sxr' =>$sxr,
+            'pcy' =>$pcy,
 
-        
-        // return $this->render('index', [
-        //     'searchModel' => $searchModel,
-        //     'dataProvider' => $dataProvider,
-        // ]);
+        ]);
     }
 
     /**

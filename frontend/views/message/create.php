@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190715
+ * This is the create view of message in frontend web.
+ */
+
 use yii\helpers\Html;
 use frontend\assets\MessageAsset;
 
@@ -15,7 +21,7 @@ $this->title = '100|为母校送祝福';
         <div class="message-create">
 
             <br><br>
-            <h2>为母校送祝福</h2>
+            <h2 style="font-size:26px;color:#000;">为母校送祝福</h2>
             <br>
             <?= $this->render('_form', [
                 'model' => $model,

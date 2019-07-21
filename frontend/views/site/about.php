@@ -1,10 +1,4 @@
 <?php
-/**
- * Team:404NotFound,NKU
- * Coding by:皮春莹 1711436,20190721
- * This is view of Contact Us of frontend
- */
-/* @var $this yii\web\View */
 
 use yii\helpers\Html;
 

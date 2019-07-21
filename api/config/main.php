@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190721
+ * This this the api config.
+ */
+
+
 $params = array_merge(
     require __DIR__ . '/../../common/config/params.php',
     require __DIR__ . '/../../common/config/params-local.php',

@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190718
+ * Coding by 李汶蔚 1711351, 20190712
+ * Coding by 史晓融 1711438, 20190715
+ * This this the homepage of frontend web.
+ */
+
 use yii\helpers\Html;
 use frontend\assets\AppAsset;
 use frontend\models\Message;
@@ -544,10 +553,6 @@ frontend\assets\AppAsset::register($this);
         </div>
 
       </div>
-
-
-
-
 
 
       <script type="text/javascript">

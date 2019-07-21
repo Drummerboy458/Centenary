@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190711
+ * This is the Message ActiveRecord of frontend web, which is used to save and query messages.
+ */
+
 namespace frontend\models;
 
 use Yii;

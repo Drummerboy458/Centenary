@@ -1,8 +1,9 @@
 <?php
 /**
  * Team:404NotFound,NKU
- * Coding by:皮春莹 1711436,20190721
- * This is Adminuser controller of frontend web
+ * Coding by:皮春莹 1711436,20190716
+ * Coding by:李钟毓 1711355,20190719
+ * This is Adminuser controller of frontend web.
  */
 namespace frontend\controllers;
 

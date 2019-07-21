@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190717
+ * This this the main layout in frontend web.
+ */
+
 use yii\helpers\Html;
 use frontend\assets\MainAsset;
 use common\models\VisitRaw;

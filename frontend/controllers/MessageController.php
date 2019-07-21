@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team:404NotFound,NKU
+ * Coding by:李钟毓 1711355, 20190718
+ * This is Message controller of frontend web.
+ */
+
 namespace frontend\controllers;
 
 use Yii;

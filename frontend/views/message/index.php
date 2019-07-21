@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190719
+ * This is the index view of Message in frontend web.
+ */
+
 use yii\helpers\Html;
 use frontend\assets\MessageAsset;
 use yii\widgets\LinkPager;

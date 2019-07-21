@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190715
+ * This is the create view of message in frontend web.
+ */
+
 use yii\helpers\Html;
 use frontend\assets\MessageAsset;
 

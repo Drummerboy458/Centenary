@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190713
+ * This this the CUDA of Message in frontend web.
+ */
+
 namespace frontend\models;
 
 use yii\base\Model;

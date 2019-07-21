@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190709
+ * This this the formModel of contact-us in api.
+ */
+
 namespace api\models;
 
 use Yii;

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team:404NotFound,NKU
+ * Coding by:皮春莹 1711436,20190721
+ * This is Password form of backend web
+ */
 namespace backend\models;
 
 use Yii;
@@ -7,7 +12,7 @@ use yii\base\Model;
 
 
 /**
- * Password form
+ * Password form，用于修改密码的表单
  */
 class PasswordForm extends Adminuser
 {
@@ -27,9 +32,9 @@ class PasswordForm extends Adminuser
     }
 
     /**
-     * Signs user up.
+     * change password
      *
-     * @return bool whether the creating new account was successful and email was sent
+     * @return bool 当输入的原密码正确且保存成功时，返回true，否则返回false
      */
     public function changePassword()
     {

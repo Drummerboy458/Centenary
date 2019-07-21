@@ -1,10 +1,15 @@
 <?php
-
+/**
+ * Team:404NotFound,NKU
+ * Coding by:皮春莹 1711436,20190721
+ * This is Adminuser view of backend web
+ */
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model backend\models\User */
+/*
+*修改密码的视图文件
+*/
 
 $this->title = '修改密码';
 $this->params['breadcrumbs'][] = ['label' => 'Adminusers', 'url' => ['index']];

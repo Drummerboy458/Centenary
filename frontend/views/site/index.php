@@ -546,10 +546,6 @@ frontend\assets\AppAsset::register($this);
       </div>
 
 
-
-
-
-
       <script type="text/javascript">
         document.querySelector('#praise').onclick = function () {
           $.post("http://admins.com/praise/add").done(

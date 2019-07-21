@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team:404NotFound,NKU
+ * Coding by:皮春莹 1711436,20190721
+ * This is the model class for table "adminuser".
+ */
 namespace common\models;
 
 use Yii;
@@ -223,6 +227,4 @@ class Adminuser extends ActiveRecord implements IdentityInterface
         $profile = $command->queryAll();
         return $profile;
     }
-
-   
 }

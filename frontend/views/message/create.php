@@ -15,7 +15,7 @@ $this->title = '100|为母校送祝福';
         <div class="message-create">
 
             <br><br>
-            <h2>为母校送祝福</h2>
+            <h2 style="font-size:26px;color:#000;">为母校送祝福</h2>
             <br>
             <?= $this->render('_form', [
                 'model' => $model,

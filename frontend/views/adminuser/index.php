@@ -1,4 +1,8 @@
-
+  <!--
+    Team:404NotFound,NKU
+    Coding by:皮春莹 1711436,20190721
+    This is  index view of Contact Us of frontend
+  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>

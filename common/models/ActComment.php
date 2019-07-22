@@ -1,10 +1,10 @@
 <?php
 /**
- * Team: 404NotFound,NKU
- * Coding by 李汶蔚 1711351, 20190713
- * This is the ActComment ActiveRecord of frontend web, which is used to save and query comments.
+ * Team:404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190721
+ * This is the model class for table "act_comment".
  */
-namespace frontend\models;
+namespace common\models;
 
 use Yii;
 
@@ -38,8 +38,9 @@ class ActComment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['author','content','identity' ], 'required'],
+            [['content', 'activity_id'], 'required'],
             [['content'], 'string'],
+            [['activity_id', 'status'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
             [['author', 'identity'], 'string', 'max' => 32],
             [['activity_id'], 'exist', 'skipOnError' => true, 'targetClass' => ActActivity::className(), 'targetAttribute' => ['activity_id' => 'id']],
@@ -58,8 +59,8 @@ class ActComment extends \yii\db\ActiveRecord
             'identity' => '身份',
             'activity_id' => '活动ID',
             'created_at' => '发布时间',
-            'updated_at' => '更新于',
-            'status' => '状态',
+            'updated_at' => '更新时间',
+            'status' => '当前状态',
         ];
     }
 
@@ -71,12 +72,12 @@ class ActComment extends \yii\db\ActiveRecord
         return $this->hasOne(ActActivity::className(), ['id' => 'activity_id']);
     }
 
-    public function getComments($id){
-        $db = Yii::$app->db;
-        //评论与活动关联查询
-        $sql = "select author, identity, content,created_at from act_comment where status=1 and activity_id =  $id order by created_at desc limit 0, 5";
-        $command = $db->createCommand($sql);
-        $result = $command->queryAll();
-        return $result;
-    }
+     public function getStatus($status){
+            if($status == 0)
+                return '待审核';
+            else if($status == 1)
+                return '审核通过';  
+            else
+                return '审核未通过';  
+        }
 }

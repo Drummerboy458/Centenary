@@ -1,14 +1,18 @@
 <?php
-
-namespace frontend\models;
+/**
+ * Team:404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190721
+ * This is the search model class for model ActComment.
+ */
+namespace common\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use frontend\models\ActComment;
+use common\models\ActComment;
 
 /**
- * ActCommentSearch represents the model behind the search form about `frontend\models\ActComment`.
+ * ActCommentSearch represents the model behind the search form about `common\models\ActComment`.
  */
 class ActCommentSearch extends ActComment
 {

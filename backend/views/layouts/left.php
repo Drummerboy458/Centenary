@@ -31,36 +31,37 @@
 
                      [
                         'label' => '校庆活动',
-                        'icon' => ' fa-user',
+                        'icon' => ' fa-map-signs',
                         'url' => 'javascript:;',
                         'items' => [
                             ['label' => '活动分类', 'icon' => '  fa-tag', 'url' => ['/act-category/index']],
                             ['label' => '发布活动', 'icon' => ' fa-check-circle', 'url' => ['/act-activity/index']],
+                            ['label' => '活动评论', 'icon' => ' fa-comments', 'url' => ['/act-comment/index']],
                         ],
                     ],    
 
                     ['label' => '管理员信息', 'icon' => ' fa-user', 'url' => ['/adminuser/index'],],
                     // ['label' => '活动分类', 'icon' => ' fa-database', 'url' => ['/act_category/index'],],
                     // ['label' => '百年活动', 'icon' => ' fa-check-circle', 'url' => ['/act_activity/index'],],
-                    ['label' => '留言管理', 'icon' => ' fa-user', 'url' => ['/message/index'],],
+                    ['label' => '留言管理', 'icon' => ' fa-commenting', 'url' => ['/message/index'],],
                     
-                    ['label' => '流量情况', 'icon' => ' fa-road', 'url' => ['/visit-count/index'],],
+                    ['label' => '流量情况', 'icon' => ' fa-binoculars', 'url' => ['/visit-count/index'],],
 
                     //个人作业展示
                     [
                         'label' => '个人作业',
-                        'icon' => ' fa-user',
+                        'icon' => ' fa-download',
                         'url' => 'javascript:;',
                         'items' => [
-                            ['label' => '作业1(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711355_李汶蔚).rar']],
+                            ['label' => '作业1(1711351_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711351_李汶蔚).pdf']],
                             ['label' => '作业1(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711355_李钟毓).rar']],
                             ['label' => '作业1(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711436_皮春莹).pdf']],
                             ['label' => '作业1(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711438_史晓融).pdf']],
-                            ['label' => '作业2(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711355_李汶蔚).rar']],
+                            ['label' => '作业2(1711351_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711351_李汶蔚).zip']],
                             ['label' => '作业2(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711355_李钟毓).rar']],
                             ['label' => '作业2(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711436_皮春莹).rar']],
                             ['label' => '作业2(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711438_史晓融).zip']],
-                            ['label' => '作业3(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711355_李汶蔚).rar']],
+                            ['label' => '作业3(1711351_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711351_李汶蔚).pdf']],
                             ['label' => '作业3(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711355_李钟毓).rar']],
                             ['label' => '作业3(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711436_皮春莹).pdf']],
                             ['label' => '作业3(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711438_史晓融).pdf']],

@@ -2,42 +2,38 @@
 /**
  * Team:404NotFound,NKU
  * Coding by:李汶蔚 1711351,20190721
- * This is the ActActivity view of backend web
+ * This is the ActComment view of backend web
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\ActActivitySearch */
+/* @var $model backend\models\ActCommentSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="act-activity-search">
+<div class="act-comment-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <!-- <?= $form->field($model, 'id') ?> -->
-
-    <?= $form->field($model, 'title') ?>
+    <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'content') ?>
 
-    <?= $form->field($model, 'published_at') ?>
+    <?= $form->field($model, 'author') ?>
 
-    <?= $form->field($model, 'holded_at') ?>
+    <?= $form->field($model, 'identity') ?>
+
+    <?= $form->field($model, 'activity_id') ?>
+
+    <?php // echo $form->field($model, 'created_at') ?>
 
     <?php // echo $form->field($model, 'updated_at') ?>
 
-    <?php // echo $form->field($model, 'sponsor') ?>
-
-    <?php // echo $form->field($model, 'location') ?>
-
-    <?php // echo $form->field($model, 'date_filter') ?>
-
-    <?php // echo $form->field($model, 'category_id') ?>
+    <?php // echo $form->field($model, 'status') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

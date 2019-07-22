@@ -1,10 +1,14 @@
 <?php
-
-namespace frontend\controllers;
+/**
+ * Team:404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190716
+ * This is ActComment controller of backend web.
+ */
+namespace backend\controllers;
 
 use Yii;
-use frontend\models\ActComment;
-use frontend\models\ActCommentSearch;
+use common\models\ActComment;
+use common\models\ActCommentSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

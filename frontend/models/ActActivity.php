@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李汶蔚 1711351, 20190713
+ * This is the ActActivity ActiveRecord of frontend web, which is used to save and query activities and related comments.
+ */
 
 namespace frontend\models;
 
@@ -87,9 +92,11 @@ class ActActivity extends \yii\db\ActiveRecord
 
     public function getActivities(){
         $db = Yii::$app->db;
-        $sql = "select * from act_activity  order by holded_at desc limit 0, 6";
+        $sql = "select * from act_activity  order by holded_at desc limit 0, 64";
         $command = $db->createCommand($sql);
         $result = $command->queryAll();
         return $result;
     }
+
+    
 }

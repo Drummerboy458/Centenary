@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team:404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190721
+ * This is the model class for table "act_category".
+ */
 namespace common\models;
 
 use Yii;

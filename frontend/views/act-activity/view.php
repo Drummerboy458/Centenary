@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: 404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190716
+ * This is view of ActActivity of frontend web.
+ */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
@@ -115,4 +120,3 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </section>
 </div>
-<!--以下是活动留言展示-->

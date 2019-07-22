@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190712
+ * This is the MessageForm Model frontend web.
+ */
+
 namespace frontend\models;
 use frontend\controllers\MessageController;
 use Yii;

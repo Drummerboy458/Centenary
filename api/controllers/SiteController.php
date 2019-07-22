@@ -1,4 +1,11 @@
 <?php
+
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190713
+ * This this the controller of contact-us module in api.
+ */
+
 namespace api\controllers;
 
 use Yii;

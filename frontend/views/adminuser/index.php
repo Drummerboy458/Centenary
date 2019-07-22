@@ -1,3 +1,28 @@
+<?php
+
+/**
+ * Team: 404NotFound,NKU
+ * Coding by:皮春莹 1711436,20190716
+ * Coding by:李钟毓 1711355,20190713
+ * This is index view of group presentation of frontend web.
+ */
+
+use yii\helpers\Html;
+use frontend\assets\AppAsset;
+use frontend\models\Message;
+use yii\helpers\HtmlPurifier;
+use frontend\assets\MainAsset;
+use yii\widgets\ListView;
+use yii\data\ActiveDataProvider;
+/* @var $this yii\web\View */
+/* @var $searchModel frontend\models\ActActivitySearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = '南开大学迎来百年校庆！';
+
+frontend\assets\AppAsset::register($this);
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

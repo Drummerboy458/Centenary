@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李钟毓 1711355, 20190709
+ * This this the ActiveRecord Model which is used to query or save praise in praise module of api.
+ */
+
 namespace api\models;
 
 use Yii;

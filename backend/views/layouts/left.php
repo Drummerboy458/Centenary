@@ -45,6 +45,28 @@
                     ['label' => '留言管理', 'icon' => ' fa-user', 'url' => ['/message/index'],],
                     
                     ['label' => '流量情况', 'icon' => ' fa-road', 'url' => ['/visit-count/index'],],
+
+                    //个人作业展示
+                    [
+                        'label' => '个人作业',
+                        'icon' => ' fa-user',
+                        'url' => 'javascript:;',
+                        'items' => [
+                            ['label' => '作业1(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711355_李汶蔚).rar']],
+                            ['label' => '作业1(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711355_李钟毓).rar']],
+                            ['label' => '作业1(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711436_皮春莹).pdf']],
+                            ['label' => '作业1(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业1(1711438_史晓融).pdf']],
+                            ['label' => '作业2(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711355_李汶蔚).rar']],
+                            ['label' => '作业2(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711355_李钟毓).rar']],
+                            ['label' => '作业2(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711436_皮春莹).rar']],
+                            ['label' => '作业2(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业2(1711438_史晓融).zip']],
+                            ['label' => '作业3(1711355_李汶蔚)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711355_李汶蔚).rar']],
+                            ['label' => '作业3(1711355_李钟毓)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711355_李钟毓).rar']],
+                            ['label' => '作业3(1711436_皮春莹)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711436_皮春莹).pdf']],
+                            ['label' => '作业3(1711438_史晓融)', 'icon' => 'fa-tag', 'url' => ['/personal/作业3(1711438_史晓融).pdf']],
+                        ],
+                    ],   
+
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [
                         'label' => '权限管理',

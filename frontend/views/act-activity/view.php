@@ -90,7 +90,8 @@ $this->params['breadcrumbs'][] = $this->title;
             echo "
                 <div class=\"vlist\">
                         <div class=\"vcard\">
-                            <img class=\"vimg\" src=\"/images/1.png\" >
+
+                            <img class=\"vimg\" src=",Yii::$app->urlManager->createUrl('images/1.png'),">
                             <div class=\"vh\">
                                 <div class=\"vhead\">
                                     <span class=\"vnick\"> 

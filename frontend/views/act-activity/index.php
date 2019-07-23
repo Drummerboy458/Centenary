@@ -32,7 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
        
         <div class="row"> <!--两列-->
             <div class="col-md-8" id="container">  <!--活动页-->
-                <img src="/images/100.png" style="width: 5%; height: 5%;">
+
+                <img src=<?php echo Yii::$app->urlManager->createUrl('images/100.png'); ?>  style="width: 5%; height: 5%;">
                 <?=Html::tag('h1',Html::encode($this->title),['class' => 'item_header'] )?>
                 <br>
                 <hr class="style-one">

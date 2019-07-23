@@ -20,9 +20,11 @@ $this->title = '登录-后台管理';
 
 
   <title>后台 | 登录</title>
+  
 
 </head>
-<body style=" background-image:url('img/nku.jpg')">
+
+<body >
 
     <div class="login-box">
     <div class="login-logo">

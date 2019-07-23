@@ -87,7 +87,6 @@
                             ['label' => '权限', 'icon' => ' fa-certificate', 'url' => ['/admin/permission'],],
                             ['label' => '角色', 'icon' => ' fa-user', 'url' => ['/admin/role'],],
                             ['label' => '分配', 'icon' => ' fa-check-circle', 'url' => ['/admin/assignment'],],
-                            ['label' => '菜单', 'icon' => ' fa-list-alt', 'url' => ['/admin/menu'],],
                         ],
                     ],
                     [

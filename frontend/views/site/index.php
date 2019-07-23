@@ -42,7 +42,8 @@ frontend\assets\AppAsset::register($this);
 
   <link rel='stylesheet prefetch' href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="/images/logo1.png">
+  <link rel="shortcut icon" href= <?php echo Yii::$app->urlManager->createUrl('images/logo1.png'); ?>>
+
 
 <?php $this->head() ?>
 
@@ -63,21 +64,22 @@ frontend\assets\AppAsset::register($this);
   <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="item active" style="background-image: url(/images/slider/1.jpg)">
+
+            <div class="item active" style="background-image: url(<?php echo Yii::$app->urlManager->createUrl('images/slider/1.jpg'); ?>)">
               <div class="caption">
                 <h1 class="animated fadeInLeftBig"><b>渤海之滨</b> <span><b>白河之津</b></span></h1>
                 <!-- <p class="animated fadeInRightBig">NK</p>
                 <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
               </div>
             </div>
-            <div class="item" style="background-image: url(/images/slider/2.jpg)">
+            <div class="item" style="background-image: url(<?php echo Yii::$app->urlManager->createUrl('images/slider/2.jpg'); ?>)">
                 <div class="caption">
                   <h1 class="animated fadeInLeftBig"><b>南开,</b><span><b>让世界听见你</b></span></h1>
                  <!--  <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
                   <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
                 </div>
             </div>
-            <div class="item" style="background-image: url(/images/slider/3.jpg)">
+            <div class="item" style="background-image: url(<?php echo Yii::$app->urlManager->createUrl('images/slider/3.jpg'); ?>)">
               <div class="caption">
                 <h1 class="animated fadeInLeftBig"><b>允公允能</b> <span><b>日新月异</b></span></h1>
                 <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
@@ -101,20 +103,22 @@ frontend\assets\AppAsset::register($this);
           </button>
           <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
-              <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
+
+              <img class="img-responsive" src= <?php echo Yii::$app->urlManager->createUrl('images/logo4.png'); ?> alt="logo"/>
             </h1>
           </a>                    
         <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
-          <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="#activities" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="#history" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
-            <li class="scroll"><a href="#message" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
-            <li class="scroll"><a href="/adminuser/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
-            <li class="scroll"><a href="#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
+          <ul class="nav navbar-nav navbar-right">      
+         
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/index'); ?>            style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href=  <?php echo Yii::$app->urlManager->createUrl('#activities'); ?>          style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('#history'); ?>            style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('#message'); ?>          style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('adminuser/index'); ?>            style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('#contact'); ?>            style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
            
-            <li class="scroll"><a href="/site/count-down" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/count-down'); ?>      style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
           </ul>
         </div>
       </div>
@@ -140,7 +144,8 @@ frontend\assets\AppAsset::register($this);
                   <div class="col-sm-5" style="">
                     <div class="folio-item wow fadeInRightBig " data-wow-duration="1000ms" data-wow-delay="300ms">
                       <div class="folio-image">
-                        <img class="img-responsive" src="/images/activity/act_play1.jpg" alt="">
+
+                        <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play1.jpg'); ?> alt="">
                       </div>
                       <div class="overlay">
                         <div class="overlay-content">
@@ -151,7 +156,7 @@ frontend\assets\AppAsset::register($this);
                             </div>
                             <div class="folio-overview">
                               <span class="folio-link"></span>
-                              <span class="folio-expand"><a href="/images/activity/act_play1.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                              <span class="folio-expand"><a href=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play1.jpg'); ?> data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
                         </div>
@@ -161,7 +166,7 @@ frontend\assets\AppAsset::register($this);
                   <div class="col-sm-5" style="">
                     <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
                       <div class="folio-image">
-                        <img class="img-responsive" src="/images/activity/act_play3.jpg" alt="">
+                        <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play3.jpg'); ?> alt="">
                       </div>
                       <div class="overlay">
                         <div class="overlay-content">
@@ -172,7 +177,7 @@ frontend\assets\AppAsset::register($this);
                             </div>
                             <div class="folio-overview">
                               <span class="folio-link"></span>
-                              <span class="folio-expand"><a href="/images/activity/act_play3.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                              <span class="folio-expand"><a href=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play3.jpg'); ?> data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
                         </div>
@@ -182,7 +187,7 @@ frontend\assets\AppAsset::register($this);
                   <div class="col-sm-5" style="margin-top: 20px; ">
                     <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
                       <div class="folio-image">
-                        <img class="img-responsive" src="/images/activity/act_play2.jpg" alt="">
+                        <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play2.jpg'); ?> alt="">
                       </div>
                       <div class="overlay">
                         <div class="overlay-content">
@@ -193,7 +198,7 @@ frontend\assets\AppAsset::register($this);
                             </div>
                             <div class="folio-overview">
                               <span class="folio-link"></span>
-                              <span class="folio-expand"><a href="/images/activity/act_play2.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                              <span class="folio-expand"><a href=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play2.jpg'); ?> data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
                         </div>
@@ -203,7 +208,7 @@ frontend\assets\AppAsset::register($this);
                   <div class="col-sm-5" style=" margin-top: 20px;">
                     <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
                       <div class="folio-image">
-                        <img class="img-responsive" src="/images/activity/act_play5.jpg" alt="">
+                        <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play5.jpg'); ?> alt="">
                       </div>
                       <div class="overlay">
                         <div class="overlay-content">
@@ -214,7 +219,7 @@ frontend\assets\AppAsset::register($this);
                             </div>
                             <div class="folio-overview">
                               <span class="folio-link"></span>
-                              <span class="folio-expand"><a href="/images/activity/act_play5.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                              <span class="folio-expand"><a href=<?php echo Yii::$app->urlManager->createUrl('images/activity/act_play5.jpg'); ?> data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                             </div>
                           </div>
                         </div>
@@ -235,27 +240,28 @@ frontend\assets\AppAsset::register($this);
                       <hr class="style-one" style="opacity: 0">
                        <div style="background-color: rgb(247,247,247); border-radius: 30px;">
 
-                        <a href=<?php echo "/act-activity/view?id=".$activities[0]['id']?>>
+                        <a href=<?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[0]['id']); ?>>
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[0]['title']?> </p>
                         </a>
 
-                         <a href=<?php echo "/act-activity/view?id=".$activities[1]['id']?>>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[1]['id']); ?>>
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[1]['title']?> </p>
                         </a>
 
-                        <a href=<?php echo "/act-activity/view?id=".$activities[2]['id']?>>
+                        <a href=<?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[2]['id']); ?>>
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[2]['title']?> </p>
                         </a>
 
-                          <a href=<?php echo "/act-activity/view?id=".$activities[3]['id']?>>
+                          <a href=<?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[3]['id']); ?>>
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[3]['title']?> </p>
                         </a>
 
-                         <a href=<?php echo "/act-activity/view?id=".$activities[4]['id']?>>
+                         <a href=<?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[4]['id']); ?>>
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;"><?php echo $activities[4]['title']?> </p>
                         </a>
 
-                         <a href=<?php echo "/act-activity/view?id=".$activities[5]['id']?>>
+
+                         <a href= <?php echo Yii::$app->urlManager->createUrl("act-activity/view?id=".$activities[5]['id']); ?> >
                         <p style="color: purple ;font-size: 16px; padding-top: 25px; padding-left: 20px;padding-right: 20px;padding-bottom: 25px;"><?php echo $activities[5]['title']?> </p>
                         </a>
                         
@@ -263,7 +269,7 @@ frontend\assets\AppAsset::register($this);
 
                         <div style="height: 10px; padding-top: 50px; text-align: center; ">   
                          <div style=" text-align: right;">
-                          <a class="more-link" href="/act-activity/index" title="显示更多">
+                           <a class="more-link" href=<?php echo Yii::$app->urlManager->createUrl('act-activity/index'); ?> title="显示更多" >
                               <span class="moretext">
                                   <font style='color: #a0468c;font-family: 微软雅黑;font-size: 16px;'>更多...</font>
                               </span>
@@ -277,11 +283,12 @@ frontend\assets\AppAsset::register($this);
 </section><!--#services-->
 
 
-<section id="about-us" class="parallax" style="background-image: url(/images/nk1.jpg);">
+<section id="about-us" class="parallax" style="background-image: url(<?php echo Yii::$app->urlManager->createUrl('images/nk1.jpg'); ?>);">
     <div class="container">
       <div class="row">
         <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">         
-           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
+        
+           <img src=<?php echo Yii::$app->urlManager->createUrl('images/banner-bottom.png'); ?> style="display:block;margin:0 auto;margin-bottom:10%">
         </div>
       </div>
     </div>
@@ -331,7 +338,8 @@ frontend\assets\AppAsset::register($this);
         <li class="selected" data-date="16/01/2014">
   <!-- <h2 style="font-size:30px;font-weight: bold;">南开大学建校</h2><br> -->
     <!-- <em>1919</em> -->
-    <img src="/images/history/1919.jpg"  style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1919.jpg'); ?>  style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1919年4月，在严、张二人的努力下，位于南开学校南端的大学部校舍开始兴建。9月7、8日，南开学校大学部举办招生考试。1919年9月25日，南开大学举行首次开学典礼。南开大学成立时，本着“文以治国、理以强国、商以富国”的办学理念，设文、理、商3科。1920年，李组绅捐款三万洋银，增设矿科。
             </p>
@@ -340,7 +348,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="28/02/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>February 28th, 2014</em> -->
-    <img src="/images/history/1927.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1927.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1927年，成立社会经济研究委员会（后改称经济研究所）和满蒙研究会（后改称东北研究会），卢木斋捐资10万元，开始兴建“木斋图书馆”。
             </p>
@@ -349,7 +357,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="20/04/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>March 20th, 2014</em> -->
-    <img src="/images/history/19378.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/19378.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1937年7月，南开大学遭日本侵略军狂轰烂炸，三分之二的校舍被毁。
         </p>
@@ -358,7 +366,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="20/05/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>May 20th, 2014</em> -->
-    <img src="/images/history/19379.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/19379.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1937年8月，南开大学与北京大学、清华大学合组长沙临时大学，三校校长张伯苓、蒋梦麟、梅贻琦为常务委员，共主校务。翌年4月，长沙临时大学迁往昆明，改称西南联合大学。
             </p>
@@ -367,7 +375,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="09/07/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>July 9th, 2014</em> -->
-    <img src="/images/history/1946.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1946.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1946年，南开大学迁回天津并改为国立。复校后设文学院、理学院、政治经济学院和工学院，计16个系，另设有经济研究所、应用化学研究所及边疆人文研究室。		</p>
         </li>
@@ -375,7 +383,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="30/08/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>August 30th, 2014</em> -->
-    <img src="/images/history/1958.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1958.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中国共产党和中国政府十分关心南开大学的发展，1958年，毛泽东主席莅校视察。
             </p>
@@ -384,7 +392,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="15/09/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>September 15th, 2014</em> -->
-    <img src="/images/history/1980.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1980.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1980年以后，南开大学为适应社会主义现代化建设需要，利用老专业基础好的优势，建立了一批新的专业和研究机构。文科重点增设了以财经类为主的应用性专业，并在此基础上于1983年恢复了经济学院，理科重点增设了交叉、边缘和高新科技类专业。到80年代中后期，南开大学发展成为一所包括人文社会科学、自然科学、技术科学、生命科学、管理科学及艺术等多学科的综合大学。</p>
         </li>
@@ -392,7 +400,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="01/11/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>November 1st, 2014</em> -->
-    <img src="/images/history/1995.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/1995.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1995年12月，南开大学成为首批列入国家“211工程”重点建设的15所大学之一。
             </p>
@@ -401,7 +409,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="10/12/2014">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>December 10th, 2014</em> -->
-    <img src="/images/history/2000.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/2000.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2000年12月25日，教育部和天津市人民政府签署重点共建南开大学协议，南开大学进入首批国家教育工程“985工程”。
             </p>
@@ -410,7 +418,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="19/01/2015">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>January 19th, 2015</em> -->
-    <img src="/images/history/2015.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/2015.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2015年9月，南开大学津南校区建成启用，初步形成了八里台校区、津南校区、泰达学院“一校三区”办学格局。</p>
         </li>
@@ -418,7 +426,7 @@ frontend\assets\AppAsset::register($this);
         <li data-date="03/03/2015">
             <!-- <h2>Event title here</h2> -->
     <!-- <em>March 3rd, 2015</em> -->
-    <img src="/images/history/2018.jpg" style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
+    <img src=<?php echo Yii::$app->urlManager->createUrl('images/history/2018.jpg'); ?> style="display:block;margin:0 auto;" height="300px" width="500px"/><br>
             <p style="min-height:120px;">	
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2018年1月，南开大学入选教育部首批挂牌中美青年创客交流中心名单。3月，入选教育部首批新工科研究与实践项目。5月，南开大学成立人工智能学院、网络空间安全学院、统计与数据科学学院。11月，教育部公示第一批中华优秀传统文化传承基地名单，南开大学入选。</p>
         </li>
@@ -430,13 +438,13 @@ frontend\assets\AppAsset::register($this);
 
 
 
-  <section id="about-us" class="parallax"  style="background-image: url(/images/nk2.jpg);">
+  <section id="about-us" class="parallax"  style="background-image: url(<?php echo Yii::$app->urlManager->createUrl('images/nk2.jpg'); ?>);">
     <div class="container">
       <div class="row">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
 
          
-           <img src="/images/banner-bottom.png" style="display:block;margin:0 auto;margin-bottom:10%">
+           <img src=<?php echo Yii::$app->urlManager->createUrl('images/banner-bottom.png'); ?> style="display:block;margin:0 auto;margin-bottom:10%">
 
         </div>
       </div>
@@ -463,7 +471,7 @@ frontend\assets\AppAsset::register($this);
 
             <article class="card" style="float:right;margin:0 10px 0 0;">
               <header class="card__thumb">
-                <img src="/images/4.jpg"/>
+                <img src=<?php echo Yii::$app->urlManager->createUrl('images/4.jpg'); ?>>
               </header>
 
               <div class="card__body">

@@ -131,7 +131,7 @@ jQuery(function($) {
 		var form_status = $('<div class="form_status"></div>');
 		$.ajax({
 			type: 'POST',
-			url: "http://admins.com/site/contact",
+			url: "http://localhost/Centenary/api/web/site/contact",
 			data: {
 				name: $("input[name='name']")[0].value,
 				email: $("input[name='email']")[0].value,

@@ -4,13 +4,12 @@
 
         <!-- Sidebar user panel -->
         <div class="user-panel">
-            <div class="pull-left image">
-                <img src="<?= $directoryAsset ?>/img/user2.png" class="img-circle" alt="User Image"/>
+            <div class="pull-left image" style="height:25px;">
+                
             </div>
             <div class="pull-left info">
-               <p><?= yii::$app->user->identity->username; ?></p>
+               <p class="img-circle" style="font-size:22px;"><?= yii::$app->user->identity->username; ?></p>
 
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
 

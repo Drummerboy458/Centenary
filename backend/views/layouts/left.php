@@ -71,14 +71,14 @@
                         'icon' => ' fa-download',
                         'url' => 'javascript:;',
                         'items' => [
-                            ['label' => '本项目亮点一览', 'icon' => ' fa-tag', 'url' => ['/data/team/本项目亮点一览.pdf']],
-                            ['label' => '目录结构', 'icon' => ' fa-tag', 'url' => ['/data/team/目录结构.pdf']],
-                            ['label' => '需求文档', 'icon' => ' fa-tag', 'url' => ['/data/team/需求文档.pdf']],
-                            ['label' => '设计文档', 'icon' => ' fa-tag', 'url' => ['/data/team/设计文档.pdf']],
-                            ['label' => '实现文档', 'icon' => ' fa-tag', 'url' => ['/data/team/实现文档.pdf']],
-                            ['label' => '用户手册', 'icon' => ' fa-tag', 'url' => ['/data/team/用户手册.pdf']],
-                            ['label' => '部署文档', 'icon' => ' fa-tag', 'url' => ['/data/team/部署文档.pdf']],
-                            ['label' => '项目展示PPT', 'icon' => ' fa-tag', 'url' => ['/data/team/项目展示PPT.pptx']],
+                            ['label' => '本项目亮点一览', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_本项目亮点一览(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '目录结构', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_目录结构(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '需求文档', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_需求文档(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '设计文档', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_设计文档(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '实现文档', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_实现文档(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '用户手册', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_用户手册(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '部署文档', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_部署文档(1711355_1711351_1711436_1711438).pdf']],
+                            ['label' => '项目展示', 'icon' => ' fa-tag', 'url' => ['/data/team/404NotFound_项目展示(1711355_1711351_1711436_1711438).pptx']],
 
 
                         ],

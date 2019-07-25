@@ -23,7 +23,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\Message;
-
+use common\models\VisitRaw;
 /**
  * Site controller
  */
@@ -97,6 +97,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        
+        VisitRaw::ExitVisit();
+
         $db = Yii::$app->db;
         $sql = "select count(*) as num from praise";
         $command = $db->createCommand($sql);

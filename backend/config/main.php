@@ -21,6 +21,7 @@ return [
     "aliases" => [    
     "@mdm/admin" => "@vendor/mdmsoft/yii2-admin",
     ],
+    'language' => 'zh-CN',
     'components' => [
 
         "authManager" => [        

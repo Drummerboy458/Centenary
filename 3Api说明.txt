@@ -1,0 +1,4 @@
+请将Centenary放在localhost目录下，否则API功能无法正常使用（API路径为localhost/Centenary/api/web）。
+否则：
+1. 请在frontend/views/site/index.php 行568修改路径
+2. 请在frontend/web/js/main.js 行134修改路径

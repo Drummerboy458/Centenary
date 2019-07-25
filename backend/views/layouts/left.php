@@ -71,6 +71,8 @@
                         'icon' => ' fa-download',
                         'url' => 'javascript:;',
                         'items' => [
+                            ['label' => '本项目亮点一览', 'icon' => ' fa-tag', 'url' => ['/data/team/本项目亮点一览.pdf']],
+                            ['label' => '目录结构', 'icon' => ' fa-tag', 'url' => ['/data/team/目录结构.pdf']],
                             ['label' => '需求文档', 'icon' => ' fa-tag', 'url' => ['/data/team/需求文档.pdf']],
                             ['label' => '设计文档', 'icon' => ' fa-tag', 'url' => ['/data/team/设计文档.pdf']],
                             ['label' => '实现文档', 'icon' => ' fa-tag', 'url' => ['/data/team/实现文档.pdf']],
@@ -89,6 +91,7 @@
                         'items' => [
                             ['label' => '数据库文件', 'icon' => ' fa-tag', 'url' => ['/data/install.sql']],
                             ['label' => 'github项目链接', 'icon' => ' fa-tag', 'url' => 'https://github.com/lzyhha/Centenary'],
+                            ['label' => '一键部署sh文件', 'icon' => ' fa-tag', 'url' => '/data/command.sh'],
                         ],
                     ],     
 

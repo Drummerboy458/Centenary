@@ -10,7 +10,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model common\models\Adminuser */
 
-$this->title = $model->id;
+$this->title = $model->username;
 $this->params['breadcrumbs'][] = ['label' => 'Adminusers', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -33,15 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
             'username',
             'nickname',
             'email:email',
             'profile:ntext',
-            // 'auth_key',
-            // 'password_hash',
-            'created_at',
-            'updated_at',
+
         ],
     ]) ?>
 

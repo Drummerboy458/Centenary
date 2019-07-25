@@ -50,7 +50,7 @@ use yii\helpers\Html;
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="view?id= <?= yii::$app->user->identity->id; ?>" 
+                                <a href=<?= \Yii::$app->urlManager->createUrl(['adminuser/view','id'=>yii::$app->user->identity->id]); ?>
                                 class="btn btn-default btn-flat">个人简介</a>
                             </div>
                             <div class="pull-right">

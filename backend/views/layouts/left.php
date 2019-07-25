@@ -71,10 +71,26 @@
                         'icon' => ' fa-download',
                         'url' => 'javascript:;',
                         'items' => [
-                            ['label' => '数据库文件', 'icon' => ' fa-tag', 'url' => ['/data/install.sql']],
+                            ['label' => '需求文档', 'icon' => ' fa-tag', 'url' => ['/data/team/需求文档.pdf']],
+                            ['label' => '设计文档', 'icon' => ' fa-tag', 'url' => ['/data/team/设计文档.pdf']],
+                            ['label' => '实现文档', 'icon' => ' fa-tag', 'url' => ['/data/team/实现文档.pdf']],
+                            ['label' => '用户手册', 'icon' => ' fa-tag', 'url' => ['/data/team/用户手册.pdf']],
+                            ['label' => '部署文档', 'icon' => ' fa-tag', 'url' => ['/data/team/部署文档.pdf']],
+                            ['label' => '项目展示PPT', 'icon' => ' fa-tag', 'url' => ['/data/team/项目展示PPT.pptx']],
+
+
                         ],
-                    ],   
-  
+                    ], 
+
+                    [
+                        'label' => '数据库文件及源码',
+                        'icon' => ' fa-download',
+                        'url' => 'javascript:;',
+                        'items' => [
+                            ['label' => '数据库文件', 'icon' => ' fa-tag', 'url' => ['/data/install.sql']],
+                            ['label' => 'github项目链接', 'icon' => ' fa-tag', 'url' => 'https://github.com/lzyhha/Centenary'],
+                        ],
+                    ],     
 
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [

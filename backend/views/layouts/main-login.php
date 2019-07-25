@@ -20,9 +20,10 @@ dmstr\web\AdminLteAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
+    <link rel="shortcut icon" href= <?php echo Yii::$app->urlManager->createUrl('img/logo1.png'); ?>>
     <?php $this->head() ?>
 </head>
-<body class="login-page"  style="background-image:url(img/nku.jpg);">
+<body class="login-page"  style="background-image:url(<?php echo Yii::$app->urlManager->createUrl('img/nku.jpg'); ?>);">
 
 <?php $this->beginBody() ?>
 

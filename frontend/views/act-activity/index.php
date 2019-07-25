@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: 404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190716
+ * This is view of ActActivity of frontend web.
+ */
 use yii\helpers\Html;
 use yii\widgets\ListView;
 use yii\data\ActiveDataProvider;
@@ -28,7 +32,8 @@ $this->params['breadcrumbs'][] = $this->title;
        
         <div class="row"> <!--两列-->
             <div class="col-md-8" id="container">  <!--活动页-->
-                <img src="/images/100.png" style="width: 5%; height: 5%;">
+
+                <img src=<?php echo Yii::$app->urlManager->createUrl('images/100.png'); ?>  style="width: 5%; height: 5%;">
                 <?=Html::tag('h1',Html::encode($this->title),['class' => 'item_header'] )?>
                 <br>
                 <hr class="style-one">
@@ -69,6 +74,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <div class="date-month"> 04 <span>月</span></div>
                             <div class="date-year"> 2019 </div>
                         </div>
+                        
                         <div class="date" data-filter="201905">
                             <div class="date-month"> 05 <span>月</span></div>
                             <div class="date-year"> 2019 </div>

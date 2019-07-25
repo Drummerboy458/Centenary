@@ -36,13 +36,19 @@
 });   
 $(function(){
 
+    var test = window.location.host;
+    if(test == '100nk.frontend.com')
+        _path = '/images/arclist/';
+    else
+        _path = '/100nk/frontend/web/images/arclist/';
+
     $('.emotion').qqFace({
 
         id : 'facebox', 
 
         assign:'saytext', 
 
-        path:'/images/arclist/' //表情存放的路径
+        path:_path //表情存放的路径
 
     });
 
@@ -64,13 +70,19 @@ $(function(){
 
 function replace_em(str){
 
+
     str = str.replace(/\</g,'&lt;');
 
     str = str.replace(/\>/g,'&gt;');
 
     //str = str.replace(/\n/g,'<br/>');
 
-    str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/images/arclist/$1.gif" border="0" />');
+    var test = window.location.host;
+    if(test == '100nk.frontend.com')
+       str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/images/arclist/$1.gif" border="0" />');
+    else
+        str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/100nk/frontend/web/images/arclist/$1.gif" border="0" />');
+    
 
     return str;
 }

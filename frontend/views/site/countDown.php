@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>南开一百周年倒计时</title>
-    <link rel="shortcut icon" href="/images/logo1.png">
+    <link rel="shortcut icon" href=<?php echo Yii::$app->urlManager->createUrl('images/logo1.png'); ?>>
     <style>
         @import url("https://fonts.googleapis.com/css?family=Aleo");
 
@@ -206,8 +206,6 @@ new Snow();
 
         ////////////////////////////////////////////////////////////
 
-        // Simple CountDown Clock
-
         const comingdate = new Date("Oct 17, 2019 00:00:00");
 
         const d = document.getElementById("d");
@@ -216,7 +214,7 @@ new Snow();
         const s = document.getElementById("s");
 
         const countdown = setInterval(() => {
-            const now   = new Date();
+        const now   = new Date();
         const des   = comingdate.getTime() - now.getTime();
         const days  = Math.floor(des / (1000 * 60 * 60 * 24));
         const hours = Math.floor((des % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -233,8 +231,5 @@ new Snow();
 
         const getTrueNumber = x => (x < 10 ? "0" + x : x);
     </script>
-    <!--这行代码可以去掉-->
-    <a href="http://www.bootstrapmb.com" style="display:none">bootstrapmb</a>
-
 </body>
 </html>

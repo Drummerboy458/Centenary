@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team:404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190721
+ * This is the search model class for model ActCategory.
+ */
 namespace common\models;
 
 use Yii;

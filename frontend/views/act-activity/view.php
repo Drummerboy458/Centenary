@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: 404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190716
+ * This is view of ActActivity of frontend web.
+ */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\DetailView;
@@ -85,7 +90,8 @@ $this->params['breadcrumbs'][] = $this->title;
             echo "
                 <div class=\"vlist\">
                         <div class=\"vcard\">
-                            <img class=\"vimg\" src=\"/images/1.png\" >
+
+                            <img class=\"vimg\" src=",Yii::$app->urlManager->createUrl('images/1.png'),">
                             <div class=\"vh\">
                                 <div class=\"vhead\">
                                     <span class=\"vnick\"> 
@@ -115,4 +121,3 @@ $this->params['breadcrumbs'][] = $this->title;
         ?>
     </section>
 </div>
-<!--以下是活动留言展示-->

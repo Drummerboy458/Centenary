@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李汶蔚 1711351, 20190712
+ * This is the ActCommentForm Model of frontend web.
+ */
 namespace frontend\models;
 use frontend\controllers\ActActivityController;
 use Yii;

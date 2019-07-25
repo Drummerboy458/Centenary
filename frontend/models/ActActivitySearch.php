@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李汶蔚 1711351, 20190713
+ * This this the CUDA of ActActivity in frontend web.
+ */
 namespace frontend\models;
 
 use Yii;

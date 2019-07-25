@@ -1,4 +1,9 @@
 <?php
+/**
+ * Team: 404NotFound,NKU
+ * Coding by:李汶蔚 1711351,20190716
+ * This is view of ActActivity of frontend web.
+ */
 use yii\helpers\Html;
 use yii\helpers\HtmlPurifier;
 ?>

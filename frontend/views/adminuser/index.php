@@ -46,7 +46,8 @@ frontend\assets\AppAsset::register($this);
   <![endif]-->
   
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="images/favicon.ico">
+    
+  <link rel="shortcut icon" href=<?php echo Yii::$app->urlManager->createUrl('images/favicon.ico'); ?>     >
 </head><!--/head-->
 
 <body>
@@ -67,7 +68,8 @@ frontend\assets\AppAsset::register($this);
           <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
               <div class="member-image">
-                <img class="img-responsive" src="/images/team/1.jpg" alt="">
+               
+                <img class="img-responsive" src= <?php echo Yii::$app->urlManager->createUrl('images/team/1.jpg'); ?>  alt="">
               </div>
               <div class="member-info">
                 <h2 style="color:#000;font-size:36px;"><?php echo $lzy['nickname']?></h2>
@@ -83,7 +85,8 @@ frontend\assets\AppAsset::register($this);
           <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
               <div class="member-image">
-                <img class="img-responsive" src="/images/team/2.jpg" alt="">
+
+                <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/team/2.jpg'); ?>  alt="">
               </div>
               <div class="member-info">
               <h2 style="color:#000;font-size:36px;"><?php echo $lww['nickname']?></h2>
@@ -101,7 +104,8 @@ frontend\assets\AppAsset::register($this);
           <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
               <div class="member-image">
-                <img class="img-responsive" src="/images/team/3.jpg" alt="">
+
+                <img class="img-responsive" src= <?php echo Yii::$app->urlManager->createUrl('images/team/3.jpg'); ?>  alt="">
               </div>
               <div class="member-info">
               <h2 style="color:#000;font-size:36px;"><?php echo $sxr['nickname']?></h2>
@@ -118,7 +122,8 @@ frontend\assets\AppAsset::register($this);
           <div class="col-md-3">
             <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
               <div class="member-image">
-                <img class="img-responsive" src="/images/team/4.jpg" alt="">
+
+                <img class="img-responsive" src=<?php echo Yii::$app->urlManager->createUrl('images/team/4.jpg'); ?>  alt="">
               </div>
               <div class="member-info">
               <h2 style="color:#000;font-size:36px;"><?php echo $pcy['nickname']?></h2>

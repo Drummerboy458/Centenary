@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Team: 404NotFound,NKU
+ * Coding by 李汶蔚 1711351, 20190713
+ * This is the ActComment ActiveRecord of frontend web, which is used to save and query comments.
+ */
 namespace frontend\models;
 
 use Yii;
@@ -34,11 +38,11 @@ class ActComment extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            // [['author','content','identity' ], 'required'],
-            // [['content'], 'string'],
-            // [['created_at', 'updated_at'], 'safe'],
-            // [['author', 'identity'], 'string', 'max' => 32],
-            // [['activity_id'], 'exist', 'skipOnError' => true, 'targetClass' => ActActivity::className(), 'targetAttribute' => ['activity_id' => 'id']],
+            [['author','content','identity' ], 'required'],
+            [['content'], 'string'],
+            [['created_at', 'updated_at'], 'safe'],
+            [['author', 'identity'], 'string', 'max' => 32],
+            [['activity_id'], 'exist', 'skipOnError' => true, 'targetClass' => ActActivity::className(), 'targetAttribute' => ['activity_id' => 'id']],
         ];
     }
 
@@ -49,13 +53,13 @@ class ActComment extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'content' => 'Content',
-            'author' => 'Author',
-            'identity' => 'Identity',
-            'activity_id' => 'Activity ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
-            'status' => 'Status',
+            'content' => '内容',
+            'author' => '作者',
+            'identity' => '身份',
+            'activity_id' => '活动ID',
+            'created_at' => '发布时间',
+            'updated_at' => '更新于',
+            'status' => '状态',
         ];
     }
 

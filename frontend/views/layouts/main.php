@@ -29,7 +29,8 @@ MainAsset::register($this);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>100南开 | Ahri</title>
 
-  <link rel="shortcut icon" href="/images/logo1.png"> <!--网站图标--->
+
+  <link rel="shortcut icon" href=<?php echo Yii::$app->urlManager->createUrl('images/logo1.png'); ?>> <!--网站图标--->
 <?php $this->head() ?>
 
 
@@ -41,7 +42,8 @@ MainAsset::register($this);
 
 <header id="home">
    <div id="headerImg">
-        <img src="/images/bg_head.jpg" style="width:100%;"> 
+
+        <img src= <?php echo Yii::$app->urlManager->createUrl('images/bg_head.jpg'); ?> style="width:100%;"> 
    </div>
 
    <div class="main-nav" style="background-color: #800080; height:50px; width:auto;">
@@ -55,20 +57,26 @@ MainAsset::register($this);
           </button>
           <a class="navbar-brand" style="padding-top: 0px" href="index">
             <h1>
-              <img class="img-responsive" src="/images/logo4.png" alt="logo"/>
+              
+              <img class="img-responsive" src= <?php echo Yii::$app->urlManager->createUrl('images/logo4.png'); ?> alt="logo"/>
             </h1>
           </a>                    
         <!--  </div> -->
         <div class="collapse navbar-collapse" style="background-color: #800080">
-          <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll"><a href="/site/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
-            <li class="scroll"><a href="/act-activity/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
-            <li class="scroll"><a href="/site/index#history" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>    
-            <li class="scroll"><a href="/message/create" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>                 
-            <li class="scroll"><a href="/adminuser/index" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
-            <li class="scroll"><a href="/site/index#contact" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
+          <ul class="nav navbar-nav navbar-right">     
+
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('site/index'); ?>             style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">首页</a></li>
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('act-activity/index'); ?>             style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">校庆活动</a></li> 
+
+
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('site/index#history'); ?>             style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">人物历史</a></li>  
+
+            <li class="scroll"><a href=<?php echo Yii::$app->urlManager->createUrl('message/create'); ?>               style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">情系南开</a></li>  
+                                        
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('adminuser/index'); ?> style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">团队介绍</a></li>
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('site/index#contact'); ?> style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">联系我们</a></li>
            
-            <li class="scroll"><a href="/site/count-down" style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
+            <li class="scroll"><a href= <?php echo Yii::$app->urlManager->createUrl('site/count-down'); ?> style="height: 50px; line-height: 25px; text-align: center;width: 100px; font-size:17px;">倒计时</a></li>       
           </ul>
         </div>
       </div>

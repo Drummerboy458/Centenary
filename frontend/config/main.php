@@ -40,7 +40,7 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'enableStrictParsing' => false,
-            "suffix" => "",
+
             "rules" => [        
             "<controller:\w+>/<id:\d+>"=>"<controller>/view",  
             "<controller:\w+>/<action:\w+>"=>"<controller>/<action>"    

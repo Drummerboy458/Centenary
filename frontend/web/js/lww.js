@@ -36,11 +36,7 @@
 });   
 $(function(){
 
-    var test = window.location.host;
-    if(test == '100nk.frontend.com')
-        _path = '/images/arclist/';
-    else
-        _path = '/100nk/frontend/web/images/arclist/';
+     _path = '../images/arclist/';
 
     $('.emotion').qqFace({
 
@@ -77,11 +73,7 @@ function replace_em(str){
 
     //str = str.replace(/\n/g,'<br/>');
 
-    var test = window.location.host;
-    if(test == '100nk.frontend.com')
-       str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/images/arclist/$1.gif" border="0" />');
-    else
-        str = str.replace(/\[em_([0-9]*)\]/g,'<img src="/100nk/frontend/web/images/arclist/$1.gif" border="0" />');
+    str = str.replace(/\[em_([0-9]*)\]/g,'<img src="../images/arclist/$1.gif" border="0" />');
     
 
     return str;

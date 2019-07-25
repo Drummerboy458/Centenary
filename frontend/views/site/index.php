@@ -565,7 +565,7 @@ frontend\assets\AppAsset::register($this);
 
       <script type="text/javascript">
         document.querySelector('#praise').onclick = function () {
-          $.post("http://admins.com/praise/add").done(
+          $.post("http://localhost/Centenary/api/web/praise/add").done(
             function(data){
               console.log(String(100*data.data/100)+"%");
               document.getElementsByClassName("layui-progress-text")[0].innerText=String(100*data.data/100)+"%";

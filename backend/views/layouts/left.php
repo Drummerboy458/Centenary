@@ -4,13 +4,12 @@
 
         <!-- Sidebar user panel -->
         <div class="user-panel">
-            <div class="pull-left image">
-                <img src="<?= $directoryAsset ?>/img/user2.png" class="img-circle" alt="User Image"/>
+            <div class="pull-left image" style="height:25px;">
+                
             </div>
             <div class="pull-left info">
-               <p><?= yii::$app->user->identity->username; ?></p>
+               <p class="img-circle" style="font-size:22px;"><?= yii::$app->user->identity->username; ?></p>
 
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
 
@@ -72,10 +71,29 @@
                         'icon' => ' fa-download',
                         'url' => 'javascript:;',
                         'items' => [
-                            ['label' => '数据库文件', 'icon' => ' fa-tag', 'url' => ['/data/install.sql']],
+                            ['label' => '本项目亮点一览', 'icon' => ' fa-tag', 'url' => ['/data/team/本项目亮点一览.pdf']],
+                            ['label' => '目录结构', 'icon' => ' fa-tag', 'url' => ['/data/team/目录结构.pdf']],
+                            ['label' => '需求文档', 'icon' => ' fa-tag', 'url' => ['/data/team/需求文档.pdf']],
+                            ['label' => '设计文档', 'icon' => ' fa-tag', 'url' => ['/data/team/设计文档.pdf']],
+                            ['label' => '实现文档', 'icon' => ' fa-tag', 'url' => ['/data/team/实现文档.pdf']],
+                            ['label' => '用户手册', 'icon' => ' fa-tag', 'url' => ['/data/team/用户手册.pdf']],
+                            ['label' => '部署文档', 'icon' => ' fa-tag', 'url' => ['/data/team/部署文档.pdf']],
+                            ['label' => '项目展示PPT', 'icon' => ' fa-tag', 'url' => ['/data/team/项目展示PPT.pptx']],
+
+
                         ],
-                    ],   
-  
+                    ], 
+
+                    [
+                        'label' => '数据库文件及源码',
+                        'icon' => ' fa-download',
+                        'url' => 'javascript:;',
+                        'items' => [
+                            ['label' => '数据库文件', 'icon' => ' fa-tag', 'url' => ['/data/install.sql']],
+                            ['label' => 'github项目链接', 'icon' => ' fa-tag', 'url' => 'https://github.com/lzyhha/Centenary'],
+                            ['label' => '一键部署sh文件', 'icon' => ' fa-tag', 'url' => '/data/command.sh'],
+                        ],
+                    ],     
 
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
                     [

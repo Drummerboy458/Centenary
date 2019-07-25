@@ -23,15 +23,12 @@ use yii\helpers\Html;
 
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                          <img src="<?= $directoryAsset ?>/img/user2.png" class="user-image" alt="User Image"/>
 
-                        <span class="hidden-xs"><?= yii::$app->user->identity->username; ?></span>
+                        <span class="hidden-xs" style="font-size:18px;"><?= yii::$app->user->identity->username; ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header" style="background-color: purple;">
-                            <img src="<?= $directoryAsset ?>/img/user2.png" class="img-circle"
-                                 alt="User Image"/>
 
                             <p>
                                <?= yii::$app->user->identity->username; ?>
@@ -53,7 +50,7 @@ use yii\helpers\Html;
                         <!-- Menu Footer-->
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="view?id= <?= yii::$app->user->identity->id; ?>" 
+                                <a href=<?= \Yii::$app->urlManager->createUrl(['adminuser/view','id'=>yii::$app->user->identity->id]); ?>
                                 class="btn btn-default btn-flat">个人简介</a>
                             </div>
                             <div class="pull-right">

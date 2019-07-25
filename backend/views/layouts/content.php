@@ -45,9 +45,9 @@ use dmstr\widgets\Alert;
 
 <footer class="main-footer">
     <div class="pull-right hidden-xs">
-        <b>Ahri开发团队</b> Version 1.0
+        <b>Ahri</b> Version 1.0
     </div>
-    <strong>Copyright &copy; 2019-2020 <a href="">Ahri(www.xxxx.com)</a>.</strong> Released under the terms of the BSD License.
+    <strong>Copyright &copy; 2019-2020 <a href="https://github.com/lzyhha/Centenary" target="_blank">Ahri(https://github.com/lzyhha/Centenary)</a>.</strong> Released under the terms of the BSD License.
 </footer>
 
 <!-- Control Sidebar -->

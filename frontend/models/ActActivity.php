@@ -90,7 +90,7 @@ class ActActivity extends \yii\db\ActiveRecord
         return $this->hasMany(ActComment::className(), ['activity_id' => 'id']);
     }
 
-    public function getActivities(){
+    public static function getActivities(){
         $db = Yii::$app->db;
         $sql = "select * from act_activity  order by holded_at desc limit 0, 64";
         $command = $db->createCommand($sql);

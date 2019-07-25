@@ -67,7 +67,7 @@ class Message extends \yii\db\ActiveRecord
     }
 
 
-    public function getMessages(){
+    public static function getMessages(){
         $db = Yii::$app->db;
         $sql = "select author, identity, content from message where status=1 order by created_at desc limit 0, 4";
         $command = $db->createCommand($sql);

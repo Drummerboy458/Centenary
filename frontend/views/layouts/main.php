@@ -11,7 +11,9 @@ use frontend\assets\MainAsset;
 use common\models\VisitRaw;
 
 MainAsset::register($this);
-VisitRaw::ExitVisit();
+
+
+// VisitRaw::ExitVisit();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -90,6 +92,8 @@ VisitRaw::ExitVisit();
           </div>
           <div class="col-sm-6">
             <p class="pull-right">Designed by <a href="http://www.themeum.com/"><b>Ahri</b></a></p>
+
+          
           </div>
         </div>
       </div>

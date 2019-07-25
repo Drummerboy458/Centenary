@@ -58,8 +58,12 @@ public static function ExitVisit()
 
     $visit=new VisitRaw();
     $visit->visit_ip=$visit_ip;
-    $visit->visit_time=time();
+    $visit->visit_time=date('Y-m-d H:i:s');
+    $visit->save();
+    // var_dump(date('Y-m-d H:i:s'));
+    // exit(0);
     return $visit->save();
+
 
 }
 public static function visitNum()
